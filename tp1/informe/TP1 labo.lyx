@@ -1,0 +1,754 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Análisis de circuito RC
+\end_layout
+
+\begin_layout Standard
+//imagen de circuito
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.1 Calculo de Frecuencia de Corte
+\end_layout
+
+\begin_layout Standard
+Se armó el circuito de la figura 1 en una protoboard, con valores nominales
+ de 
+\begin_inset Formula $R=3.9k\Omega$
+\end_inset
+
+ y 
+\begin_inset Formula $C=1.8nF$
+\end_inset
+
+.
+ Analíticamente se encontró la función transferencia del mismo, con 
+\begin_inset Formula $V_{out}$
+\end_inset
+
+ en la tension del capacitor y 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ la entrada una senoidal de 
+\begin_inset Formula $5$
+\end_inset
+
+
+\begin_inset Formula $V_{pp}$
+\end_inset
+
+, que resultó ser la siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{1}{sRC+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+con 
+\begin_inset Formula $s=j\omega.$
+\end_inset
+
+ La frecuencia de corte resulta ser aquella en la que se anula el denominador,
+ es decir, cuando 
+\begin_inset Formula $\omega_{c}=\frac{1}{RC}$
+\end_inset
+
+; entonces, teniendo en cuenta que 
+\begin_inset Formula $\omega=2\pi f$
+\end_inset
+
+, se dedujo que la fecuencia de corte esta al rededor de 
+\begin_inset Formula $f_{ccalculado}=22.7kHz$
+\end_inset
+
+.
+ Por otro lado se sabe que cuando el circuito esta en su 
+\begin_inset Formula $f_{c}$
+\end_inset
+
+, la salida 
+\begin_inset Formula $V_{out}$
+\end_inset
+
+ atenúa la entrada 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ en 
+\begin_inset Formula $-3dB$
+\end_inset
+
+; de esta manera se busco experimentalmente su respectiva frecuencia de
+ corte que resulto ser 
+\begin_inset Formula $f_{cmedido}=21.8kHz$
+\end_inset
+
+.
+ Se tuvo en cuenta la resistencia interna del generador (50
+\begin_inset Formula $\Omega$
+\end_inset
+
+), y se la sumó a la 
+\begin_inset Formula $R_{teorica}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+A continuación, sabiendo que 
+\begin_inset Formula $C_{cal}\text{=}\frac{1}{2\pi fR}$
+\end_inset
+
+ se completó la siguiente tabla:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $|V_{in}|[V]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $|V_{out}|[V]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R[k\varOmega]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{calculado}[nF]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{medido}[nF]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Error\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.97
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.46
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.95
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.775
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.848
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.11
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.97
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.46
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.93
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.784
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.858
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.98
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tensiones y valores de componentes del circuito 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.2 
+\end_layout
+
+\begin_layout Standard
+Para el calculo de la corriente se utilizo 
+\begin_inset Formula $I=\frac{V_{R}}{R}$
+\end_inset
+
+, asumiendo que la tension y la resistencia estan en fase.
+ Seleccionando una frecuencia representativa y con el uso de la opcion math
+ del osciloscopio midiendo la fase y amplitudes de las señales, se le resto
+ a la tension de entrada la caida de tension en el capacitor vectorialmente,
+ obteniendo asi la tension en la resistencia y su respectiva fase.
+ De estamanera se obtuvo las tensiones 
+\begin_inset Formula $|V_{R}|=3.51V$
+\end_inset
+
+ y 
+\begin_inset Formula $|V_{c}|=3.48V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+//Insertar imagen 1.2 y 1.2b
+\end_layout
+
+\begin_layout Standard
+De la figura 2 observamos que la corriente se adelanta a la tension del
+ capacitor 
+\begin_inset Formula $90^{o}$
+\end_inset
+
+.
+ Ademas, la suma fasorial de VR y Vc es de 4.97V en vez de los 5V, esto es
+ puede ser por la resistencia del generador que aun siendo pequeña genera
+ una caida de tension en el circuito.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.3
+\end_layout
+
+\begin_layout Standard
+//insertar imagen 1.3a y b
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.4
+\end_layout
+
+\begin_layout Standard
+//Insertar imagen 1.4a y b
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.6
+\end_layout
+
+\begin_layout Standard
+//imagenes de /Drive/datos/RC
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.7
+\end_layout
+
+\begin_layout Standard
+//imagen1.7
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.8
+\end_layout
+
+\begin_layout Standard
+//imagenes 1.8
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.9 Conclusiones
+\end_layout
+
+\begin_layout Section
+parte2
+\end_layout
+
+\begin_layout Section
+Respuesta en frecuencia con barrido automático
+\end_layout
+
+\begin_layout Subsection
+Modo normal del osciloscopio
+\end_layout
+
+\begin_layout Standard
+El barrido automático se realizó con el generador en donde se barrió de
+ 100Hz a 2MHz en un lapso de 100 mili segundos con una senoidal de 20 
+\begin_inset Formula $V_{pp}$
+\end_inset
+
+.
+ El output del generador se utilizó para excitar al circuito RC y se conectó
+ el sync al osciloscopio para poder triggerear la senial, además se aprovechó
+ el marker del sweep del generador para que la cuadrada entregada por el
+ sync tenga un ancho de 22,6KHz para que coincida con la frecuencia de corte
+ calculada de nuestro circuito.
+ Cabe mencionar que el barrido automático estaba configurado en escala logaritmi
+ca.
+ Se obtuvó la siguiente imagén:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Downloads/Respuesta en frecuencia barrido automatico modo normal.png
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia con barrido automático en modo normal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La figura evidencia claramente el efecto del filtro pasa bajos sobre el
+ circuito, mientras que la senial amarilla que es la entrada se mantiene
+ constante en amplitud a lo largo de todo el barrido, la salida que es la
+ senial verde tiene ganancia unitaria en las bajas frecuencias y luego se
+ atenua a medida que esta aumenta.
+ La senial cuadrada violeta marca la frecuencia de corte del circuito donde
+ se espera una caida de 3dB.
+ En veces equivale aproximadamente a una atenuacion de 
+\begin_inset Formula $\sqrt{2},$
+\end_inset
+
+es decir, 
+\begin_inset Formula $V_{0}=\sqrt{2}V_{i}$
+\end_inset
+
+ y en nuestro caso como 
+\begin_inset Formula $V_{i}$
+\end_inset
+
+ tiene una amplitud de 10 V, 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ deberia tener una amplitud aproximada de 7,1 V, esto se puede observar
+ claramente en el gráfico.
+\end_layout
+
+\begin_layout Subsection
+Modo XY del osciloscopio
+\end_layout
+
+\begin_layout Standard
+Se intento de siumular el barrido en el modo XY bajo ciertas características.
+ Se colocó un generador realizando un sweep barriendo nuevamente frecuencias
+ de 
+\begin_inset Formula $100Hz$
+\end_inset
+
+ a 
+\begin_inset Formula $2MHz$
+\end_inset
+
+ esta vez linieal cada 
+\begin_inset Formula $10ms$
+\end_inset
+
+ con una senoidal 
+\begin_inset Formula $20Vpp$
+\end_inset
+
+ y bajo estas condiciones se lo conectó a la entrada del circuito.
+ Luego se sincronizó el trigger del generador de sweep con el flanco descendente
+ de la señal del generador 2, en el cual se colocó una rampa de 
+\begin_inset Formula $10Vp$
+\end_inset
+
+ a una periodo de 
+\begin_inset Formula $11ms$
+\end_inset
+
+ y se la conectó en la entrada X del osciloscopio.
+ Se conectó la salida del circuito a la entrada Y del osciloscopio.
+ Por consecuente, tomando en cuenta las consideraciones establecidas, se
+ esperaba ver como en el modo XY el eje Y iba a presentar las senoidales
+ en modo sweep desde la frecuencia inicial a la final y en la componente
+ X un desplazamiento de 0 a 10V estableciendo la relación 
+\begin_inset Formula $0V$
+\end_inset
+
+ a 
+\begin_inset Formula $t=\text{0}$
+\end_inset
+
+ y en 
+\begin_inset Formula $10V$
+\end_inset
+
+ 
+\begin_inset Formula $t=11ms$
+\end_inset
+
+ dejando entrar un poco mas de un barrido en pantalla.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../Downloads/scope_24.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia con barrido automático en modo XY
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede observar como las configuraciones previas permitieron el análisis
+ en frecuencia del circuito, dando una imagen relacionada directamente con
+ la obtenida en el modo normal del osciloscopio bajo el mismo sweep.
+ Es importante notar como se configuró la escala en X y en Y para poder
+ formar correctamente la imagen en pantalla del barrido en frecuencia.
+\end_layout
+
+\begin_layout Section
+Respuesta en frecuencia del osciloscopio
+\end_layout
+
+\begin_layout Standard
+Para medir la respuesta en frecuencia del osciloscopio se utilizaron dos
+ puntas de osciloscopio y un generador, por un lado se conectaron ambas
+ puntas con el generador de seniales entre sí y por el otro las masas de
+ estos tres elementos también entre sí.
+ El bode del circuito se realizó con los filtros AC y el BW del osciloscopio
+ activados y se lo excitó con una senoidal de 10 
+\begin_inset Formula $V_{pp}$
+\end_inset
+
+.
+ Los resultados obtenidos de las mediciones se graficaron en la siguiente
+ figura:
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en frecuencia del osciloscopio
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede observar que la forma de la respuesta en frecuencia es la de un
+ filtro pasa banda ya que atenua las frecuencias menores a 12Hz y las frecuencia
+s mayores a 5MHz.
+ Esto se debe a que el filtro AC del osciloscopio filtra las seniales continuas
+ con un capacitor formando un pasa altos que posee una frecuencia de corte
+ muy pequenia; y el filtro BW dismunuye el ancho de banda atenuando las
+ altas frecuancias mediante un filtro pasa bajo, la combinación de ambos
+ actuan como el pasa banda representado en la figura 1.
+\end_layout
+
+\end_body
+\end_document

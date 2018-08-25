@@ -1,0 +1,520 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Análisis de circuito RC
+\end_layout
+
+\begin_layout Standard
+//imagen de circuito
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.1 Calculo de Frecuencia de Corte
+\end_layout
+
+\begin_layout Standard
+Se armó el circuito de la figura 1 en una protoboard, con valores nominales
+ de 
+\begin_inset Formula $R=3.9k\Omega$
+\end_inset
+
+ y 
+\begin_inset Formula $C=1.8nF$
+\end_inset
+
+.
+ Analíticamente se encontró la función transferencia del mismo, con 
+\begin_inset Formula $V_{out}$
+\end_inset
+
+ en la tension del capacitor y 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ la entrada una senoidal de 
+\begin_inset Formula $5$
+\end_inset
+
+
+\begin_inset Formula $V_{pp}$
+\end_inset
+
+, que resultó ser la siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{1}{sRC+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+con 
+\begin_inset Formula $s=j\omega.$
+\end_inset
+
+ La frecuencia de corte resulta ser aquella en la que se anula el denominador,
+ es decir, cuando 
+\begin_inset Formula $\omega_{c}=\frac{1}{RC}$
+\end_inset
+
+; entonces, teniendo en cuenta que 
+\begin_inset Formula $\omega=2\pi f$
+\end_inset
+
+, se dedujo que la fecuencia de corte esta al rededor de 
+\begin_inset Formula $f_{ccalculado}=22.7kHz$
+\end_inset
+
+.
+ Por otro lado se sabe que cuando el circuito esta en su 
+\begin_inset Formula $f_{c}$
+\end_inset
+
+, la salida 
+\begin_inset Formula $V_{out}$
+\end_inset
+
+ atenúa la entrada 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ en 
+\begin_inset Formula $-3dB$
+\end_inset
+
+; de esta manera se busco experimentalmente su respectiva frecuencia de
+ corte que resulto ser 
+\begin_inset Formula $f_{cmedido}=21.8kHz$
+\end_inset
+
+.
+ Se tuvo en cuenta la resistencia interna del generador (50
+\begin_inset Formula $\Omega$
+\end_inset
+
+), y se la sumó a la 
+\begin_inset Formula $R_{teorica}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+A continuación, sabiendo que 
+\begin_inset Formula $C_{cal}\text{=}\frac{1}{2\pi fR}$
+\end_inset
+
+ se completó la siguiente tabla:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $|V_{in}|[V]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $|V_{out}|[V]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R[k\varOmega]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{calculado}[nF]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C_{medido}[nF]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Error\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.97
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.46
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.95
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.775
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.848
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.11
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.97
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.46
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.93
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.784
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.858
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.98
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tensiones y valores de componentes del circuito 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.2 
+\end_layout
+
+\begin_layout Standard
+Para el calculo de la corriente se utilizo 
+\begin_inset Formula $I=\frac{V_{R}}{R}$
+\end_inset
+
+, asumiendo que la tension y la resistencia estan en fase.
+ Seleccionando una frecuencia representativa y con el uso de la opcion math
+ del osciloscopio midiendo la fase y amplitudes de las señales, se le resto
+ a la tension de entrada la caida de tension en el capacitor vectorialmente,
+ obteniendo asi la tension en la resistencia y su respectiva fase.
+ De estamanera se obtuvo las tensiones 
+\begin_inset Formula $|V_{R}|=3.51V$
+\end_inset
+
+ y 
+\begin_inset Formula $|V_{c}|=3.48V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+//Insertar imagen 1.2 y 1.2b
+\end_layout
+
+\begin_layout Standard
+De la figura 2 observamos que la corriente se adelanta a la tension del
+ capacitor 
+\begin_inset Formula $90^{o}$
+\end_inset
+
+.
+ Ademas, la suma fasorial de VR y Vc es de 4.97V en vez de los 5V, esto es
+ puede ser por la resistencia del generador que aun siendo pequeña genera
+ una caida de tension en el circuito.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.3
+\end_layout
+
+\begin_layout Standard
+//insertar imagen 1.3a y b
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.4
+\end_layout
+
+\begin_layout Standard
+//Insertar imagen 1.4a y b
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.6
+\end_layout
+
+\begin_layout Standard
+//imagenes de /Drive/datos/RC
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.7
+\end_layout
+
+\begin_layout Standard
+//imagen1.7
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.8
+\end_layout
+
+\begin_layout Standard
+//imagenes 1.8
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+1.9 Conclusiones
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
