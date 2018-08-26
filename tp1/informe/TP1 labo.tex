@@ -1,66 +1,74 @@
 \input{./preamble.tex}
 
 \begin{document}
+\onehalfspacing
 
 \input{caratula.tex}
 
 \section{Análisis de circuito RC}
 
-//imagen de circuito
+Se armó el circuito de la figura inferior con los valores nominales de $R=3.9k\Omega$ y $C=1.8nF$.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{rcCircuito.png}
+\caption{Circuito RC armado.}
+\label{fig:RC}
+\end{figure}
+
+\vspace{5mm}
+Con $V_{out}$ la tensión del capacitor y $V_{in}$ como la tensión de entrada que fue una senoidal de $5~V_{pp}$, se halló analíticamente la función transferencia, que resultó ser:
+
+\begin{center}
+\begin{equation}
+H(s)=\frac{1}{sRC+1}
+\end{equation}
+\end{center}
+
+siendo $s=j\omega.$
+
 
 \subsection{Cálculo de Frecuencia de Corte}
 
-Se armó el circuito de la figura 1 en una protoboard, con valores
-nominales de $R=3.9k\Omega$ y $C=1.8nF$. Analíticamente se encontró
-la función transferencia del mismo, con $V_{out}$ en la tensión del
-capacitor y $V_{in}$ la entrada una senoidal de $5$$V_{pp}$, que
-resultó ser la siguiente:
+La frecuencia de corte resulta ser el polo de la función, es decir, cuando $\omega_c=\frac{1}{RC}$;
+entonces, teniendo en cuenta que $\omega=2\pi f$, se dedujo que la frecuencia de corte es $f_{ccalculado}=22.7kHz$. 
+Por otro lado se sabe que la frecuencia de corte es aquella en la que la salida
+$V_{out}$ atenúa la entrada $V_{in}$ en $-3dB$ y la primera desfasa a la segunda en $45^0$; de esta manera
+se buscó experimentalmente su respectiva frecuencia de corte que resultó ser $f_{cmedido}=21.8kHz$. Se tuvo en cuenta la resistencia interna
+del generador ($50\Omega$), y se la sumó a la $R_{teorica}$ .
 
-\[
-H(s)=\frac{1}{sRC+1}
-\]
+A continuación, sabiendo que $C_{cal}\text{=}\frac{1}{2\pi fR}$ se completó la siguiente tabla:
 
-con $s=j\omega.$ La frecuencia de corte resulta ser el polo de la función, es decir, cuando $\omega_{c}=\frac{1}{RC}$;
-entonces, teniendo en cuenta que $\omega=2\pi f$, se dedujo que la
-frecuencia de corte es $f_{ccalculado}=22.7kHz$. Por
-otro lado se sabe que cuando el circuito está en su $f_{c}$, la salida
-$V_{out}$ atenúa la entrada $V_{in}$ en $-3dB$; de esta manera
-se buscó experimentalmente su respectiva frecuencia de corte que resultó
-ser $f_{cmedido}=21.8kHz$. Se tuvo en cuenta la resistencia interna
-del generador (50$\Omega$), y se la sumó a la $R_{teorica}$ .
-
-A continuación, sabiendo que $C_{cal}\text{=}\frac{1}{2\pi fR}$ se
-completó la siguiente tabla:
-
-\begin{table}
-\begin{center}
+\begin{table}[!htb]
+\centering
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline 
-$|V_{in}|[V]$ & $|V_{out}|[V]$ & $R[k\varOmega]$ & $C_{calculado}[nF]$ & $C_{medido}[nF]$ & $Error\%$\tabularnewline
+$|V_{in}|[V]$ & $|V_{out}|[V]$ & $R[k\Omega]$ & $C_{calculado}[nF]$ & $C_{medido}[nF]$ & $Error\%$\\
 \hline 
 \hline 
-4.97 & 3.46 & 3.95 & 1.775 & 1.848 & 4.11\tabularnewline
+4.97 & 3.46 & 3.95 & 1.775 & 1.848 & 3.95\\
 \hline 
-4.97 & 3.46 & 3.93 & 1.784 & 1.858 & 3.98\tabularnewline
+4.97 & 3.46 & 3.93 & 1.784 & 1.848 & 3.46\\
 \hline 
 \end{tabular}
-\par\end{center}
-\caption{Tensiones y valores de componentes del circuito }
+\caption{Tensiones y valores de componentes del circuito.}
 \end{table}
 
-\textbf{1.2 }
+\subsection{Medición de ángulo de fase entre I y $V_C$}
 
-Para el calculo de la corriente se utilizo $I=\frac{V_{R}}{R}$, asumiendo
-que la tension y la resistencia estan en fase. Seleccionando una frecuencia
-representativa y con el uso de la opcion math del osciloscopio midiendo
-la fase y amplitudes de las señales, se le resto a la tension de entrada
-la caida de tension en el capacitor vectorialmente, obteniendo asi
-la tension en la resistencia y su respectiva fase. De estamanera se
-obtuvo las tensiones $|V_{R}|=3.51V$ y $|V_{c}|=3.48V$
+Para el cálculo de la corriente se utilizó $I=\frac{V_{R}}{R}$, asumiendo que la tensión y la corriente de la resistencia estaban en fase. 
+Luego con el uso de la opción math del osciloscopio, se restó la caída en el capacitor a la tensión de entrada y se midieron las fases y amplitudes de las mismas, siendo la resultante de la resta $V_R$. Una vez que se obtuvo, se la dividió por el valor de la resistencia, obteniendo así, el valor vectorial de la corriente.
+De esta manera se obtuvo que $|V_{R}|=3.51V$ y $|V_{c}|=3.48V$.
 
-//Insertar imagen 1.2 y 1.2b
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{1-2.png}
+\includegraphics[scale=0.5]{1-2b.png}
+\caption{Diagrama fasorial y representación de las señales VR y VC.}
+\label{diagfasorial}
+\end{figure}
 
-De la figura 2 observamos que la corriente se adelanta a la tension
+
+De la figura \ref{diagfasorial} observamos que la corriente se adelanta a la tension
 del capacitor $90^{o}$. Ademas, la suma fasorial de VR y Vc es de
 4.97V en vez de los 5V, esto es puede ser por la resistencia del generador
 que aun siendo pequeña genera una caida de tension en el circuito.
