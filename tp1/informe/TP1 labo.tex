@@ -15,24 +15,9 @@ Se armó el circuito de la figura inferior con los valores nominales de $R=3.9k\
 \label{fig:RC}
 \end{figure}
 
-\vspace{5mm}
-Con $V_{out}$ la tensión del capacitor y $V_{in}$ como la tensión de entrada que fue una senoidal de $5~V_{pp}$, se halló analíticamente la función transferencia, que resultó ser:
-
-\begin{center}
-\begin{equation}
-H(s)=\frac{1}{sRC+1}
-\end{equation}
-\end{center}
-
-siendo $s=j\omega.$
-
-
 \subsection{Cálculo de Frecuencia de Corte}
 
-La frecuencia de corte resulta ser el polo de la función, es decir, cuando $\omega_c=\frac{1}{RC}$;
-entonces, teniendo en cuenta que $\omega=2\pi f$, se dedujo que la frecuencia de corte es $f_{ccalculado}=22.7kHz$. 
-Por otro lado se sabe que la frecuencia de corte es aquella en la que la salida
-$V_{out}$ atenúa la entrada $V_{in}$ en $-3dB$ y la primera desfasa a la segunda en $45^0$; de esta manera
+La frecuencia de corte es aquella en la que la salida $V_{out}$ atenúa la entrada $V_{in}$ en $-3dB$ y la primera desfasa a la segunda en $45^o$; de esta manera
 se buscó experimentalmente su respectiva frecuencia de corte que resultó ser $f_{cmedido}=21.8kHz$. Se tuvo en cuenta la resistencia interna
 del generador ($50\Omega$), y se la sumó a la $R_{teorica}$ .
 
@@ -68,33 +53,115 @@ De esta manera se obtuvo que $|V_{R}|=3.51V$ y $|V_{c}|=3.48V$.
 \end{figure}
 
 
-De la figura \ref{diagfasorial} observamos que la corriente se adelanta a la tension
-del capacitor $90^{o}$. Ademas, la suma fasorial de VR y Vc es de
-4.97V en vez de los 5V, esto es puede ser por la resistencia del generador
-que aun siendo pequeña genera una caida de tension en el circuito.
+De la figura \ref{diagfasorial} observamos que la corriente se adelanta a la tensión del capacitor $90^{o}$. Ademas, la suma fasorial de $V_R$ y $V_C$ es de 4.97V en vez de los 5V, esto puede ser por la resistencia del generador que aún siendo pequeña genera una caída de tensión en el circuito.
 
-\textbf{1.3}
+\subsection{Cálculo analítico de la función transferencia}
 
-//insertar imagen 1.3a y b
+Teniendo en cuenta la fiugra \ref{RC}; con $V_{out}$ la tensión del capacitor y $V_{in}$ como la tensión de entrada que fue una senoidal de $5~V_{pp}$, se halló analíticamente la función transferencia planteando un divisor resistivo, que resultó ser:
 
-\textbf{1.4}
+\begin{center}
+\begin{equation}
+\label{transf}
+H(s)=\frac{1}{sRC+1}
+\end{equation}
+\end{center}
 
-//Insertar imagen 1.4a y b
+siendo $s=j\omega$ y $R=R_{medida} + R_{generador}$.
 
-\textbf{1.6}
+La frecuencia de corte resulta ser el polo de la función, es decir, cuando 
+$\omega_c=\frac{1}{RC}$. Entonces, teniendo en cuenta que $\omega=2\pi f$, se deduce que la frecuencia de corte es $f_{ccalculado}=22.75kHz$. 
+Se puede ver que la función obtenida es un pasabajos con un polo simple en $\frac{1}{2\pi RC}$.
+Se diagramó el Bode de magnitud y fase, que se muestra a continuación.
 
-//imagenes de /Drive/datos/RC
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+\includegraphics[scale=0.45]{1-3a.png}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+\includegraphics[scale=0.45]{1-3b.png}
+\end{minipage}
+\caption{Bode de magnitud y fase para los valores medidos de R y C.}
+\label{diagbodemedido}
+\end{figure}
 
-\textbf{1.7}
 
-//imagen1.7
+En la figura \ref{diagbodemedido} puede verse que la frecuencia en la que la ganancia del circuito es $-3dB$ y el desfase es de $45^o$ es la frecuencia de corte, que ronda los 22.7kHz.
+
+\subsection{Función transferencia a distintas frecuencias}
+
+Se midieron valores de tensión y fase a distintas frecuencias entre 10Hz y 1MHz, completando la siguiente tabla. Donde el ángulo $\varphi_1$ fue medido en el modo $\Delta t$ del osciloscopio; y el ángulo $\varphi_2$, en el modo XY del osciloscopio.
+//VALOR DE TENSION? 
+La diferencia entre ambos $\varphi$ se debe a errores de apreciación al medir y de cálculo al realizar $\arcsin(\frac{\Delta X}{\Delta Y})$, siendo $\Delta X$ el ancho mínimo entre 2 extremos de la elipse y $\Delta Y$ el ancho máximo entre dos de ellos. 
+
+\label{tablabode}
+
+\subsection{Bode teórico y empírico}
+Se graficó lo obtenido de la tabla \ref{tablabode} y se lo superpuso con el diagrama de Bode teórico de la función transferencia (ecuación \ref{transf}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{1-4a.png}
+\includegraphics[scale=0.5]{1-4b.png}
+\caption{Bode de magnitud y fase medido y teórico.}
+\label{diagbode}
+\end{figure}
+
+Se puede observar que para el diagrama de amplitud las mediciones a distintas frecuencias se corresponden a lo calculado teóricamente. En el diagrama de fase, las variaciones se deben a errores de medición y en el rango de frecuencias altas, donde la señal es atenuada, se encuentra un mayor error ya que el ruido se hace comparable con la magnitud de la señal.
+
+\subsection{Respuesta al escalón}
+
+Se excitó al circuito con una señal cuadrada de $5~V_{pp}$ en un rango de frecuencias entre $500Hz$ y $500kHz$. Se destacaron las frecuencias $1kHz$, $15kHz$ y $200kHz$. Las mismas se muestran a continuación.
+
+\begin{figure}[H]
+\centering
+\subfloat[Frecuencia 1kHz.]{\includegraphics[scale=0.35]{1ka.png} }%
+\qquad
+\subfloat[Frecuencia 15kHz.]{{\includegraphics[scale=0.35]{15ka.png} }}%
+\qquad
+\subfloat[Frecuencia 200kHz.]{{\includegraphics[scale=0.35]{200ka.png} }}%
+\caption{Respuesta al escalón.}
+\label{diagbodemedido}
+\end{figure}
+
+Si antitransformamos la función transferencia para obtener la respuesta en el tiempo, ésta resulta:
+\begin{center}
+\begin{equation}
+\label{transf}
+h(t)=\frac{e^{\frac{-t}{RC}}}{RC}
+\end{equation}
+\end{center}
+
+Su respectiva respuesta al escalón será:
+\begin{center}
+\begin{equation}
+\label{transf}
+\widetilde{h}(t)=1 - e^{-\frac{t}{\tau}}
+\end{equation}
+\end{center}
+
+con $\tau=RC$.
+Cuando la frecuencia es de $1kHz$; como se ve en la figura \ref{diagbodemedido} $(a)$, debido a la baja frecuencia, el circuito logra llegar a un estado estacionario en lo que dura el período de la excitación cuadrada. Esto se debe a que el tiempo característico del circuito $\tau=RC=6.84\mu s$, que es mucho menor al período de la señal de entrada $T=1ms$.
+Al excitar el circuito con una frecuencia de $15kHz$, cuyo período es de $ T\approx 66.67\mu s$, que ya es comparable con el tiempo característico del circuito, se llega a apreciar el estado transitorio del mismo. Esto se puede apreciar en la figura \ref{diagbodemedido} $(b)$.
+En el último caso, en la figura \ref{diagbodemedido} $(c)$, con una frecuencia de $200kHz$, no se llega al estado estacionario, sino que se observa una fracción del transitorio, que se debe a que el período de la excitación cuadrada se vuelve menor al tiempo característico del circuito $(T\approx 5\mu s)$. Lo que se está viendo es la pendiente de la exponencial, que se asemeja con una recta.
+Se puede notar que a frecuencias mucho mayores a su frecuencia de corte, la función transferencia puede aproximarse a $H(s)=\frac{1}{sRC}$, que es la transferencia de un circuito integrador. De este análisis se deriva, que a altas frecuencias el circuito integra.
+
+\subsection{Respuesta en frecuencia de VR}
+
+
+
 
 \textbf{1.8}
-
+//1.7
 //imagenes 1.8
 
 \textbf{1.9 Conclusiones}
 
+<<<<<<< HEAD
+De esto se concluye, de ahí que a altas frecuencias el circuito integra.
+
+\section{parte2}
+=======
 
 
 \section{Analisis Circuito CR}
@@ -184,6 +251,7 @@ En la grafica el $V_R$ no es
 
 
 
+>>>>>>> 90e60842c18f4bfcd674f06bb288a364d338db0a
 
 \section{Respuesta en frecuencia con barrido automático}
 
