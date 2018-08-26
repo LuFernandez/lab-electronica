@@ -15,24 +15,9 @@ Se armó el circuito de la figura inferior con los valores nominales de $R=3.9k\
 \label{fig:RC}
 \end{figure}
 
-\vspace{5mm}
-Con $V_{out}$ la tensión del capacitor y $V_{in}$ como la tensión de entrada que fue una senoidal de $5~V_{pp}$, se halló analíticamente la función transferencia, que resultó ser:
-
-\begin{center}
-\begin{equation}
-H(s)=\frac{1}{sRC+1}
-\end{equation}
-\end{center}
-
-siendo $s=j\omega.$
-
-
 \subsection{Cálculo de Frecuencia de Corte}
 
-La frecuencia de corte resulta ser el polo de la función, es decir, cuando $\omega_c=\frac{1}{RC}$;
-entonces, teniendo en cuenta que $\omega=2\pi f$, se dedujo que la frecuencia de corte es $f_{ccalculado}=22.7kHz$. 
-Por otro lado se sabe que la frecuencia de corte es aquella en la que la salida
-$V_{out}$ atenúa la entrada $V_{in}$ en $-3dB$ y la primera desfasa a la segunda en $45^0$; de esta manera
+La frecuencia de corte es aquella en la que la salida $V_{out}$ atenúa la entrada $V_{in}$ en $-3dB$ y la primera desfasa a la segunda en $45^o$; de esta manera
 se buscó experimentalmente su respectiva frecuencia de corte que resultó ser $f_{cmedido}=21.8kHz$. Se tuvo en cuenta la resistencia interna
 del generador ($50\Omega$), y se la sumó a la $R_{teorica}$ .
 
@@ -68,29 +53,77 @@ De esta manera se obtuvo que $|V_{R}|=3.51V$ y $|V_{c}|=3.48V$.
 \end{figure}
 
 
-De la figura \ref{diagfasorial} observamos que la corriente se adelanta a la tension
-del capacitor $90^{o}$. Ademas, la suma fasorial de VR y Vc es de
-4.97V en vez de los 5V, esto es puede ser por la resistencia del generador
-que aun siendo pequeña genera una caida de tension en el circuito.
+De la figura \ref{diagfasorial} observamos que la corriente se adelanta a la tensión del capacitor $90^{o}$. Ademas, la suma fasorial de $V_R$ y $V_C$ es de 4.97V en vez de los 5V, esto puede ser por la resistencia del generador que aún siendo pequeña genera una caída de tensión en el circuito.
 
-\textbf{1.3}
+\subsection{Cálculo analítico de la función transferencia}
 
-//insertar imagen 1.3a y b
+Teniendo en cuenta la fiugra \ref{RC}; con $V_{out}$ la tensión del capacitor y $V_{in}$ como la tensión de entrada que fue una senoidal de $5~V_{pp}$, se halló analíticamente la función transferencia planteando un divisor resistivo, que resultó ser:
 
-\textbf{1.4}
+\begin{center}
+\begin{equation}
+\label{transf}
+H(s)=\frac{1}{sRC+1}
+\end{equation}
+\end{center}
 
-//Insertar imagen 1.4a y b
+siendo $s=j\omega$ y $R=R_{medida} + R_{generador}$.
 
-\textbf{1.6}
+La frecuencia de corte resulta ser el polo de la función, es decir, cuando 
+$\omega_c=\frac{1}{RC}$. Entonces, teniendo en cuenta que $\omega=2\pi f$, se deduce que la frecuencia de corte es $f_{ccalculado}=22.75kHz$. 
+Se puede ver que la función obtenida es un pasabajos con un polo simple en $\frac{1}{2\pi RC}$.
+Se diagramó el Bode de magnitud y fase, que se muestra a continuación.
 
-//imagenes de /Drive/datos/RC
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+\includegraphics[scale=0.45]{1-3a.png}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+\includegraphics[scale=0.45]{1-3b.png}
+\end{minipage}
+\caption{Bode de magnitud y fase para los valores medidos de R y C.}
+\label{diagbodemedido}
+\end{figure}
 
-\textbf{1.7}
 
-//imagen1.7
+En la figura \ref{diagbodemedido} puede verse que la frecuencia en la que la ganancia del circuito es $-3dB$ y el desfase es de $45^o$ es la frecuencia de corte, que ronda los 22.7kHz.
+
+\subsection{Función transferencia a distintas frecuencias}
+
+Se midieron valores de tensión y fase a distintas frecuencias entre 10Hz y 1MHz, completando la siguiente tabla. Donde el ángulo $\varphi_1$ fue medido en el modo $\Delta t$ del osciloscopio; y el ángulo $\varphi_2$, en el modo XY del osciloscopio.
+//VALOR DE TENSION? 
+La diferencia entre ambos $\varphi$ se debe a errores de apreciación al medir y de cálculo al realizar $\arcsin(\frac{\Delta X}{\Delta Y})$, siendo $\Delta X$ el ancho mínimo entre 2 extremos de la elipse y $\Delta Y$ el ancho máximo entre dos de ellos. 
+
+\label{tablabode}
+
+\subsection{Bode teórico y empírico}
+Se graficó lo obtenido de la tabla \ref{tablabode} y se lo superpuso con el diagrama de Bode teórico de la función transferencia (ecuación \ref{transf}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{1-4a.png}
+\includegraphics[scale=0.5]{1-4b.png}
+\caption{Bode de magnitud y fase medido y teórico.}
+\label{diagbode}
+\end{figure}
+
+Se puede observar que para el diagrama de amplitud las mediciones a distintas frecuencias se corresponden a lo calculado teóricamente. En el diagrama de fase, las variaciones se deben a errores de medición y en el rango de frecuencias altas, donde la señal es atenuada. se encuentra un mayor error ya que el ruido se hace comparable con las mediciones.
+
+\subsection{Respuesta al escalón}
+
+\begin{figure}[H]
+\centering
+\subfloat[Frecuencia 1kHz.]{\includegraphics[scale=0.35]{1ka.png} }%
+\qquad
+\subfloat[Frecuencia 15kHz.]{{\includegraphics[scale=0.35]{15ka.png} }}%
+\qquad
+\subfloat[Frecuencia 200kHz.]{{\includegraphics[scale=0.35]{200ka.png} }}%
+\caption{Respuesta al escalón.}
+\label{diagbodemedido}
+\end{figure}
 
 \textbf{1.8}
-
+//1.7
 //imagenes 1.8
 
 \textbf{1.9 Conclusiones}
