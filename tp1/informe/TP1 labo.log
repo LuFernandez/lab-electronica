@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6670) (preloaded format=pdflatex 2018.4.17)  25 AUG 2018 23:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6670) (preloaded format=pdflatex 2018.4.17)  26 AUG 2018 13:11
 entering extended mode
 **"./TP1 labo.tex"
 ("TP1 labo.tex"
@@ -1147,8 +1147,26 @@ s
 \f@nch@O@erf=\skip68
 \f@nch@O@olf=\skip69
 \f@nch@O@orf=\skip70
-))
-No file "TP1 labo".aux.
+)) ("TP1 labo.aux"
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+
+
+LaTeX Warning: Label `diagbodemedido' multiply defined.
+
+
+LaTeX Warning: Label `transf' multiply defined.
+
+
+LaTeX Warning: Label `transf' multiply defined.
+
+
+LaTeX Warning: Label `fig:CR' multiply defined.
+
+
+LaTeX Warning: Label `fig:CR' multiply defined.
+
+)
 \openout1 = `"TP1 labo.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -1165,21 +1183,22 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 3.
 LaTeX Font Info:    Try loading font information for FML+futm on input line 3.
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd"
+ ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd
+"
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 3.
 LaTeX Font Info:    Try loading font information for FMS+futm on input line 3.
- ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmsfutm.fd
-"
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmsfutm.fd"
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 3.
 LaTeX Font Info:    Try loading font information for FMX+futm on input line 3.
-
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmxfutm.fd"
+ ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmxfutm.fd
+"
 File: fmxfutm.fd futm-extension
 )
 LaTeX Font Info:    ... okay on input line 3.
@@ -1190,8 +1209,7 @@ File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Try loading font information for T1+futs on input line 3.
-
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\t1futs.fd"
+ ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\t1futs.fd"
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
 LaTeX Info: Redefining \. on input line 3.
@@ -1410,15 +1428,6 @@ Package pdftex.def Info: 1-2b.png  used on input line 50.
 (pdftex.def)             Requested size: 444.9111pt x 129.85983pt.
 
 [1 <./rcCircuito.png>]
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 56.
-
-
-LaTeX Warning: Reference `diagfasorial' on page 2 undefined on input line 56.
-
-
-LaTeX Warning: Reference `fig:RC' on page 2 undefined on input line 60.
-
 <1-3a.png, id=20, 526.96875pt x 395.22656pt>
 File: 1-3a.png Graphic file (type png)
 <use 1-3a.png>
@@ -1429,110 +1438,107 @@ File: 1-3b.png Graphic file (type png)
 <use 1-3b.png>
 Package pdftex.def Info: 1-3b.png  used on input line 82.
 (pdftex.def)             Requested size: 237.13374pt x 177.8503pt.
-[2 <./1-2.png (PNG copy)> <./1-2b.png (PNG copy)>]
-
-LaTeX Warning: Reference `diagbodemedido' on page 3 undefined on input line 89.
-
-
-
-LaTeX Warning: Reference `tablabode' on page 3 undefined on input line 100.
-
-
-LaTeX Warning: Reference `transf' on page 3 undefined on input line 100.
-
+ [2 <./1-2.png (PNG copy)> <./1-2b.png (PNG copy)>]
 <1-4a.png, id=25, 889.82437pt x 395.22656pt>
 File: 1-4a.png Graphic file (type png)
 <use 1-4a.png>
-Package pdftex.def Info: 1-4a.png  used on input line 104.
+Package pdftex.def Info: 1-4a.png  used on input line 140.
 (pdftex.def)             Requested size: 355.92345pt x 158.08781pt.
 <1-4b.png, id=26, 526.96875pt x 395.22656pt>
 File: 1-4b.png Graphic file (type png)
 <use 1-4b.png>
-Package pdftex.def Info: 1-4b.png  used on input line 105.
+Package pdftex.def Info: 1-4b.png  used on input line 141.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
+
 [3 <./1-3a.png (PNG copy)> <./1-3b.png (PNG copy)>]
-<1ka.png, id=30, 393.72093pt x 402.00188pt>
+Overfull \vbox (107.57295pt too high) has occurred while \output is active []
+
+
+[4 <./1-4a.png (PNG copy)> <./1-4b.png (PNG copy)>]
+<1ka.png, id=33, 393.72093pt x 402.00188pt>
 File: 1ka.png Graphic file (type png)
 <use 1ka.png>
-Package pdftex.def Info: 1ka.png  used on input line 118.
+Package pdftex.def Info: 1ka.png  used on input line 154.
 (pdftex.def)             Requested size: 137.80438pt x 140.70276pt.
-<15ka.png, id=31, 395.22656pt x 398.99063pt>
+<15ka.png, id=34, 395.22656pt x 398.99063pt>
 File: 15ka.png Graphic file (type png)
 <use 15ka.png>
-Package pdftex.def Info: 15ka.png  used on input line 120.
+Package pdftex.def Info: 15ka.png  used on input line 156.
 (pdftex.def)             Requested size: 138.33136pt x 139.6488pt.
-<200ka.png, id=32, 389.20406pt x 402.00188pt>
+<200ka.png, id=35, 389.20406pt x 402.00188pt>
 File: 200ka.png Graphic file (type png)
 <use 200ka.png>
-Package pdftex.def Info: 200ka.png  used on input line 122.
+Package pdftex.def Info: 200ka.png  used on input line 158.
 (pdftex.def)             Requested size: 136.22345pt x 140.70276pt.
- [4 <./1-4a.png (PNG copy)> <./1-4b.png (PNG copy)>]
+ [5 <./1ka.png> <./15ka.png> <./200ka.png>]
+<1-7.png, id=40, 526.96875pt x 395.22656pt>
+File: 1-7.png Graphic file (type png)
+<use 1-7.png>
+Package pdftex.def Info: 1-7.png  used on input line 191.
+(pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 210.
 
-LaTeX Warning: Reference `diagbodemedido' on page 5 undefined on input line 144
-.
 
+LaTeX Warning: Reference `tablaOsc' on page 6 undefined on input line 210.
 
-LaTeX Warning: Reference `diagbodemedido' on page 5 undefined on input line 145
-.
-
-
-LaTeX Warning: Reference `diagbodemedido' on page 5 undefined on input line 146
-.
-
-<crCircuito.png, id=36, 207.77625pt x 145.7445pt>
+<1-8a.png, id=41, 526.96875pt x 395.22656pt>
+File: 1-8a.png Graphic file (type png)
+<use 1-8a.png>
+Package pdftex.def Info: 1-8a.png  used on input line 215.
+(pdftex.def)             Requested size: 237.13374pt x 177.8503pt.
+<1-8b.png, id=43, 526.96875pt x 395.22656pt>
+File: 1-8b.png Graphic file (type png)
+<use 1-8b.png>
+Package pdftex.def Info: 1-8b.png  used on input line 218.
+(pdftex.def)             Requested size: 237.13374pt x 177.8503pt.
+[6 <./1-7.png (PNG copy)>]
+<crCircuito.png, id=48, 207.77625pt x 145.7445pt>
 File: crCircuito.png Graphic file (type png)
 <use crCircuito.png>
-Package pdftex.def Info: crCircuito.png  used on input line 172.
+Package pdftex.def Info: crCircuito.png  used on input line 254.
 (pdftex.def)             Requested size: 103.88786pt x 72.87207pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[5 <./1ka.png> <./15ka.png> <./200ka.png>]
-<2teomag.png, id=42, 526.96875pt x 395.22656pt>
+ [7 <./1-8a.png> <./1-8b.png> <./crCircuito.png>]
+<2teomag.png, id=55, 526.96875pt x 395.22656pt>
 File: 2teomag.png Graphic file (type png)
 <use 2teomag.png>
-Package pdftex.def Info: 2teomag.png  used on input line 186.
+Package pdftex.def Info: 2teomag.png  used on input line 268.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
-<2teofase.png, id=43, 526.96875pt x 395.22656pt>
+<2teofase.png, id=56, 526.96875pt x 395.22656pt>
 File: 2teofase.png Graphic file (type png)
 <use 2teofase.png>
-Package pdftex.def Info: 2teofase.png  used on input line 187.
+Package pdftex.def Info: 2teofase.png  used on input line 269.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
- [6 <./crCircuito.png> <./2teomag.png (PNG copy)> <./2teofase.png (PNG copy)>]
-<2Compmag.png, id=49, 526.96875pt x 395.22656pt>
+<2Compmag.png, id=57, 526.96875pt x 395.22656pt>
 File: 2Compmag.png Graphic file (type png)
 <use 2Compmag.png>
-Package pdftex.def Info: 2Compmag.png  used on input line 242.
+Package pdftex.def Info: 2Compmag.png  used on input line 324.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
-<2Compfase.png, id=50, 526.96875pt x 395.22656pt>
+<2Compfase.png, id=58, 526.96875pt x 395.22656pt>
 File: 2Compfase.png Graphic file (type png)
 <use 2Compfase.png>
-Package pdftex.def Info: 2Compfase.png  used on input line 243.
+Package pdftex.def Info: 2Compfase.png  used on input line 325.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7] [8 <./2Compmag.png (PNG copy)> <./2Compfase.png (PNG copy)>]
-<./scope_24.png, id=57, 1027.84pt x 825.0825pt>
+[8 <./2teomag.png (PNG copy)> <./2teofase.png (PNG copy)>] [9]
+<./scope_24.png, id=65, 1027.84pt x 825.0825pt>
 File: ./scope_24.png Graphic file (type png)
 <use ./scope_24.png>
-Package pdftex.def Info: ./scope_24.png  used on input line 291.
+Package pdftex.def Info: ./scope_24.png  used on input line 373.
 (pdftex.def)             Requested size: 1027.8375pt x 825.08049pt.
 
-Overfull \hbox (538.45007pt too wide) in paragraph at lines 291--291
+Overfull \hbox (538.45007pt too wide) in paragraph at lines 373--373
  [][] 
  []
 
-[9]
+[10 <./2Compmag.png (PNG copy)> <./2Compfase.png (PNG copy)>] [11]
 Overfull \vbox (175.59544pt too high) has occurred while \output is active []
 
 
-[10 <./scope_24.png (PNG copy)>]
-
-LaTeX Warning: Reference `rtaosc' on page 11 undefined on input line 322.
-
-[11] ("TP1 labo.aux"
+[12 <./scope_24.png (PNG copy)>] [13] ("TP1 labo.aux"
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 )
@@ -1543,17 +1549,17 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19291 strings out of 492976
- 354575 string characters out of 3127194
- 450349 words of memory out of 3000000
- 22486 multiletter control sequences out of 15000+200000
- 132538 words of font info for 238 fonts, out of 3000000 for 9000
+ 19328 strings out of 492976
+ 355022 string characters out of 3127194
+ 451500 words of memory out of 3000000
+ 22502 multiletter control sequences out of 15000+200000
+ 133618 words of font info for 250 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,54p,444b,421s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,12n,54p,547b,421s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fou
 rier-mex.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
@@ -1563,9 +1569,9 @@ KTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/user/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/user/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/user/A
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on "TP1 labo.pdf" (12 pages, 429589 bytes).
+Output written on "TP1 labo.pdf" (14 pages, 505442 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
+ 103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41053 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 41068 words of extra memory for PDF output out of 42996 (max. 10000000)
 
