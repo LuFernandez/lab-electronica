@@ -57,7 +57,7 @@ De la figura \ref{diagfasorial} observamos que la corriente se adelanta a la ten
 
 \subsection{Cálculo analítico de la función transferencia}
 
-Teniendo en cuenta la fiugra \ref{RC}; con $V_{out}$ la tensión del capacitor y $V_{in}$ como la tensión de entrada que fue una senoidal de $5~V_{pp}$, se halló analíticamente la función transferencia planteando un divisor resistivo, que resultó ser:
+Teniendo en cuenta la figura \ref{fig:RC}; con $V_{out}$ la tensión del capacitor y $V_{in}$ como la tensión de entrada que fue una senoidal de $5~V_{pp}$, se halló analíticamente la función transferencia planteando un divisor resistivo, que resultó ser:
 
 \begin{center}
 \begin{equation}
@@ -157,11 +157,10 @@ Se puede notar que a frecuencias mucho mayores a su frecuencia de corte, la func
 
 \textbf{1.9 Conclusiones}
 
-<<<<<<< HEAD
+
 De esto se concluye, de ahí que a altas frecuencias el circuito integra.
 
 \section{parte2}
-=======
 
 
 \section{Analisis Circuito CR}
@@ -251,49 +250,36 @@ En la grafica el $V_R$ no es
 
 
 
->>>>>>> 90e60842c18f4bfcd674f06bb288a364d338db0a
+
 
 \section{Respuesta en frecuencia con barrido automático}
 
 \subsection{Modo normal del osciloscopio}
 
-El barrido automático se realizó con el generador en donde se barrió
-de 100Hz a 2MHz en un lapso de 100 mili segundos con una senoidal
-de 20 $V_{pp}$. El output del generador se utilizó para excitar al
-circuito RC y se conectó el sync al osciloscopio para poder triggerear
-la señal, además se aprovechó el marker del sweep del generador para
-que la cuadrada entregada por el sync tenga un ancho de 22,6KHz para
-que coincida con la frecuencia de corte calculada de nuestro circuito.
-Cabe mencionar que el barrido automático estaba configurado en escala
-logaritmica. Se obtuvó la siguiente imagen:
+El barrido automático se realizó con el generador en donde se barrió de 100Hz a 2MHz en un lapso de 100ms con una senoidal
+de 20 $V_{pp}$. La salida del generador se utilizó para excitar al circuito RC y se conectó el sync al osciloscopio para poder triggerear la señal, además se aprovechó el marker del sweep del generador para que la señal cuadrada entregada por el sync tenga un ancho de 22,6KHz para que coincida con la frecuencia de corte calculada de nuestro circuito.
+Cabe mencionar que el barrido automático estaba configurado en escala logarítmica. Se obtuvo la siguiente imagen:
 
 \begin{figure}[H]
 \begin{center}
 %\includegraphics[bb = 0 0 200 100, draft, type=eps]{./Respuesta en frecuencia barrido automatico modo normal.png}
 \par\end{center}
-\caption{Respuesta en frecuencia con barrido automatico en modo normal}
+\caption{Respuesta en frecuencia con barrido automático en modo normal}
 \end{figure}
 
-La figura evidencia claramente el efecto del filtro pasa bajos sobre
-el circuito, mientras que la señal amarilla que es la entrada se
-mantiene constante en amplitud a lo largo de todo el barrido, la salida
-que es la senial verde tiene ganancia unitaria en las bajas frecuencias
-y luego se atenua a medida que esta aumenta. La senial cuadrada violeta
-marca la frecuencia de corte del circuito donde se espera una caida
-de 3dB. En veces equivale aproximadamente a una atenuacion de $\sqrt{2},$es
-decir, $V_{0}=\sqrt{2}V_{i}$ y en nuestro caso como $V_{i}$ tiene
-una amplitud de 10 V, $V_{0}$ deberia tener una amplitud aproximada
-de 7,1 V, esto se puede observar claramente en el gráfico.
+La figura evidencia claramente el efecto del filtro pasa bajos sobre el circuito, mientras que la señal amarilla, que es la entrada, se mantiene constante en amplitud a lo largo de todo el barrido. La salida que es la señal verde tiene ganancia unitaria en las bajas frecuencias y luego se atenúa a medida que ésta aumenta. La señal cuadrada violeta
+marca la frecuencia de corte del circuito donde se espera una caída de 3dB. En veces equivale aproximadamente a una atenuación de $\frac{1}{\sqrt{2}},$es
+decir, $V_{out}=\frac{1}{\sqrt{2}}*V_{in}$. En nuestro caso como $V_{in}$ tiene
+una amplitud de 10 V, $V_{out}$ debería tener una amplitud aproximada de 7.1 V, esto se puede observar claramente en el gráfico.
 
 \subsection{Modo XY del osciloscopio}
 
-Se intento de siumular el barrido en el modo XY bajo ciertas características.
-Se colocó un generador realizando un sweep barriendo nuevamente frecuencias
-de $100Hz$ a $2MHz$ esta vez linieal cada $10ms$ con una senoidal
+Se intentó simular el barrido en el modo XY bajo ciertas características.
+Se colocó un generador realizando un sweep barriendo nuevamente frecuencias de $100Hz$ a $2MHz$ esta vez lineal cada $10ms$ con una senoidal
 $20Vpp$ y bajo estas condiciones se lo conectó a la entrada del circuito.
 Luego se sincronizó el trigger del generador de sweep con el flanco
 descendente de la señal del generador 2, en el cual se colocó una
-rampa de $10Vp$ a una periodo de $11ms$ y se la conectó en la entrada
+rampa de $10Vp$ a un período de $11ms$ y se la conectó en la entrada
 X del osciloscopio. Se conectó la salida del circuito a la entrada
 Y del osciloscopio. Por consecuente, tomando en cuenta las consideraciones
 establecidas, se esperaba ver como en el modo XY el eje Y iba a presentar
@@ -316,21 +302,22 @@ barrido en frecuencia.
 
 Para medir la respuesta en frecuencia del osciloscopio se utilizaron
 dos puntas de osciloscopio y un generador, por un lado se conectaron
-ambas puntas con el generador de seniales entre sí y por el otro las
+ambas puntas con el generador de señales entre sí y por el otro las
 masas de estos tres elementos también entre sí. El bode del circuito
 se realizó con los filtros AC y el BW del osciloscopio activados y
 se lo excitó con una senoidal de 10 $V_{pp}$. Los resultados obtenidos
 de las mediciones se graficaron en la siguiente figura:
 \begin{figure}[H]
 \caption{Respuesta en frecuencia del osciloscopio}
+\label{rtaosc}
 \end{figure}
 
 Se puede observar que la forma de la respuesta en frecuencia es la
-de un filtro pasa banda ya que atenua las frecuencias menores a 12Hz
+de un filtro pasa banda ya que atenúa las frecuencias menores a 12Hz
 y las frecuencias mayores a 5MHz. Esto se debe a que el filtro AC
-del osciloscopio filtra las seniales continuas con un capacitor formando
-un pasa altos que posee una frecuencia de corte muy pequenia; y el
-filtro BW dismunuye el ancho de banda atenuando las altas frecuancias
-mediante un filtro pasa bajo, la combinación de ambos actuan como
-el pasa banda representado en la figura 1.
+del osciloscopio filtra las señales continuas con un capacitor formando
+un filtro pasa altos que posee una frecuencia de corte muy pequeña; y el
+filtro BW disminuye el ancho de banda atenuando las altas frecuancias
+mediante un filtro pasabajos, la combinación de ambos actúa como
+el pasa banda representado en la figura \ref{rtaosc}.
 \end{document}
