@@ -107,9 +107,11 @@ Se graficó lo obtenido de la tabla \ref{tablabode} y se lo superpuso con el dia
 \label{diagbode}
 \end{figure}
 
-Se puede observar que para el diagrama de amplitud las mediciones a distintas frecuencias se corresponden a lo calculado teóricamente. En el diagrama de fase, las variaciones se deben a errores de medición y en el rango de frecuencias altas, donde la señal es atenuada. se encuentra un mayor error ya que el ruido se hace comparable con las mediciones.
+Se puede observar que para el diagrama de amplitud las mediciones a distintas frecuencias se corresponden a lo calculado teóricamente. En el diagrama de fase, las variaciones se deben a errores de medición y en el rango de frecuencias altas, donde la señal es atenuada, se encuentra un mayor error ya que el ruido se hace comparable con la magnitud de la señal.
 
 \subsection{Respuesta al escalón}
+
+Se excitó al circuito con una señal cuadrada de $5~V_{pp}$ en un rango de frecuencias entre $500Hz$ y $500kHz$. Se destacaron las frecuencias $1kHz$, $15kHz$ y $200kHz$. Las mismas se muestran a continuación.
 
 \begin{figure}[H]
 \centering
@@ -122,11 +124,40 @@ Se puede observar que para el diagrama de amplitud las mediciones a distintas fr
 \label{diagbodemedido}
 \end{figure}
 
+Si antitransformamos la función transferencia para obtener la respuesta en el tiempo, ésta resulta:
+\begin{center}
+\begin{equation}
+\label{transf}
+h(t)=\frac{e^{\frac{-t}{RC}}}{RC}
+\end{equation}
+\end{center}
+
+Su respectiva respuesta al escalón será:
+\begin{center}
+\begin{equation}
+\label{transf}
+\widetilde{h}(t)=1 - e^{-\frac{t}{\tau}}
+\end{equation}
+\end{center}
+
+con $\tau=RC$.
+Cuando la frecuencia es de $1kHz$; como se ve en la figura \ref{diagbodemedido} $(a)$, debido a la baja frecuencia, el circuito logra llegar a un estado estacionario en lo que dura el período de la excitación cuadrada. Esto se debe a que el tiempo característico del circuito $\tau=RC=6.84\mu s$, que es mucho menor al período de la señal de entrada $T=1ms$.
+Al excitar el circuito con una frecuencia de $15kHz$, cuyo período es de $ T\approx 66.67\mu s$, que ya es comparable con el tiempo característico del circuito, se llega a apreciar el estado transitorio del mismo. Esto se puede apreciar en la figura \ref{diagbodemedido} $(b)$.
+En el último caso, en la figura \ref{diagbodemedido} $(c)$, con una frecuencia de $200kHz$, no se llega al estado estacionario, sino que se observa una fracción del transitorio, que se debe a que el período de la excitación cuadrada se vuelve menor al tiempo característico del circuito $(T\approx 5\mu s)$. Lo que se está viendo es la pendiente de la exponencial, que se asemeja con una recta.
+Se puede notar que a frecuencias mucho mayores a su frecuencia de corte, la función transferencia puede aproximarse a $H(s)=\frac{1}{sRC}$, que es la transferencia de un circuito integrador. De este análisis se deriva, que a altas frecuencias el circuito integra.
+
+\subsection{Respuesta en frecuencia de VR}
+
+
+
+
 \textbf{1.8}
 //1.7
 //imagenes 1.8
 
 \textbf{1.9 Conclusiones}
+
+De esto se concluye, de ahí que a altas frecuencias el circuito integra.
 
 \section{parte2}
 
