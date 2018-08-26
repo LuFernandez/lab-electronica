@@ -157,9 +157,101 @@ Se puede notar que a frecuencias mucho mayores a su frecuencia de corte, la func
 
 \textbf{1.9 Conclusiones}
 
+<<<<<<< HEAD
 De esto se concluye, de ahí que a altas frecuencias el circuito integra.
 
 \section{parte2}
+=======
+
+
+\section{Analisis Circuito CR}
+
+Se armó el circuito de la figura inferior con los componentes anteriores.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{crCircuito.png}
+\caption{Circuito CR armado.}
+\label{fig:CR}
+\end{figure}
+
+
+\subsection{Funcion de Transferencia}
+
+Como la funcion de transferencia en este circuito es $H(s) = \frac{V_R(s)}{V_1}$ y conciderenado la resistencia del generador, la funcion de transferencia resulta ser:
+$$H(s) = \frac{sCR}{\left(R+R_{gen}\right)Cs+1}$$
+Por lo que notamos que a mayor frecuencia la tension del $V_R$ aumenta a mayor frecuencia, por lo que tiene caractestica de un filtro pasa alto. Es posible visualisar este comportamiento en el siguiente diagrama de Bode:
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{2teomag.png}
+\includegraphics[scale=0.5]{2teofase.png}
+\caption{Diagrama de Bode Teorico.}
+\label{fig:CR}
+\end{figure}
+
+\subsection{Tabla de Mediciones}
+
+Exitando el circuito con una onda senoidal de $10~V_{pp}$, obtuvimos los siguientes resultados:
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+f{[}Hz{]}    & $|V_{in}|${[}V{]} & $|V_R|${[}V{]}      & $H(s)=\frac{V_R}{V_{in}} (s)${[}dB{]} & $\phi${[}grados{]} \\ \hline
+1.00E+03  & 10    & 4.80E-01 & -26.6           & 90                  \\ \hline
+5.00E+03  & 10    & 2.28     & -12.9           & 78.52165905         \\ \hline
+1.00E+04  & 10    & 4.15     & -7.6            & 63.75353139         \\ \hline
+1.50E+04  & 10    & 5.55     & -5.1            & 52.27906148         \\ \hline
+1.70E+04  & 10    & 6        & -4.4            & 49.46419789         \\ \hline
+2.00E+04  & 10    & 6.5      & -3.7            & 45.15361072         \\ \hline
+2.05E+04  & 10    & 6.6      & -3.6            & 44.26676315         \\ \hline
+2.10E+04  & 10    & 6.67     & -3.5            & 43.86805655         \\ \hline
+2.13E+04  & 10    & 6.7      & -3.4            & 43.07852077         \\ \hline
+2.16E+04  & 10    & 6.75     & -3.4            & 42.76554885         \\ \hline
+2.19E+04  & 10    & 6.8      & -3.3            & 37.66184465         \\ \hline
+2.24E+04  & 10    & 6.87     & -3.2            & 41.66698377         \\ \hline
+2.28E+04  & 10    & 6.96     & -3.1            & 41.59799164         \\ \hline
+2.30E+04  & 10    & 7        & -3.1            & 40.91964995         \\ \hline
+2.32E+04  & 10    & 7.02     & -3              & 40.54160187         \\ \hline
+2.34E+04  & 10    & 7.05     & -3              & 40.39097962         \\ \hline
+2.38E+04  & 10    & 7.1      & -3              & 40.07576311         \\ \hline
+2.40E+04  & 10    & 7.12     & -2.9            & 39.92617229         \\ \hline
+2.45E+04  & 10    & 7.2      & -2.8            & 39.03536844         \\ \hline
+2.50E+04  & 10    & 7.24     & -2.8            & 38.82913316         \\ \hline
+2.80E+04  & 10    & 7.54     & -2.4            & 35.80299001         \\ \hline
+3.00E+04  & 10    & 7.72     & -2.2            & 33.43564423         \\ \hline
+3.50E+04  & 10    & 8.04     & -1.8            & 29.86776904         \\ \hline
+4.00E+04  & 10    & 8.3      & -1.6            & 27.06493423         \\ \hline
+4.50E+04  & 10    & 8.5      & -1.4            & 24.88510514         \\ \hline
+5.00E+04  & 10    & 8.64     & -1.2            & 21.14319164         \\ \hline
+5.50E+04  & 10    & 8.75     & -1.1            & 20.48731511         \\ \hline
+6.50E+04  & 10    & 8.9      & -1              & 17.18152467         \\ \hline
+7.50E+04  & 10    & 9        & -9.00E-01       & 15.96201416         \\ \hline
+8.00E+04  & 10    & 9.06     & -8.00E-01       & 13.85703185         \\ \hline
+8.50E+04  & 10    & 9.1      & -8.00E-01       & 12.55578123         \\ \hline
+\end{tabular}
+\caption{Modulo de Tensiones, Magnitud y Fase de la funcion de transferencia.}
+\end{table}
+
+\subsection{Analisis de Resultado}
+
+Con el uso de los datos hallados en el punto anterior conseguimos los siguientes diagramas, los cuales se superpuso la tension de $V_R$, $\frac{V_R}{V_{in}}$ y los valores teoricos de la funcion de transferencia. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{2Compmag.png}
+\includegraphics[scale=0.5]{2Compfase.png}
+\caption{Diagramas de Amplitud y Frecuencia del circuito CR.}
+\label{fig:CR}
+\end{figure}
+
+En la figura notamos una leve distincion entre los valores de amplitud y frecuencia de los medidos y los teoricos; esto se debe a que pudo haber errores accidentales durante medicion y ademas los componentes no son perfectos, por lo que presentan impedancia parásita causando alteraciones impredecibles durante la medicion. Pero es posible la identificacion del circuito CR como un filtro pasa altos.
+En la grafica el $V_R$ no es  
+
+
+
+>>>>>>> 90e60842c18f4bfcd674f06bb288a364d338db0a
 
 \section{Respuesta en frecuencia con barrido automático}
 
