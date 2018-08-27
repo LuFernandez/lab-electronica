@@ -245,6 +245,36 @@ Con el uso de los datos hallados en el punto anterior conseguimos los siguientes
 En la figura notamos una leve distincion entre los valores de amplitud y frecuencia de los medidos y los teoricos; esto se debe a que pudo haber errores accidentales durante medicion y ademas los componentes no son perfectos, por lo que presentan impedancia parásita causando alteraciones impredecibles durante la medicion. Pero es posible la identificacion del circuito CR como un filtro pasa altos.
 No es comparable el Bode del circuito RC con el $V_R$, debido a que el bode es la ganancia referida a la tension de entrada mientras que $V_R$ es la caida de tension a una entrada especifica, ademas los diferentes circuitos fueron alimentados con diferente tensiones de entradas y se tomaron diferentes datos de frecuencias. Por lo que se propuso el grafico de $\frac{V_R}{V_{in}}$ lo que se asemeja mas al filtro pasa altos.
 
+\subsection{Entrada Triangular}
+
+Exitando el circuito CR con una onda triangular obtuvimos diferentes diagramas a diferentes frecuencias.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{2_601.png}
+\caption{Diagramas del Circuito RC exitado con onda triangular a $601Hz$.}
+\label{fig:CR}
+\end{figure}
+
+A $601Hz$ notamos que la tension de salida es muy atenuada ya que tiene caracteristica correspondiente a un filtro pasa-altos. Por otro lado la salida es identica a la señal de entrada derivada. Esto es devido a que la funcion de transferencia  $H(s) = \frac{sCR}{\left(R+R_{gen}\right)Cs+1}$ a bajas frecuencias el termino del denominador $\left(R+R_{gen}\right)Cs$ es aproximadamente a $0$ frente a la constante $1$, porque $\left(R+R_{gen}\right)Cs = 0.026$ lo que es mucho menor a 1 ($0.026 << 1$). Resulta entonces que la funcion de transferencia equivale a $H(s) = sCR $.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{2_20k.png}
+\caption{Diagramas del Circuito RC exitado con onda triangular a $20kHz$.}
+\label{fig:CR}
+\end{figure}
+
+Observamos que a $20kHz$ el circuito esta levemente atenuada. Puesto que el circuito es un pasa-altos y tener la frecuencia al rededor de la frecuencia de corte, es razonable que la atenuacion sea ligero.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{2_198k.png}
+\caption{Diagramas del Circuito RC exitado con onda triangular a $198kHz$.}
+\label{fig:CR}
+\end{figure}
+
+En esta ultima figura, a $198kHz$, contemplamos a grandes razgos la señal de salida es identica a la señal de entrada. Podemos explicar este fenomeno ya que a altas frecuencias el capacitor tiene caracteristicas de un cable; pues tiempo característico del circuito $\tau = RC = 7.02\mu$s y el periodo de la señal de entrada al circuito es $T=5.05\mu$s, entonces como el periodo del circuito es mucho mayor al tiempo característico la carga y descarga del capacitor se hacen en simultaneo con la señal de entrada. 
 
 
 \section{Respuesta en frecuencia con barrido automático}
