@@ -16,11 +16,22 @@ Se armó el circuito de la figura inferior con los valores nominales de $R=3.9k\
 \label{fig:RC}
 \end{figure}
 
-\subsection{Cálculo de Frecuencia de Corte}
+\subsection{Cálculo analítico de la función transferencia}\label{sec:fc}
 
-La frecuencia de corte es aquella en la que la salida $V_{out}$ atenúa la entrada $V_{in}$ en $-3dB$ y la primera desfasa a la segunda en $45^o$; de esta manera
-se buscó experimentalmente su respectiva frecuencia de corte que resultó ser $f_{cmedido}=21.8kHz$. Se tuvo en cuenta la resistencia interna
-del generador ($50\Omega$), y se la sumó a la $R_{teorica}$ .
+Teniendo en cuenta la figura \ref{fig:RC}; con $V_{out}$ la tensión del capacitor y $V_{in}$ como la tensión de entrada que fue una senoidal de $5~V_{pp}$, se halló analíticamente la función transferencia planteando un divisor resistivo. Se tuvo en cuenta la resistencia interna
+del generador ($50\Omega$), y se la sumó a la $R_{teorica}=R$.
+La función transferencia resultó ser:
+
+\begin{center}
+\begin{equation}
+\label{eq:transf}
+H(s)=\frac{1}{sRC+1}
+\end{equation}
+\end{center}
+
+siendo $s=j\omega$ y $R=R_{medida} + R_{generador}$.
+Se puede ver que la función obtenida es un pasabajos con un polo simple en $\frac{1}{2\pi RC}$.
+La frecuencia de corte es aquella en la que la salida $V_{out}$ atenúa la entrada $V_{in}$ en $-3dB$ y la primera desfasa a la segunda en $45^o$; de esta manera se buscó experimentalmente su respectiva frecuencia de corte que resultó ser $f_{cmedido}=21.8kHz$.
 
 A continuación, sabiendo que $C_{cal}\text{=}\frac{1}{2\pi fR}$ se completó la siguiente tabla:
 
@@ -39,7 +50,7 @@ $|V_{in}|[V]$ & $|V_{out}|[V]$ & $R[k\Omega]$ & $C_{calculado}[nF]$ & $C_{medido
 \caption{Tensiones y valores de componentes del circuito.}
 \end{table}
 
-\subsection{Medición de ángulo de fase entre I y $V_C$}
+\subsection{Medición de ángulo de fase entre $I$ y $V_C$}
 
 Para el cálculo de la corriente se utilizó $I=\frac{V_{R}}{R}$, asumiendo que la tensión y la corriente de la resistencia estaban en fase. 
 Luego con el uso de la opción math del osciloscopio, se restó la caída en el capacitor a la tensión de entrada y se midieron las fases y amplitudes de las mismas, siendo la resultante de la resta $V_R$. Una vez que se obtuvo, se la dividió por el valor de la resistencia, obteniendo así, el valor vectorial de la corriente.
@@ -50,28 +61,16 @@ De esta manera se obtuvo que $|V_{R}|=3.51V$ y $|V_{c}|=3.48V$.
 \includegraphics[scale=0.5]{1-2.png}
 \includegraphics[scale=0.5]{1-2b.png}
 \caption{Diagrama fasorial y representación de las señales VR y VC.}
-\label{diagfasorial}
+\label{fig:diagfasorial}
 \end{figure}
 
 
-De la figura \ref{diagfasorial} observamos que la corriente se adelanta a la tensión del capacitor $90^{o}$. Ademas, la suma fasorial de $V_R$ y $V_C$ es de 4.97V en vez de los 5V, esto puede ser por la resistencia del generador que aún siendo pequeña genera una caída de tensión en el circuito.
+De la figura \ref{fig:diagfasorial} observamos que la corriente se adelanta a la tensión del capacitor $90^{o}$. Además, la suma fasorial de $V_R$ y $V_C$ es de 4.97V en vez de los 5V, esto puede ser por la resistencia del generador que aún siendo pequeña genera una caída de tensión en el circuito.
 
-\subsection{Cálculo analítico de la función transferencia}
+\subsection{Cálculo analítico de la frecuencia de corte y diagrama de Bode}
 
-Teniendo en cuenta la figura \ref{fig:RC}; con $V_{out}$ la tensión del capacitor y $V_{in}$ como la tensión de entrada que fue una senoidal de $5~V_{pp}$, se halló analíticamente la función transferencia planteando un divisor resistivo, que resultó ser:
-
-\begin{center}
-\begin{equation}
-\label{transf}
-H(s)=\frac{1}{sRC+1}
-\end{equation}
-\end{center}
-
-siendo $s=j\omega$ y $R=R_{medida} + R_{generador}$.
-
-La frecuencia de corte resulta ser el polo de la función, es decir, cuando 
+Como se vio en la sección \ref{sec:fc}, la frecuencia de corte resulta ser el polo de la función, es decir, cuando 
 $\omega_c=\frac{1}{RC}$. Entonces, teniendo en cuenta que $\omega=2\pi f$, se deduce que la frecuencia de corte es $f_{ccalculado}=22.75kHz$. 
-Se puede ver que la función obtenida es un pasabajos con un polo simple en $\frac{1}{2\pi RC}$.
 Se diagramó el Bode de magnitud y fase, que se muestra a continuación.
 
 \begin{figure}[H]
@@ -83,15 +82,16 @@ Se diagramó el Bode de magnitud y fase, que se muestra a continuación.
 \includegraphics[scale=0.45]{1-3b.png}
 \end{minipage}
 \caption{Bode de magnitud y fase para los valores medidos de R y C.}
-\label{diagbodemedido}
+\label{fig:diagbodemed}
 \end{figure}
 
 
-En la figura \ref{diagbodemedido} puede verse que la frecuencia en la que la ganancia del circuito es $-3dB$ y el desfase es de $45^o$ es la frecuencia de corte, que ronda los 22.7kHz.
+En la figura \ref{fig:diagbodemed} puede verse que la frecuencia en la que la ganancia del circuito es $-3dB$ y el desfase es de $45^o$ es la frecuencia de corte, que ronda los 22.7kHz.
 
 \subsection{Función transferencia a distintas frecuencias}
 
 Se excitó con una senoidal de amplitud 5V, se midieron valores de tensión del capacitor y fase a distintas frecuencias entre 10Hz y 1MHz, completando la siguiente tabla. Donde el ángulo $\varphi_1$ fue medido en el modo $\Delta t$ del osciloscopio; y el ángulo $\varphi_2$, en el modo XY del osciloscopio.
+Se tomaron únicamente algunos valores representativos para el $\varphi_2$, ya que sólo se quería un análisis cualitativo respecto de $\varphi_1$.
 La diferencia entre ambos $\varphi$ se debe a errores de apreciación al medir y de cálculo al realizar $\arcsin(\frac{\Delta X}{\Delta Y})$, siendo $\Delta X$ el ancho mínimo entre 2 extremos de la elipse y $\Delta Y$ el ancho máximo entre dos de ellos. 
 
 
@@ -100,48 +100,48 @@ La diferencia entre ambos $\varphi$ se debe a errores de apreciación al medir y
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
  $f[Hz] $   & $|V_{in}|[V] $& $|V_C| [V]$   & $H(s)=\frac{V_C}{V_{in}} (s)[dB]$ & $\phi_1 [grados]$& $\phi_2 [grados]$ \\ \hline
-1k  &  5   & 4.86 & -0.1           & -3           &0    \\ \hline
-5k  & 5    & 4.5    & -0.3           & -10			&-	\\ \hline
-10k  & 5    & 4.1     & -0.9            & -20&-23\\ \hline
-15k  & 5    & 3.93     & -1.71            & -34&-         \\ \hline
-17k  & 5    & 3.85       & -2.1            & -37&-\\ \hline
-18k  & 5    & 3.76      & -2.3            & -38.5 &-        \\ \hline
-19k  & 5    & 3.68      & -2.4            & -40   &-      \\ \hline
-20k  & 5    & 3.64     & -2.6           & -41    &-44    \\ \hline
-20.5k  & 5    & 3.62	&-2.7	&-42       &-  \\ \hline
-20.8k  & 5    & 3.6	&-2.8	&-42    &-     \\ \hline
-21k  & 5    & 3.59&	-2.8&	-43 &-       \\ \hline
-21.2k  & 5    &3.56	&-2.8	&-43    &-     \\ \hline
-22.5k&	5	&3.48&	-3.1	&-45	&-46	\\ \hline
-22.8k  & 5    & 3.46&	-3.1	&-45    &-46\\ \hline
-23.2k  & 5    & 3.43	&-3.2&	-46     &-    \\ \hline
-24k  & 5    & 3.37	&-3.4&	-47     &-   \\ \hline
-25k  & 5    & 3.3&	-3.6&	-48    &-   \\ \hline
-27k  & 5    & 3.16&	-3.9	&-51   &-     \\ \hline
-30k  & 5    & 2.97&	-4.5	&-53    &-   \\ \hline
-35k  & 5    & 2.68&	-5.4	&-58   &-53   \\ \hline
-42k  & 5    & 2.35	&-6.6	&-62    &- \\ \hline
-50k  & 5    & 2.04&	-7.8	&-65    &-  \\ \hline
-58k  & 5    & 1.79&	-8.9&	-69   &-    \\ \hline
-65k  & 5    &1.62&	-9.8	&-70   &-      \\ \hline
-95k  & 5    & 1.15&	-12.8&	-77  &-   \\ \hline
-230k  & 5    & 0.49&	-20.4&	-84  &-89   \\ \hline
-630k  & 5    &0	&-29.1	&-90     &-   \\ \hline
-1M  & 5    &0&	-32.7	&-90      &-  \\ \hline
+1k  &  4.97   & 4.86 & -0.1           & -3           &0    \\ \hline
+5k  & 4.97    & 4.5    & -0.3           & -10			&-	\\ \hline
+10k  & 4.97    & 4.1     & -0.9            & -20&-23\\ \hline
+15k  & 4.97    & 3.93     & -1.71            & -34&-         \\ \hline
+17k  & 4.97    & 3.85       & -2.1            & -37&-\\ \hline
+18k  & 4.97    & 3.76      & -2.3            & -38.5 &-        \\ \hline
+19k  & 4.97    & 3.68      & -2.4            & -40   &-      \\ \hline
+20k  & 4.97    & 3.64     & -2.6           & -41    &-44    \\ \hline
+20.5k  & 4.97    & 3.62	&-2.7	&-42       &-  \\ \hline
+20.8k  & 4.97    & 3.6	&-2.8	&-42    &-     \\ \hline
+21k  & 4.97    & 3.59&	-2.8&	-43 &-       \\ \hline
+21.2k  & 4.97    &3.56	&-2.8	&-43    &-     \\ \hline
+22.5k&	4.97	&3.48&	-3.1	&-45	&-46	\\ \hline
+22.8k  & 4.97    & 3.46&	-3.1	&-45    &-46\\ \hline
+23.2k  & 4.97    & 3.43	&-3.2&	-46     &-    \\ \hline
+24k  & 4.97    & 3.37	&-3.4&	-47     &-   \\ \hline
+25k  & 4.97    & 3.3&	-3.6&	-48    &-   \\ \hline
+27k  & 4.97    & 3.16&	-3.9	&-51   &-     \\ \hline
+30k  & 4.97    & 2.97&	-4.5	&-53    &-   \\ \hline
+35k  & 4.97    & 2.68&	-5.4	&-58   &-53   \\ \hline
+42k  & 4.97    & 2.35	&-6.6	&-62    &- \\ \hline
+50k  & 4.97    & 2.04&	-7.8	&-65    &-  \\ \hline
+58k  & 4.97    & 1.79&	-8.9&	-69   &-    \\ \hline
+65k  & 4.97    &1.62&	-9.8	&-70   &-      \\ \hline
+95k  & 4.97    & 1.15&	-12.8&	-77  &-   \\ \hline
+230k  & 4.97    & 0.49&	-20.4&	-84  &-89   \\ \hline
+630k  & 4.97    &0	&-29.1	&-90     &-   \\ \hline
+1M  & 4.97    &0&	-32.7	&-90      &-  \\ \hline
 \end{tabular}
 \caption{Módulo y fase de tensiones a distintas frecuencias.}
-\label{tablabode}
+\label{tab:tablabode}
 \end{table}
 
 \subsection{Bode teórico y empírico}
-Se graficó lo obtenido de la tabla \ref{tablabode} y se lo superpuso con el diagrama de Bode teórico de la función transferencia (ecuación \ref{transf}).
+Se graficó lo obtenido de la tabla \ref{tab:tablabode} y se lo superpuso con el diagrama de Bode teórico de la función transferencia (ecuación \ref{eq:transf}).
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{1-4a.png}
 \includegraphics[scale=0.5]{1-4b.png}
 \caption{Bode de magnitud y fase medido y teórico.}
-\label{diagbode}
+\label{fig:diagbode}
 \end{figure}
 
 Se puede observar que para el diagrama de amplitud las mediciones a distintas frecuencias se corresponden a lo calculado teóricamente. En el diagrama de fase, las variaciones se deben a errores de medición y en el rango de frecuencias altas, donde la señal es atenuada, se encuentra un mayor error ya que el ruido se hace comparable con la magnitud de la señal.
@@ -158,13 +158,13 @@ Se excitó al circuito con una señal cuadrada de $5~V_{pp}$ en un rango de frec
 \qquad
 \subfloat[Frecuencia 200kHz.]{{\includegraphics[scale=0.35]{200ka.png} }}%
 \caption{Respuesta al escalón.}
-\label{diagbodemedido}
+\label{fig:diagesc}
 \end{figure}
 
 Si antitransformamos la función transferencia para obtener la respuesta en el tiempo, ésta resulta:
 \begin{center}
 \begin{equation}
-\label{transf}
+\label{eq:transfentiempo}
 h(t)=\frac{e^{\frac{-t}{RC}}}{RC}
 \end{equation}
 \end{center}
@@ -172,16 +172,16 @@ h(t)=\frac{e^{\frac{-t}{RC}}}{RC}
 Su respectiva respuesta al escalón será:
 \begin{center}
 \begin{equation}
-\label{transf}
+\label{eq:escalon}
 \widetilde{h}(t)=1 - e^{-\frac{t}{\tau}}
 \end{equation}
 \end{center}
 
 con $\tau=RC$.
-Cuando la frecuencia es de $1kHz$; como se ve en la figura \ref{diagbodemedido} $(a)$, debido a la baja frecuencia, el circuito logra llegar a un estado estacionario en lo que dura el período de la excitación cuadrada. Esto se debe a que el tiempo característico del circuito $\tau=RC=6.84\mu s$, que es mucho menor al período de la señal de entrada $T=1ms$.
-Al excitar el circuito con una frecuencia de $15kHz$, cuyo período es de $ T\approx 66.67\mu s$, que ya es comparable con el tiempo característico del circuito, se llega a apreciar el estado transitorio del mismo. Esto se puede observar en la figura \ref{diagbodemedido} $(b)$.
-En el último caso, en la figura \ref{diagbodemedido} $(c)$, con una frecuencia de $200kHz$, no se llega al estado estacionario, sino que se observa una fracción del transitorio, que se debe a que el período de la excitación cuadrada se vuelve menor al tiempo característico del circuito $(T\approx 5\mu s)$. Lo que se está viendo es la pendiente de la exponencial, que se asemeja con una recta.
-Se puede notar que a frecuencias mucho mayores a su frecuencia de corte, la función transferencia puede aproximarse a $H(s)=\frac{1}{sRC}$, que es la transferencia de un circuito integrador. De este análisis se deriva, que a altas frecuencias el circuito integra.
+Cuando la frecuencia es de $1kHz$; como se ve en la figura \ref{fig:diagesc} $(a)$, debido a la baja frecuencia, el circuito logra llegar a un estado estacionario en lo que dura el período de la excitación cuadrada. Esto se debe a que el tiempo característico del circuito $\tau=RC=6.84\mu s$, que es mucho menor al período de la señal de entrada $T=1ms$.
+Al excitar el circuito con una frecuencia de $15kHz$, cuyo período es de $ T\approx 66.67\mu s$, que ya es comparable con el tiempo característico del circuito, se llega a apreciar el estado transitorio del mismo. Esto se puede observar en la figura \ref{fig:diagesc} $(b)$.
+En el último caso, en la figura \ref{fig:diagesc} $(c)$, con una frecuencia de $200kHz$, no se llega al estado estacionario, sino que se observa una fracción del transitorio, que se debe a que el período de la excitación cuadrada se vuelve menor al tiempo característico del circuito $(T\approx 5\mu s)$. Lo que se está viendo es la pendiente de la exponencial, que se asemeja con una recta.
+Se puede notar que a frecuencias mucho mayores a la de corte, la función transferencia puede aproximarse a $H(s)=\frac{1}{sRC}$, que es la transferencia de un circuito integrador. De este análisis se deriva, que a altas frecuencias el circuito integra.
 
 \subsection{Respuesta en frecuencia de VR}
 
@@ -191,7 +191,7 @@ Se calculó la tensión en la resistencia a partir de las mediciones sobre la te
 \centering
 \includegraphics[scale=0.5]{1-7.png} 
 \caption{Respuesta en frecuencia de la tensión en la resistencia.}
-\label{rtafrecVR}
+\label{fig:rtafrecVR}
 \end{figure}
 
 \subsection{Influencia de las puntas en la medición}
@@ -202,13 +202,13 @@ Al circuito en cuestión se le puede calcular la función transferencia asociand
 
 \begin{center}
 \begin{equation}
-\label{transfOsc}
+\label{eq:transfOsc}
 H(s)=\frac{\frac{R_{osc}}{R+R_{osc}}}{1+\frac{s R_{osc} C_{osc} R}{R+R_{osc}}}
 \end{equation}
 \end{center}
 
 Esta función tiene la forma de un pasabajos con $f_{corte}=\frac{R+R_{osc}}{2\pi R C_{osc} R_{osc}}$. Variando la frecuencia se encontró que la frecuencia de corte con las puntas x1 rondaba los 370kHz, mientras que en puntas x10 estaba cerca de los 2.3MHz.
-A continuación se muestran los diagramas de Bode realizados con las mediciones en ambas puntas y se muestra la tabla \ref{tablaOsc} comparando ambos resultados.
+A continuación se muestran los diagramas de Bode realizados con las mediciones en ambas puntas y se muestra la tabla \ref{tab:tablaOsc} comparando ambos resultados.
 
 \begin{figure}[H]
 \centering
@@ -219,7 +219,7 @@ A continuación se muestran los diagramas de Bode realizados con las mediciones 
 \includegraphics[scale=0.45]{1-8b.png}
 \end{minipage}
 \caption{.}
-\label{puntas}
+\label{fig:puntas}
 \end{figure}
 
 
@@ -237,7 +237,7 @@ $|V_{in}|[V]$ & $|V_{C}|[V]$ & $R[k\Omega]$ & $C_{calculado}[pF]$ & $C_{medido}[
 \hline 
 \end{tabular}
 \caption{Valores de los componentes del osciloscopio.}
-\label{tablaOsc}
+\label{tab:tablaOsc}
 \end{table}
 
 
@@ -249,7 +249,7 @@ Además, se llegaron a valores similares de capacitancia del osciloscopio que se
 
 
 
-\section{Analisis Circuito CR}
+\section{Análisis Circuito CR}
 
 Se armó el circuito de la figura inferior con los componentes anteriores.
 
@@ -261,23 +261,23 @@ Se armó el circuito de la figura inferior con los componentes anteriores.
 \end{figure}
 
 
-\subsection{Funcion de Transferencia}
+\subsection{Función Transferencia}
 
-Como la funcion de transferencia en este circuito es $H(s) = \frac{V_R(s)}{V_1}$ y conciderenado la resistencia del generador, la funcion de transferencia resulta ser:
-$$H(s) = \frac{sCR}{\left(R+R_{gen}\right)Cs+1}$$
-Por lo que notamos que a mayor frecuencia la tension del $V_R$ aumenta a mayor frecuencia, por lo que tiene caractestica de un filtro pasa alto. Es posible visualisar este comportamiento en el siguiente diagrama de Bode:
+Como la función de transferencia en este circuito es $H(s) = \frac{V_R(s)}{V_1}$ y considerando la resistencia del generador, la función de transferencia resulta ser:
+$H(s) = \frac{sCR}{\left(R+R_{gen}\right)Cs+1}$
+Por lo que notamos que a mayor frecuencia la tensión $V_R$ aumenta, lo que es característico de un filtro pasa alto. Es posible visualizar este comportamiento en el siguiente diagrama de Bode:
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.5]{2teomag.png}
 \includegraphics[scale=0.5]{2teofase.png}
-\caption{Diagrama de Bode Teorico.}
+\caption{Diagrama de Bode Teórico.}
 \label{fig:CR}
 \end{figure}
 
 \subsection{Tabla de Mediciones}
 
-Exitando el circuito con una onda senoidal de $10~V_{pp}$, obtuvimos los siguientes resultados:
+Excitando el circuito con una onda senoidal de $10~V_{pp}$, obtuvimos los siguientes resultados:
 
 \begin{table}[!htb]
 \centering
@@ -316,14 +316,14 @@ f{[}Hz{]}    & $|V_{in}|${[}V{]} & $|V_R|${[}V{]}      & $H(s)=\frac{V_R}{V_{in}
 8.00E+04  & 10    & 9.06     & -8.00E-01       & 13.86         \\ \hline
 8.50E+04  & 10    & 9.1      & -8.00E-01       & 12.56         \\ \hline
 \end{tabular}
-\caption{Modulo de Tensiones, Magnitud y Fase de la funcion de transferencia.}
+\caption{Módulo de Tensiones, Magnitud y Fase de la función transferencia.}
 \end{table}
 
-\subsection{Analisis de Resultado}
+\subsection{Análisis de Resultados}
 
-Con el uso de los datos hallados en el punto anterior conseguimos los siguientes diagramas, los cuales se superpuso la tension de $V_R$ y $\frac{V_R}{V_{in}}$ del circuito RC y los valores teoricos de la funcion de transferencia del circuito CR. 
+Con el uso de los datos hallados en el punto anterior conseguimos los siguientes diagramas, para los cuales se superpusieron la tensión $V_R$ y $\frac{V_R}{V_{in}}$ del circuito RC y los valores teóricos de la función de transferencia del circuito CR. 
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{2Compmag.png}
 \includegraphics[scale=0.5]{2Compfase.png}
@@ -331,39 +331,39 @@ Con el uso de los datos hallados en el punto anterior conseguimos los siguientes
 \label{fig:CR}
 \end{figure}
 
-En la figura notamos una leve distincion entre los valores de amplitud y frecuencia de los medidos y los teoricos; esto se debe a que pudo haber errores accidentales durante medicion y ademas los componentes no son perfectos, por lo que presentan impedancia parásita causando alteraciones impredecibles durante la medicion. Pero es posible la identificacion del circuito CR como un filtro pasa altos.
+En la figura notamos una leve distinción entre los valores de amplitud y frecuencia de los medidos y los teóricos; esto se debe a que pudo haber errores durante la medición y además los componentes no son perfectos, por lo que presentan impedancia parásita causando alteraciones impredecibles durante la medicion. Pero es posible la identificacion del circuito CR como un filtro pasa altos.
 No es comparable el Bode del circuito RC con el $V_R$, debido a que el bode es la ganancia referida a la tension de entrada mientras que $V_R$ es la caida de tension a una entrada especifica, ademas los diferentes circuitos fueron alimentados con diferente tensiones de entradas y se tomaron diferentes datos de frecuencias. Por lo que se propuso el grafico de $\frac{V_R}{V_{in}}$ lo que se asemeja mas al filtro pasa altos.
 
-\subsection{Entrada Triangular}
+\subsection{Respuesta a señal triangular}
 
-Exitando el circuito CR con una onda triangular obtuvimos diferentes diagramas a diferentes frecuencias.
+Excitando al circuito CR con una onda triangular obtuvimos diferentes diagramas a diferentes frecuencias.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{2_601.png}
-\caption{Diagramas del Circuito RC exitado con onda triangular a $601Hz$.}
+\includegraphics[scale=0.4]{2_601.png}
+\caption{Diagramas del Circuito RC exitado con onda triangular a $600Hz$.}
 \label{fig:CR}
 \end{figure}
 
-A $601Hz$ notamos que la tension de salida es muy atenuada ya que tiene caracteristica correspondiente a un filtro pasa-altos. Por otro lado la salida es identica a la señal de entrada derivada. Esto es devido a que la funcion de transferencia  $H(s) = \frac{sCR}{\left(R+R_{gen}\right)Cs+1}$ a bajas frecuencias el termino del denominador $\left(R+R_{gen}\right)Cs$ es aproximadamente a $0$ frente a la constante $1$, porque $\left(R+R_{gen}\right)Cs = 0.026$ lo que es mucho menor a 1 ($0.026 << 1$). Resulta entonces que la funcion de transferencia equivale a $H(s) = sCR $.
+A $600Hz$ notamos que la tensión de salida es muy atenuada ya que tiene características correspondientes a un filtro pasa-altos, es decir, se atenúan frecuencias menores a la de corte. Por otro lado, la salida es idéntica a la señal de entrada derivada. Esto es debido a que en la función de transferencia, $H(s) = \frac{sCR}{\left(R+R_{gen}\right)Cs+1}$ a bajas frecuencias, el denominador se asemeja a la unidad. Resulta entonces que la función de transferencia equivale a $H(s) = sCR $.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{2_20k.png}
-\caption{Diagramas del Circuito RC exitado con onda triangular a $20kHz$.}
+\includegraphics[scale=0.4]{2_20k.png}
+\caption{Diagramas del Circuito RC excitado con onda triangular a $20kHz$.}
 \label{fig:CR}
 \end{figure}
 
-Observamos que a $20kHz$ el circuito esta levemente atenuada. Puesto que el circuito es un pasa-altos y tener la frecuencia al rededor de la frecuencia de corte, es razonable que la atenuacion sea ligero.
+Observamos que a $20kHz$ la salida está levemente atenuada. Puesto que el circuito es un pasa-altos y su frecuencia de corte está cerca de los $20kHz$, es razonable que la atenuación sea ligera.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{2_198k.png}
-\caption{Diagramas del Circuito RC exitado con onda triangular a $198kHz$.}
+\includegraphics[scale=0.4]{2_198k.png}
+\caption{Diagramas del Circuito RC excitado con onda triangular a $200kHz$.}
 \label{fig:CR}
 \end{figure}
 
-En esta ultima figura, a $198kHz$, contemplamos a grandes razgos la señal de salida es identica a la señal de entrada. Podemos explicar este fenomeno ya que a altas frecuencias el capacitor tiene caracteristicas de un cable; pues tiempo característico del circuito $\tau = RC = 7.02\mu$s y el periodo de la señal de entrada al circuito es $T=5.05\mu$s, entonces como el periodo del circuito es mucho mayor al tiempo característico la carga y descarga del capacitor se hacen en simultaneo con la señal de entrada. 
+En esta última figura, a $200kHz$, contemplamos a grandes razgos que la señal de salida es idéntica a la señal de entrada. Podemos explicar este fenómeno ya que a altas frecuencias el capacitor tiene características de un cable; pues el tiempo característico del circuito es $\tau = RC = 7.02\mu$s y el período de la señal de entrada al circuito es $T=5.05\mu$s, entonces como el período del circuito es mucho mayor al tiempo característico la carga y descarga del capacitor se hacen en simúltaneo con la señal de entrada. 
 
 
 \section{Respuesta en frecuencia con barrido automático}
@@ -402,7 +402,7 @@ y en la componente X un desplazamiento de 0 a 10V estableciendo la
 relación $0V$ a $t=\text{0}$ y en $10V$ $t=11ms$ dejando entrar
 un poco mas de un barrido en pantalla.
 \begin{figure}[H]
-\centering{}\includegraphics{./scope_24.png}\caption{Respuesta en frecuencia con barrido automático en modo XY}
+\centering{}\includegraphics[scale=0.4]{./scope_24.png}\caption{Respuesta en frecuencia con barrido automático en modo XY}
 \end{figure}
 
 Se puede observar como las configuraciones previas permitieron el
@@ -423,7 +423,7 @@ se lo excitó con una senoidal de 10 $V_{pp}$. Los resultados obtenidos
 de las mediciones se graficaron en la siguiente figura:
 \begin{figure}[H]
 \caption{Respuesta en frecuencia del osciloscopio}
-\label{rtaosc}
+\label{fig:rtaosc}
 \end{figure}
 
 Se puede observar que la forma de la respuesta en frecuencia es la
@@ -433,5 +433,5 @@ del osciloscopio filtra las señales continuas con un capacitor formando
 un filtro pasa altos que posee una frecuencia de corte muy pequeña; y el
 filtro BW disminuye el ancho de banda atenuando las altas frecuancias
 mediante un filtro pasabajos, la combinación de ambos actúa como
-el pasa banda representado en la figura \ref{rtaosc}.
+el pasa banda representado en la figura \ref{fig:rtaosc}.
 \end{document}

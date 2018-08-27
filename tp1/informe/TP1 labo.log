@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6670) (preloaded format=pdflatex 2018.4.17)  26 AUG 2018 17:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6670) (preloaded format=pdflatex 2018.4.17)  27 AUG 2018 18:49
 entering extended mode
 **"./TP1 labo.tex"
 ("TP1 labo.tex"
@@ -806,13 +806,13 @@ LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 
 
-LaTeX Warning: Label `diagbodemedido' multiply defined.
+LaTeX Warning: Label `fig:CR' multiply defined.
 
 
-LaTeX Warning: Label `transf' multiply defined.
+LaTeX Warning: Label `fig:CR' multiply defined.
 
 
-LaTeX Warning: Label `transf' multiply defined.
+LaTeX Warning: Label `fig:CR' multiply defined.
 
 
 LaTeX Warning: Label `fig:CR' multiply defined.
@@ -1033,40 +1033,41 @@ Package pdftex.def Info: rcCircuito.png  used on input line 14.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 19.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 42.
+(Font)              scaled to size 11.03998pt on input line 53.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 42.
+(Font)              scaled to size 8.27998pt on input line 53.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 42.
+(Font)              scaled to size 6.43999pt on input line 53.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 42.
+(Font)              scaled to size 11.03998pt on input line 53.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 42.
+(Font)              scaled to size 8.27998pt on input line 53.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 42.
+(Font)              scaled to size 6.43999pt on input line 53.
 <1-2.png, id=9, 889.82437pt x 256.70906pt>
 File: 1-2.png Graphic file (type png)
 <use 1-2.png>
-Package pdftex.def Info: 1-2.png  used on input line 50.
+Package pdftex.def Info: 1-2.png  used on input line 61.
 (pdftex.def)             Requested size: 444.9111pt x 128.3542pt.
 <1-2b.png, id=10, 889.82437pt x 259.7203pt>
 File: 1-2b.png Graphic file (type png)
 <use 1-2b.png>
-Package pdftex.def Info: 1-2b.png  used on input line 51.
+Package pdftex.def Info: 1-2b.png  used on input line 62.
 (pdftex.def)             Requested size: 444.9111pt x 129.85983pt.
 
 [1 <./rcCircuito.png>]
 <1-3a.png, id=17, 526.96875pt x 395.22656pt>
 File: 1-3a.png Graphic file (type png)
 <use 1-3a.png>
-Package pdftex.def Info: 1-3a.png  used on input line 80.
+Package pdftex.def Info: 1-3a.png  used on input line 79.
 (pdftex.def)             Requested size: 237.13374pt x 177.8503pt.
 <1-3b.png, id=18, 526.96875pt x 395.22656pt>
 File: 1-3b.png Graphic file (type png)
 <use 1-3b.png>
-Package pdftex.def Info: 1-3b.png  used on input line 83.
+Package pdftex.def Info: 1-3b.png  used on input line 82.
 (pdftex.def)             Requested size: 237.13374pt x 177.8503pt.
- [2 <./1-2.png (PNG copy)> <./1-2b.png (PNG copy)>]
+ [2 <./1-2.png (PNG copy)> <./1-2b.png (PNG copy)> <./1-3a.png (PNG copy)> <./1
+-3b.png (PNG copy)>]
 <1-4a.png, id=22, 889.82437pt x 395.22656pt>
 File: 1-4a.png Graphic file (type png)
 <use 1-4a.png>
@@ -1077,33 +1078,29 @@ File: 1-4b.png Graphic file (type png)
 <use 1-4b.png>
 Package pdftex.def Info: 1-4b.png  used on input line 142.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
-
-[3 <./1-3a.png (PNG copy)> <./1-3b.png (PNG copy)>]
-Overfull \vbox (107.57295pt too high) has occurred while \output is active []
-
-
-[4 <./1-4a.png (PNG copy)> <./1-4b.png (PNG copy)>]
-<1ka.png, id=30, 393.72093pt x 402.00188pt>
+ [3]
+<1ka.png, id=27, 393.72093pt x 402.00188pt>
 File: 1ka.png Graphic file (type png)
 <use 1ka.png>
 Package pdftex.def Info: 1ka.png  used on input line 155.
 (pdftex.def)             Requested size: 137.80438pt x 140.70276pt.
-<15ka.png, id=31, 395.22656pt x 398.99063pt>
+<15ka.png, id=28, 395.22656pt x 398.99063pt>
 File: 15ka.png Graphic file (type png)
 <use 15ka.png>
 Package pdftex.def Info: 15ka.png  used on input line 157.
 (pdftex.def)             Requested size: 138.33136pt x 139.6488pt.
-<200ka.png, id=32, 389.20406pt x 402.00188pt>
+<200ka.png, id=29, 389.20406pt x 402.00188pt>
 File: 200ka.png Graphic file (type png)
 <use 200ka.png>
 Package pdftex.def Info: 200ka.png  used on input line 159.
 (pdftex.def)             Requested size: 136.22345pt x 140.70276pt.
- [5 <./1ka.png> <./15ka.png> <./200ka.png>]
-<1-7.png, id=37, 526.96875pt x 395.22656pt>
+ [4 <./1-4a.png (PNG copy)> <./1-4b.png (PNG copy)>]
+<1-7.png, id=33, 526.96875pt x 395.22656pt>
 File: 1-7.png Graphic file (type png)
 <use 1-7.png>
 Package pdftex.def Info: 1-7.png  used on input line 192.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
+ [5 <./1ka.png> <./15ka.png> <./200ka.png>]
 <1-8a.png, id=38, 526.96875pt x 395.22656pt>
 File: 1-8a.png Graphic file (type png)
 <use 1-8a.png>
@@ -1141,26 +1138,35 @@ File: 2Compfase.png Graphic file (type png)
 <use 2Compfase.png>
 Package pdftex.def Info: 2Compfase.png  used on input line 329.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
+ [8 <./2teomag.png (PNG copy)> <./2teofase.png (PNG copy)>]
+Overfull \vbox (184.21391pt too high) has occurred while \output is active []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[8 <./2teomag.png (PNG copy)> <./2teofase.png (PNG copy)>] [9]
-<./scope_24.png, id=62, 1027.84pt x 825.0825pt>
+[9 <./2Compmag.png (PNG copy)> <./2Compfase.png (PNG copy)>]
+<2_601.png, id=62, 1027.84pt x 825.0825pt>
+File: 2_601.png Graphic file (type png)
+<use 2_601.png>
+Package pdftex.def Info: 2_601.png  used on input line 343.
+(pdftex.def)             Requested size: 411.12872pt x 330.02715pt.
+<2_20k.png, id=63, 1027.84pt x 825.0825pt>
+File: 2_20k.png Graphic file (type png)
+<use 2_20k.png>
+Package pdftex.def Info: 2_20k.png  used on input line 352.
+(pdftex.def)             Requested size: 411.12872pt x 330.02715pt.
+ [10 <./2_601.png (PNG copy)>]
+<2_198k.png, id=67, 1027.84pt x 825.0825pt>
+File: 2_198k.png Graphic file (type png)
+<use 2_198k.png>
+Package pdftex.def Info: 2_198k.png  used on input line 361.
+(pdftex.def)             Requested size: 411.12872pt x 330.02715pt.
+ [11 <./2_20k.png (PNG copy)>] [12 <./2_198k.png (PNG copy)>]
+<./scope_24.png, id=75, 1027.84pt x 825.0825pt>
 File: ./scope_24.png Graphic file (type png)
 <use ./scope_24.png>
-Package pdftex.def Info: ./scope_24.png  used on input line 375.
-(pdftex.def)             Requested size: 1027.8375pt x 825.08049pt.
+Package pdftex.def Info: ./scope_24.png  used on input line 405.
+(pdftex.def)             Requested size: 411.12872pt x 330.02715pt.
 
-Overfull \hbox (538.45007pt too wide) in paragraph at lines 375--375
- [][] 
- []
-
-[10 <./2Compmag.png (PNG copy)> <./2Compfase.png (PNG copy)>] [11]
-Overfull \vbox (175.59544pt too high) has occurred while \output is active []
-
-
-[12 <./scope_24.png (PNG copy)>] [13] ("TP1 labo.aux"
+[13 <./scope_24.png (PNG copy)>] [14] ("TP1 labo.aux"
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 )
@@ -1172,13 +1178,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7750 strings out of 492976
- 111205 string characters out of 3127194
- 207858 words of memory out of 3000000
- 11339 multiletter control sequences out of 15000+200000
+ 7769 strings out of 492976
+ 111489 string characters out of 3127194
+ 206898 words of memory out of 3000000
+ 11355 multiletter control sequences out of 15000+200000
  117604 words of font info for 125 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,11n,49p,547b,385s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,10n,49p,575b,385s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fou
 rier-mex.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
@@ -1188,9 +1194,9 @@ KTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/user/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/user/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/user/A
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on "TP1 labo.pdf" (14 pages, 503831 bytes).
+Output written on "TP1 labo.pdf" (15 pages, 622282 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 106 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
