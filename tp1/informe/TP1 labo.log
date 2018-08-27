@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6670) (preloaded format=pdflatex 2018.4.17)  27 AUG 2018 18:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6670) (preloaded format=pdflatex 2018.4.17)  27 AUG 2018 19:33
 entering extended mode
 **"./TP1 labo.tex"
 ("TP1 labo.tex"
@@ -1121,52 +1121,50 @@ Package pdftex.def Info: crCircuito.png  used on input line 258.
 <2teomag.png, id=52, 526.96875pt x 395.22656pt>
 File: 2teomag.png Graphic file (type png)
 <use 2teomag.png>
-Package pdftex.def Info: 2teomag.png  used on input line 272.
+Package pdftex.def Info: 2teomag.png  used on input line 271.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
 <2teofase.png, id=53, 526.96875pt x 395.22656pt>
 File: 2teofase.png Graphic file (type png)
 <use 2teofase.png>
-Package pdftex.def Info: 2teofase.png  used on input line 273.
+Package pdftex.def Info: 2teofase.png  used on input line 272.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
-<2Compmag.png, id=54, 526.96875pt x 395.22656pt>
+ [8 <./2teomag.png (PNG copy)> <./2teofase.png (PNG copy)>] [9]
+<2Compmag.png, id=60, 526.96875pt x 395.22656pt>
 File: 2Compmag.png Graphic file (type png)
 <use 2Compmag.png>
-Package pdftex.def Info: 2Compmag.png  used on input line 328.
+Package pdftex.def Info: 2Compmag.png  used on input line 329.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
-<2Compfase.png, id=55, 526.96875pt x 395.22656pt>
+<2Compfase.png, id=61, 526.96875pt x 395.22656pt>
 File: 2Compfase.png Graphic file (type png)
 <use 2Compfase.png>
-Package pdftex.def Info: 2Compfase.png  used on input line 329.
+Package pdftex.def Info: 2Compfase.png  used on input line 330.
 (pdftex.def)             Requested size: 263.48372pt x 197.6128pt.
- [8 <./2teomag.png (PNG copy)> <./2teofase.png (PNG copy)>]
-Overfull \vbox (184.21391pt too high) has occurred while \output is active []
-
-
-[9 <./2Compmag.png (PNG copy)> <./2Compfase.png (PNG copy)>]
 <2_601.png, id=62, 1027.84pt x 825.0825pt>
 File: 2_601.png Graphic file (type png)
 <use 2_601.png>
-Package pdftex.def Info: 2_601.png  used on input line 343.
-(pdftex.def)             Requested size: 411.12872pt x 330.02715pt.
-<2_20k.png, id=63, 1027.84pt x 825.0825pt>
+Package pdftex.def Info: 2_601.png  used on input line 344.
+(pdftex.def)             Requested size: 308.35437pt x 247.52666pt.
+ [10
+
+ <./2Compmag.png (PNG copy)> <./2Compfase.png (PNG copy)>]
+<2_20k.png, id=66, 1027.84pt x 825.0825pt>
 File: 2_20k.png Graphic file (type png)
 <use 2_20k.png>
-Package pdftex.def Info: 2_20k.png  used on input line 352.
-(pdftex.def)             Requested size: 411.12872pt x 330.02715pt.
- [10 <./2_601.png (PNG copy)>]
+Package pdftex.def Info: 2_20k.png  used on input line 353.
+(pdftex.def)             Requested size: 308.35437pt x 247.52666pt.
 <2_198k.png, id=67, 1027.84pt x 825.0825pt>
 File: 2_198k.png Graphic file (type png)
 <use 2_198k.png>
-Package pdftex.def Info: 2_198k.png  used on input line 361.
-(pdftex.def)             Requested size: 411.12872pt x 330.02715pt.
- [11 <./2_20k.png (PNG copy)>] [12 <./2_198k.png (PNG copy)>]
-<./scope_24.png, id=75, 1027.84pt x 825.0825pt>
+Package pdftex.def Info: 2_198k.png  used on input line 362.
+(pdftex.def)             Requested size: 308.35437pt x 247.52666pt.
+ [11 <./2_601.png (PNG copy)> <./2_20k.png (PNG copy)>]
+<./scope_24.png, id=71, 1027.84pt x 825.0825pt>
 File: ./scope_24.png Graphic file (type png)
 <use ./scope_24.png>
-Package pdftex.def Info: ./scope_24.png  used on input line 405.
+Package pdftex.def Info: ./scope_24.png  used on input line 406.
 (pdftex.def)             Requested size: 411.12872pt x 330.02715pt.
-
-[13 <./scope_24.png (PNG copy)>] [14] ("TP1 labo.aux"
+ [12 <./2_198k.png (PNG copy)>] [13 <./scope_24.png (PNG copy)>] [14]
+("TP1 labo.aux"
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 )
@@ -1194,7 +1192,7 @@ KTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/user/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/user/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/user/A
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on "TP1 labo.pdf" (15 pages, 622282 bytes).
+Output written on "TP1 labo.pdf" (15 pages, 622344 bytes).
 PDF statistics:
  106 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
