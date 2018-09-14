@@ -6,4 +6,33 @@
 
 \input{caratula.tex}
 
+\section{Medicion de Componentes con Analizador de Impedancia}
+
+
+\section{Respuesta del Circuito LRC}
+
+Se armo el circuito LRC representado en la figura \ref{fig:LRC1}, cuyos valores nominales son $L=1mH$ para la bobina y $C=8.2nF$ para el capacitor. Con el uso de un Buffer en la entrada se evitar impedancia del generador y que se cargue el generador, provocando un funcionamiento incorrecto durante las mediciones.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{lrcCircuito.png}
+\caption{Circuito LRC armado}
+\label{fig:LRC1}
+\end{figure}
+
+La ecuacion característica del circuito es $\frac{s^2}{\omega_0^2}+s\frac{2\xi}{\omega_0}+1$, donde $\omega_0 = \frac{1}{\sqrt{LC}}$ y $\xi = \frac{\omega_0RC}{2}$. Calculado la frecuencia de resonancia $f_0=55.5kHz$ y teniendo en cuenta el valor de $\xi = 0.19$ hallamos el valor de la resistencia $R = 130\Omega$. Cabe notar que el factor de calidad $Q = \frac{1}{2\xi}$ por lo que resulta en este caso $Q = 2.6$, por lo tanto se trataria de un circuito sub-amortiguado. 
+
+\subsection{Respuesta al Escalon}
+
+Exitando el circuito con $V_i = 0.5V_{pp}$ y una frecuencia de $f = 5.5kHz$ obteniendo la siguiente respuesta:
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.25]{LRC2a.png}
+\caption{Respuesta al escalon}
+\label{fig:LRC2}
+\end{figure}
+
+De tal manera que se obtuvo 
+
 \end{document}
