@@ -24,7 +24,7 @@ La ecuacion característica del circuito es $\frac{s^2}{\omega_0^2}+s\frac{2\xi}
 
 \subsection{Respuesta al Escalon}
 
-Exitando el circuito con $V_i = 0.5V_{pp}$ y una frecuencia de $f = 5.5kHz$ obteniendo la siguiente respuesta:
+Exitando el circuito con una onda cuadrada de $V_i = 0.5V_{pp}$ y una frecuencia de $f = 5.5kHz$ obteniendo la siguiente respuesta:
 
 \begin{figure}[h!]
 \centering
@@ -33,6 +33,15 @@ Exitando el circuito con $V_i = 0.5V_{pp}$ y una frecuencia de $f = 5.5kHz$ obte
 \label{fig:LRC2}
 \end{figure}
 
-De tal manera que se obtuvo 
+De tal manera que se obtuvo un sobrepico de $M_p = 757mV$, un tiempo de establecimiento del $5\%$ $t_s = 47.6{\mu}s$ y su frecuencia de oscilacion $f_t = 56.2kHz$. Como criterio para la medicion del tiempo de establecimie se tomo la diferencia de tiempo desde la exitacion de la señal cuadrada y el tercer sobrepico de la oscilacion. Notamos que la señal de salida tiene comportamiento de una oscilacion subamortiguada, donde el capacitor y la inductancia en seria actuan como un oscilador y la resistencia actua como dicipador de energia reduciendo asi la amplitud de la oscilacion.
+
+Se obtuvo la respuesta analitica del circuito partiendo de la ecuacion: $$\frac{V_c''(t)}{\omega_0^2} + \frac{V_c'(t) 2\xi}{\omega_0} + V_c(t) =  0.5u(t)$$ tal que las condiciones iniciales son nulas. Con el uso de la transformada de Laplace llegamos a $V_c(s) = \frac{0.5}{s(\frac{s^2}{\omega_0^2}+\frac{s2\xi}{\omega_0}+1)}$ por lo que su antitransformada es equivalente a:$$V_c(t) = 0.5\left(1-\frac{e^{-\xi\omega_0t}}{\sqrt{1-\xi^2}}\sin{\left(\omega_0\sqrt{1-\xi^2}t+\arctg{\frac{\sqrt{{1-\xi^2}}}{\xi}}\right)}\right)$$ 
+De esta manera se podra derivar $V_c(t)$ y hallar el punto critico, es decir el sobrepico de la funcion que tiene forma $t_p=\frac{\pi}{\omega_0\sqrt{1-\xi^2}}$, lo que resulta en este caso $t_p=9.18{\mu}s$ y su correspondiente valor $M_p=772mV$. Como describe la ecuacion la frecuencia de oscilación es $f_t= \frac{\omega_0\sqrt{1-\xi^2}}{2\pi} = 54.5kHz$. Por ultimo el tiempo de establecimiento de la señal la aproximamos con $t_s=\frac{\pi}{\xi\omega_0}$ que obtenemos $t_s = 47.42{\mu}s$
+
+Comparando los resultados analiticos y experimentales, los resultados estan en el mismo orden si bien existen diferencias las cuales pueden ser debido a errores accidentales en las mediciones y aproximaciones en los calculos teoricos. 
+
+\subsection{Effecto de la frecuencia en el circuito LRC}
+Se
+
 
 \end{document}
