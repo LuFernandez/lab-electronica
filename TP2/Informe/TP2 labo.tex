@@ -17,7 +17,7 @@ Se armo el circuito LRC representado en la figura \ref{fig:LRC1}, cuyos valores 
 \centering
 \includegraphics[scale=0.5]{lrcCircuito.png}
 \caption{Circuito LRC armado}
-\label{fig:LRC1}
+\label{fig:LRC2}
 \end{figure}
 
 La ecuacion característica del circuito es $\frac{s^2}{\omega_0^2}+s\frac{2\xi}{\omega_0}+1$, donde $\omega_0 = \frac{1}{\sqrt{LC}}$ y $\xi = \frac{\omega_0RC}{2}$. Calculado la frecuencia de resonancia $f_0=55.5kHz$ y teniendo en cuenta el valor de $\xi = 0.19$ hallamos el valor de la resistencia $R = 130\Omega$. Cabe notar que el factor de calidad $Q = \frac{1}{2\xi}$ por lo que resulta en este caso $Q = 2.6$, por lo tanto se trataria de un circuito sub-amortiguado. 
@@ -30,18 +30,47 @@ Exitando el circuito con una onda cuadrada de $V_i = 0.5V_{pp}$ y una frecuencia
 \centering
 \includegraphics[scale=0.25]{LRC2a.png}
 \caption{Respuesta al escalon}
-\label{fig:LRC2}
+\label{fig:LRC2a}
 \end{figure}
 
-De tal manera que se obtuvo un sobrepico de $M_p = 757mV$, un tiempo de establecimiento del $5\%$ $t_s = 47.6{\mu}s$ y su frecuencia de oscilacion $f_t = 56.2kHz$. Como criterio para la medicion del tiempo de establecimie se tomo la diferencia de tiempo desde la exitacion de la señal cuadrada y el tercer sobrepico de la oscilacion. Notamos que la señal de salida tiene comportamiento de una oscilacion subamortiguada, donde el capacitor y la inductancia en seria actuan como un oscilador y la resistencia actua como dicipador de energia reduciendo asi la amplitud de la oscilacion.
+De tal manera que se obtuvo un sobrepico de $M_p = 257mV$, un tiempo de establecimiento del $5\%$ $t_s = 47.6{\mu}s$ y su frecuencia de oscilacion $f_t = 56.2kHz$. Como criterio para la medicion del tiempo de establecimie se tomo la diferencia de tiempo desde la exitacion de la señal cuadrada y el tercer sobrepico de la oscilacion. Notamos que la señal de salida tiene comportamiento de una oscilacion subamortiguada, donde el capacitor y la inductancia en seria actuan como un oscilador y la resistencia actua como dicipador de energia reduciendo asi la amplitud de la oscilacion.
 
 Se obtuvo la respuesta analitica del circuito partiendo de la ecuacion: $$\frac{V_c''(t)}{\omega_0^2} + \frac{V_c'(t) 2\xi}{\omega_0} + V_c(t) =  0.5u(t)$$ tal que las condiciones iniciales son nulas. Con el uso de la transformada de Laplace llegamos a $V_c(s) = \frac{0.5}{s(\frac{s^2}{\omega_0^2}+\frac{s2\xi}{\omega_0}+1)}$ por lo que su antitransformada es equivalente a:$$V_c(t) = 0.5\left(1-\frac{e^{-\xi\omega_0t}}{\sqrt{1-\xi^2}}\sin{\left(\omega_0\sqrt{1-\xi^2}t+\arctg{\frac{\sqrt{{1-\xi^2}}}{\xi}}\right)}\right)$$ 
-De esta manera se podra derivar $V_c(t)$ y hallar el punto critico, es decir el sobrepico de la funcion que tiene forma $t_p=\frac{\pi}{\omega_0\sqrt{1-\xi^2}}$, lo que resulta en este caso $t_p=9.18{\mu}s$ y su correspondiente valor $M_p=772mV$. Como describe la ecuacion la frecuencia de oscilación es $f_t= \frac{\omega_0\sqrt{1-\xi^2}}{2\pi} = 54.5kHz$. Por ultimo el tiempo de establecimiento de la señal la aproximamos con $t_s=\frac{\pi}{\xi\omega_0}$ que obtenemos $t_s = 47.42{\mu}s$
+De esta manera se podra derivar $V_c(t)$ y hallar el punto critico, es decir el sobrepico de la funcion que tiene forma $t_p=\frac{\pi}{\omega_0\sqrt{1-\xi^2}}$, lo que resulta en este caso $t_p=9.18{\mu}s$ y su correspondiente valor $M_p=272mV$. Como describe la ecuacion la frecuencia de oscilación es $f_t= \frac{\omega_0\sqrt{1-\xi^2}}{2\pi} = 54.5kHz$. Por ultimo el tiempo de establecimiento de la señal la aproximamos con $t_s=\frac{\pi}{\xi\omega_0}$ que obtenemos $t_s = 47.42{\mu}s$
 
 Comparando los resultados analiticos y experimentales, los resultados estan en el mismo orden si bien existen diferencias las cuales pueden ser debido a errores accidentales en las mediciones y aproximaciones en los calculos teoricos. 
 
 \subsection{Effecto de la frecuencia en el circuito LRC}
-Se
+
+Con el uso del del circuito anterior se observo la onda de salida exitada con una señal cuadrada de duty $50\%$ variando su frecuencia partiendo de $f_i=5.5kHz$.
+
+Inicialmente, como las condiciones eran identicas a la experiencia anterior se vio en la señal su correspondiente periodo transitorioy su periodo estacionario en cada escalon. Sin embargo al aumentar la frecuencia, disminuye la cantidad de periodos de oscilaciones en la respuesta del escalon del circuito. 
+
+Al llegar a la frecuencia de resonancia $f_0$ la señal de salida oscila en transitorio y tiene forma de una senoidal como la frecuenciade la señal cuadrada es similar a su frecuencia de la oscilación $f_t$, por lo que siendo el duty cycle de la función de entrada $50\%$, solo medio período de la oscilacióno ocurre antes de que se presente un nuevo escalón de tensión, es decir notamos un solo maximo en cada escalon. Aumentando la frecuencia desde este punto, la forma de la onda es identica a la de $f_0$, pero la amplitud de la señal de salida se ve atenuada. Podemos explicar este fenomeno ya que el circuito tiene cracteristica de un pasa bajos el cual las altas frecuencias son filtradas y solo deja el paso de frecuencias bajas. 
+
+\subsection{Diagrama de Bode}
+
+Realizando un barrido de frecuencia entre $\frac{f_0}{10}$ a $20f_0$ con una onda senoidal, se midio la amplitud y la fase de tension del capacitor. Con el uso de los datos obtenidos se realizo su correspondiente diagrama de Bode. Ademas, se calculo la respuesta en transferencia del circuito que tiene la forma $H(s)=\frac{1}{s^2LC+sRC+1}$ con los valores de L, C y R los valores mencionados previamente.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.25]{2cmag.png}
+\includegraphics[scale=0.25]{2cfase.png}
+\caption{Diagrama de Bode}
+\label{fig:LRC2c}
+\end{figure}
+
+\pagebreak
+
+De la figura \ref{fig:LRC2c} identificamos que el circuito de segundo orden actua como un filtro pasa bajos y tiene su respectivo sobrepico al rededor de $f_p=f_0\sqrt{1-2\xi^2}=53.5kHz$. Analizando el Bode con el punto anterior, reconocemos que a frecuencias mayores a $f_0$ la salida es atenuada respecto a la entrada como tambien la frecuencia en que la amlitud maxima del sobrepico de la salida coincide con el la frecuencia $f_p$, al rededor de la $f_0$
+
+Si bien identificamos diferencias en el Bode medido y el Bode teorico, a grandes razgos son identicas; estas diferencias pueden ser debido a la tolerancia de los componentes utilizado y errores accidentales en las mediciones de las mismas. 
+
+\subsection{Respuesta al escalon condicionadas}
+
+\subsubsection{Sobrepico de 0.2V}
+
+
 
 
 \end{document}
