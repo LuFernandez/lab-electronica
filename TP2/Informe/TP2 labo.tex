@@ -11,7 +11,7 @@
 
 \section{Respuesta del Circuito LRC}
 
-Se armo el circuito LRC representado en la figura \ref{fig:LRC1}, cuyos valores nominales son $L=1mH$ para la bobina y $C=8.2nF$ para el capacitor. Con el uso de un Buffer en la entrada se evitar impedancia del generador y que se cargue el generador, provocando un funcionamiento incorrecto durante las mediciones.
+Se armo el circuito LRC representado en la figura \ref{fig:LRC2}, cuyos valores nominales son $L=1mH$ para la bobina y $C=8.2nF$ para el capacitor. Con el uso de un Buffer en la entrada se evitar impedancia del generador y que se cargue el generador, provocando un funcionamiento incorrecto durante las mediciones.
 
 \begin{figure}[h!]
 \centering
@@ -33,10 +33,10 @@ Exitando el circuito con una onda cuadrada de $V_i = 0.5V_{pp}$ y una frecuencia
 \label{fig:LRC2a}
 \end{figure}
 
-De tal manera que se obtuvo un sobrepico de $M_p = 257mV$, un tiempo de establecimiento del $5\%$ $t_s = 47.6{\mu}s$ y su frecuencia de oscilacion $f_t = 56.2kHz$. Como criterio para la medicion del tiempo de establecimie se tomo la diferencia de tiempo desde la exitacion de la señal cuadrada y el tercer sobrepico de la oscilacion. Notamos que la señal de salida tiene comportamiento de una oscilacion subamortiguada, donde el capacitor y la inductancia en seria actuan como un oscilador y la resistencia actua como dicipador de energia reduciendo asi la amplitud de la oscilacion.
+De tal manera que se obtuvo un sobrepico de $S_p = 257mV$, un tiempo de establecimiento del $5\%$ $t_s = 47.6{\mu}s$ y su frecuencia de oscilacion $f_t = 56.2kHz$. Como criterio para la medicion del tiempo de establecimie se tomo la diferencia de tiempo desde la exitacion de la señal cuadrada y el tercer sobrepico de la oscilacion. Notamos que la señal de salida tiene comportamiento de una oscilacion subamortiguada, donde el capacitor y la inductancia en seria actuan como un oscilador y la resistencia actua como dicipador de energia reduciendo asi la amplitud de la oscilacion.
 
 Se obtuvo la respuesta analitica del circuito partiendo de la ecuacion: $$\frac{V_c''(t)}{\omega_0^2} + \frac{V_c'(t) 2\xi}{\omega_0} + V_c(t) =  0.5u(t)$$ tal que las condiciones iniciales son nulas. Con el uso de la transformada de Laplace llegamos a $V_c(s) = \frac{0.5}{s(\frac{s^2}{\omega_0^2}+\frac{s2\xi}{\omega_0}+1)}$ por lo que su antitransformada es equivalente a:$$V_c(t) = 0.5\left(1-\frac{e^{-\xi\omega_0t}}{\sqrt{1-\xi^2}}\sin{\left(\omega_0\sqrt{1-\xi^2}t+\arctg{\frac{\sqrt{{1-\xi^2}}}{\xi}}\right)}\right)$$ 
-De esta manera se podra derivar $V_c(t)$ y hallar el punto critico, es decir el sobrepico de la funcion que tiene forma $t_p=\frac{\pi}{\omega_0\sqrt{1-\xi^2}}$, lo que resulta en este caso $t_p=9.18{\mu}s$ y su correspondiente valor $M_p=272mV$. Como describe la ecuacion la frecuencia de oscilación es $f_t= \frac{\omega_0\sqrt{1-\xi^2}}{2\pi} = 54.5kHz$. Por ultimo el tiempo de establecimiento de la señal la aproximamos con $t_s=\frac{\pi}{\xi\omega_0}$ que obtenemos $t_s = 47.42{\mu}s$
+De esta manera se podra derivar $V_c(t)$ y hallar el punto critico, es decir el sobrepico de la funcion que tiene forma $t_p=\frac{\pi}{\omega_0\sqrt{1-\xi^2}}$, lo que resulta en este caso $t_p=9.18{\mu}s$ y su correspondiente valor $S_p=0.5\left(e^{\frac{-\xi\pi}{\sqrt{1-\xi^2}}}\right) =272mV$. Como describe la ecuacion la frecuencia de oscilación es $f_t= \frac{\omega_0\sqrt{1-\xi^2}}{2\pi} = 54.5kHz$. Por ultimo el tiempo de establecimiento de la señal la aproximamos con $t_s=\frac{\pi}{\xi\omega_0}$ que obtenemos $t_s = 47.42{\mu}s$
 
 Comparando los resultados analiticos y experimentales, los resultados estan en el mismo orden si bien existen diferencias las cuales pueden ser debido a errores accidentales en las mediciones y aproximaciones en los calculos teoricos. 
 
@@ -64,13 +64,90 @@ Realizando un barrido de frecuencia entre $\frac{f_0}{10}$ a $20f_0$ con una ond
 
 De la figura \ref{fig:LRC2c} identificamos que el circuito de segundo orden actua como un filtro pasa bajos y tiene su respectivo sobrepico al rededor de $f_p=f_0\sqrt{1-2\xi^2}=53.5kHz$. Analizando el Bode con el punto anterior, reconocemos que a frecuencias mayores a $f_0$ la salida es atenuada respecto a la entrada como tambien la frecuencia en que la amlitud maxima del sobrepico de la salida coincide con el la frecuencia $f_p$, al rededor de la $f_0$
 
-Si bien identificamos diferencias en el Bode medido y el Bode teorico, a grandes razgos son identicas; estas diferencias pueden ser debido a la tolerancia de los componentes utilizado y errores accidentales en las mediciones de las mismas. 
+Si bien identificamos diferencias en el Bode medido y el Bode teorico, a grandes razgos son identicas. Estas diferencias pueden ser debido a la tolerancia de los componentes utilizado y errores accidentales en las mediciones de las mismas. 
 
 \subsection{Respuesta al escalon condicionadas}
 
-\subsubsection{Sobrepico de 0.2V}
+\subsubsection{Sobrepico de $\bold{0,2V}$} \label{dSobrepico de 0.2v}
 
+En primera instancia se busco el valor de R experimentalmente tal que el sobrepico sea de $S_p=0.2V$. Variando su valor se hallo que la resistencia que cumple tal condicion es $R=184\Omega$. En estas condiciones su frecuencia de oscilacion $f_t=56.8kHz$ y su tiempo de establecimiento $t_s = 44.1{\mu}s$. 
 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.075]{2d1.jpg}
+\caption{Sobrepico de $0.2V$}
+\label{fig:LRC2d1}
+\end{figure}
 
+Sin embargo analiticamente con tal valor de R, el valor de sobrepico es $S_p = 214mV$, $f_t= 53.6kHz$ y $t_s = 47.4{\mu}s$. Estos resultados pueden variar con el experimental debido a la tolerancia y a errores de apreciacion al medir el sobrepico. Por ello tambien se hallo la resistencia teorica que daria el sobrepico de $0.2V$, la cual remplazando en la ecuacion de sobrepico el $\xi=0.28$ por lo tanto $R=180\Omega$, donde la diferencia de valor de R puede atribuirse a errores accidentale en la medicion y no tener encuenta la tolerancia de los componentes. 
+
+\subsubsection{Resistencia de $\bold{18k\Omega}$}
+
+Remplazando la resistencia con uno de valor $R=18k\Omega$, lo que es $100$ veces la resistecia del item anterior observamos lo siguiente:
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.075]{2d2.jpg}
+\caption{Respuesta del Circuito con Resistencia de $18k\Omega$} 	
+\label{fig:LRC2d2}
+\end{figure}
+
+De la figura \ref{fig:LRC2d2} notamos que el circuito es atenuado y no llega a su periodo estacionario. Este fenomeno puede atribuirse a que el incremento de la resistencia provoca un incremento en el tiempo de carga en el capacitor; el tiempo caracteristico del capacitor es $\tau = RC$ en este caso $\tau = 147{\mu}s$ por lo que cuya velocidad de carga se ve reducido por el incremento del valor de resistencia. Ademas, sabiendo que la señal de cuadrada de duty $50\%$ esta en su estado mas alto tan solo $90.9{\mu}s$, lo que el capacitor no llega a cargarse y descargarse. 
+
+\subsubsection{Sin Resistencia}\label{dsinresistencia}
+
+Retirando la resistencia en el circuito, se espera una señal de salida con forma de una oscilacion armonica teniendo $V_c(t) = 0.5\left(1-\sin{\left(\omega_0t+\frac{\pi}{2}\right)}\right)$. Sin embargo se obtuvo:
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.075]{2d3.jpg}
+\caption{Respuesta del Circuito sin Resistencia} 	
+\label{fig:LRC2d3}
+\end{figure}
+
+\pagebreak
+
+En el cual la respuesta siguie teniendo forma de una oscilacion subamortiguada, de $S_p = 562mV$, $f_t = 58.1kHz$ y no llega a establecerse al $5\%$. Por lo que notamos una leve reduccion en la amplitud; esta puede atribuirse a la resistencia de los cables usados y como los C y L utilizados en el circuito no son ideales, entonces precentan resistividad  parasita. Esta resistencia  parasita, si bien pequeña, dicipa energia del sistema en cada oscilacion.
+
+\subsubsection{Circuito Criticamente Amortiguado}
+
+Para que el circuito llegue a su estado de establecimiento lo mas veloz posible, lo que el circuito seria criticamente amortiguado ya que que el tiempo de establecimiento seria el mínimo, existe un $R_c$, donde $\xi = 1$, lo que resuta analiticamente ser $R_c = 700\Omega$. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.075]{2d4.jpg}
+\caption{Respuesta del Circuito con Resistencia de $601\Omega$} 	
+\label{fig:LRC2d4}
+\end{figure}
+
+A pesar de ser la resistencia teorica de $700\Omega$, experimentalmente el valor de la resistencia usada fue $R = 601\Omega$. Es razonable que el valor de la resistencia disminuya ya que en el circuito existen resistencias parasitas. Tambien es posible que halla errores accidentales durante la medicion y que los componentes presentan tolerancias.
+
+\subsection{Respuesta del Circuito sin Buffer}
+
+\subsubsection{Sobrepico de $\bold{0,2V}$} 
+
+Repitiendo la experiencia del punto \ref{dSobrepico de 0.2v}, pero ahora sin el uso de un Buffer se obtuvo la siguiente respuesta:
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.075]{2e1.jpg}
+\caption{Sobrepico de $0.2V$ sin Buffer} 	
+\label{fig:LRC2e1}
+\end{figure}
+
+Utilizando el mismo valor del punto \ref{dSobrepico de 0.2v}, se obtuvo un sobrepico de $S_p = 180mV$, por ello se vario el valor de resistencia, disminuyendola para obtener un sobrepico de $0.2V$. Esto es debido que el Buffer permitia que el circuito sea independiente del generador que tenia impedancia interna de $50\Omega$, al quitarlo la resistencia mencionada comienza a afectar al circuito y ademas es posible que se cargue el generador provocando una leve alteracion en la señal de entrada.
+
+\subsubsection{Sin Resistencia}
+
+Quitando el Buffer y la resistencia del circuito se observo la señal de salida:
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.075]{2e3.jpg}
+\caption{Sobrepico de $0.2V$ sin Buffer} 	
+\label{fig:LRC2e3}
+\end{figure}
+
+Como en el punto \ref{dsinresistencia}, no se pudo obtener el tiempo de establecimiento al $5\%$, si bien la oscilacion es mas amortiguada teniendo un $S_p = 0.4V$, ya que la resistencia interna del generador de $50\Omega$no es suficiente como para poder disipar la suficiente cantidad de energia estabilizando la señal. Ademas, notamos que la señal de entrada tambien oscila ya que generador se carga de tal manera que sin una resistencia suficiente no puede disipar la suficiente cantidad de energia para establecerse.
 
 \end{document}
