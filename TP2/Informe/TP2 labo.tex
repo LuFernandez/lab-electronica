@@ -6,7 +6,24 @@
 
 \input{caratula.tex}
 
-\section{Medicion de Componentes con Analizador de Impedancia}
+\section{Medición de Componentes Pasivos con Analizador de Impedancias}
+\subsection{Inductor}
+Utilizando el analizador de impedancias se midió el valor de L, su factor de calidad Q, y la resistencia de una bobina de 1mH, entre 10Hz y 10MHz.
+Se propuso el siguiente modelo eléctrico equivalente:
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{modeloL.png}
+\caption{Modelo eléctrico equivalente de la bobina}
+\label{fig:modeloL}
+\end{figure}
+Se calculó la impedancia equivalente del modelo como:
+
+\begin{equation}
+Z_L=\frac{\omega^2L^2R_p}{(R_p-\omega^2C_pR_pL)^2+(\omega L)^2}+R_s+j\frac{(\omega LR_p)(R_p-\omega^2 CLR_p)}{(R_p-\omega^2C_pR_pL)^2+(\omega L)^2}
+\end{equation}
+En este modelo, $C_p$  representa la capacitancia parásita presente entre las espiras de la bobina, a su vez, $R_s$ y $R_p$, las pérdidas en el cobre y en el material magnético, respectivamente.
+Para hallar los valores de los componentes, se analiza de las mediciones la frecuencia de resonancia, que es cuando la impedancia es real, es decir, su fase es $0^o$. Esta se encuentra alrededor de los 1,8MHz.
+Igualando la parte imaginaria y evaluando en la frecuencia de resonancia se encuentra que $C_p=7.82pF$
 
 
 \section{Respuesta del Circuito LRC}
