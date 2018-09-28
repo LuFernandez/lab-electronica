@@ -33,37 +33,46 @@ clearvars data raw;
 
 
 Rs= 1;
-Rp=5e6;
-L=1e-3;
-C= 7.82e-12;
+Rl=5e6;
+L=38e-9;
+C= 8.2e-9;
+
+% s = tf('s');
 s = tf('s');
 % H = 1/(s*C*R+1);
 f1 = 10: 200 : 10e6;
-H = Rs + (s*L*Rp)/(s^2*C*Rp+s*L+Rp);
+H =  (s^2*L*C*Rl+s*(L+C*Rl*Rs)+Rl+Rs)/(s*C*Rl+1);
+% ZR = Rs + (s*L)^2*Rp/((Rp-s^2*C*Rp*L)^2+(s*L)^2)
 
-[magn, phase] = bode(H,2*pi*f1);
-magn = squeeze (magn);
-phase = squeeze(phase);
-Hdb = 20*log10(magn);
+% [magn, phase] = bode(H,2*pi*f1);
+% magn = squeeze (magn);
+% phase = squeeze(phase);
+% Hdb = 20*log10(magn);
+
+% [magn, phase] = bode(ZR,2*pi*f1);
+% magn = squeeze (magn);
+% phase = squeeze(phase);
 
 
-
-figure
-hold on
-semilogx(LC.Ls, LC.Fasegrado)
-semilogx(f1, phase);
-title('Bode de Fase');
-xlabel('frecuencia[Hz]');
-ylabel('fase [grados]');
-grid on
-hold off
 
 figure
+semilogx(LC.Ls, log10LC.R)
 hold on
-semilogx(LC.Ls, LC.Modulo)
-semilogx(f1, Hdb);
+semilogx(f1, magn);
 title('Bode de Magnitud');
 xlabel('frecuencia[Hz]');
-ylabel('magnitud[dB]');
+ylabel('impedancia [ohms]');
 grid on
+legend('Medido','Teórico');
 hold off
+
+% figure
+% semilogx(LC.Ls, 20*log10(LC.Modulo))
+% hold on
+% semilogx(f1, Hdb);
+% title('Bode de Magnitud');
+% xlabel('frecuencia[Hz]');
+% ylabel('magnitud[dB]');
+% grid on
+% legend('Medido','Teórico');
+% hold off
