@@ -146,7 +146,7 @@ Barrido de Frecuencias
 \end_layout
 
 \begin_layout Standard
-Realizando un barrido de frecuencia de 
+Al circuito mencionado se realizo un barrido de frecuencia de 
 \begin_inset Formula $10kHz$
 \end_inset
 
@@ -158,7 +158,48 @@ Realizando un barrido de frecuencia de
 \begin_inset Formula $10kHz$
 \end_inset
 
- en las condiciones mencionadas
+.
+ Observando a 10kHz:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename A10K.png
+	lyxscale 35
+	scale 20
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
