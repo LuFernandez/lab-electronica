@@ -55,10 +55,65 @@ Estos errores son también apreciables al graficar la curva del factor de calida
 
 \begin{figure}[h!]
 \centering
-`%\includegraphics[scale=0.5]{QdelL.png}
+%\includegraphics[scale=0.5]{QdelL.png}
 \caption{Factor de calidad de la bobina.}
 \label{fig:QdelL}
 \end{figure}
+
+\subsection{Capacitor}
+
+Utilizando el analizador de impedancias se midió el valor de C, el factor de pérdidas D, y la conductancia G de un capacitor de de $8.2nF$ entre frecuencias de 10Hz a 10MHz. Luego se propuso un modelo de la forma:
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{modeloC.png}
+\caption{Modelo equivalente del capacitor.}
+\label{fig:modeloC}
+\end{figure}
+Este modelo tiene la siguiente impedancia equivalente:
+
+\begin{equation}
+\centering
+Z_c=\frac{R_L}{1+(\omega CR_L)^2}+R_s+j\left(\omega L_s-\frac{\omega R_L^2C}{1+(\omega CR_L)^2}\right)
+\end{equation}
+
+$R_L$ modela la corriente de fuga que presenta el diélectrico; $L_s$ representa la inductancia parásita del componente y de los terminales. A su vez, $R_s$ refiere a la resistencia de los terminales del componente.
+Con ésto, se puede estimar la frecuencia de resonancia del componente igualando la parte imaginaria a cero. Sabiendo que $f_r=\frac{1}{2\pi}\sqrt{\frac{1}{L_sC}}$. Así se consiguió el valor de $L_s=38nH$. 
+Se dieron valores a $R_s$ y $R_L$ de manera tal que se aproximen a las curvas de magnitud y fase del capacitor, teniendo en cuenta que $R_s$ debe ser un valor chico, del orden del ohm y $R_L$ de gran magnitud, del orden del MegaOhm. Se probaron valores de $R_s=1\Omega$ y $R_L=5M\Omega$ .
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{bodeC.png}
+\caption{Bode del capacitor.}
+\label{fig:bodeC}
+\end{figure}
+
+Por otro lado, también se graficaron las curvas de la resistencia R y la capacitancia C del capacitor aproximando la curva de impedancia.
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=0.5]{RdelC.png}
+\caption{Resistencia del capacitor.}
+\label{fig:RdelC}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=0.5]{CdelC.png}
+\caption{Capacitancia del capacitor.}
+\label{fig:CdelC}
+\end{figure}
+
+Se definió también el factor de pérdidas  como $D=\frac{X_C}{G}$.
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[scale=0.5]{DdelC.png}
+\caption{Factor de pérdidas del capacitor.}
+\label{fig:DdelC}
+\end{figure}
+
+Del gráfico se puede observar que a partir que aumenta la frecuencia de excitación, la capacidad del componente disminuye, hasta la frecuencia de resonancia, donde los efectos capacitivos  e inductivos se compensan comportándose únicamente de manera resistiva. Por la fase se puede ver que a partir de esta frecuencia, comienza a comportarse de manera inductiva.
 
 \section{Respuesta del Circuito LRC}
 
