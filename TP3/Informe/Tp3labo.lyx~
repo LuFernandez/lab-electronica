@@ -27,9 +27,10 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -53,6 +54,10 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 25mm
+\topmargin 19mm
+\rightmargin 25mm
+\bottommargin 19mm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -95,7 +100,15 @@ Se armo el siguiente circuito con una inductancia
 \begin_inset Formula $R=1k\Omega$
 \end_inset
 
- :
+ exitando el circuito con una señal cuadrada 
+\begin_inset Formula $V=3V_{pp}$
+\end_inset
+
+ de 
+\begin_inset Formula $50\%$
+\end_inset
+
+ duty cycle:
 \end_layout
 
 \begin_layout Standard
@@ -138,7 +151,331 @@ Barrido de Frecuencias
 \end_layout
 
 \begin_layout Standard
+Al circuito mencionado se realizo un barrido de frecuencia de 
+\begin_inset Formula $10kHz$
+\end_inset
 
+ a 
+\begin_inset Formula $200kHz$
+\end_inset
+
+, en pasos de a 
+\begin_inset Formula $10kHz$
+\end_inset
+
+.
+ Observando a 
+\begin_inset Formula $10kHz$
+\end_inset
+
+ la tension de salida tiene un ripple de entre 
+\begin_inset Formula $17.3V$
+\end_inset
+
+ y 
+\begin_inset Formula $19.1V$
+\end_inset
+
+, en promedio 
+\begin_inset Formula $V_{o}=18.2V$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename A10K.png
+	lyxscale 35
+	scale 20
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta del Circuito a 10kHz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A 
+\begin_inset Formula $50kHz$
+\end_inset
+
+ la tension es atenuada teniendo un menor ripple y ademas en promedio la
+ tension de salida es 
+\begin_inset Formula $V_{o}=10.5V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename A50K.png
+	lyxscale 40
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta del Circuito a 50kHz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego a 
+\begin_inset Formula $200kHz$
+\end_inset
+
+ la señal es practicamente continua con una tension de 
+\begin_inset Formula $V_{o}=10.5V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename A200K.png
+	lyxscale 40
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta del Circuito a 200kHz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que a frecuencias mas altas se encuentra la salida mas estable.
+ Notamos de esta manera que la fuente switching tiene su funcionamiento
+ gracias a la diferencia de tension generada por el inductor devido a su
+ propiedad 
+\begin_inset Formula $V_{L}=-L\frac{di}{dt}$
+\end_inset
+
+, en el cual el cambio abrupto de corriente; tambien para mantener la tension
+ de salida constante, ya que una vez que la correinte es estabilizada la
+ tension de la bobina disminuye, se utiliza un capacitor en paralelo a la
+ resistencia de carga para el caso donde la tension del inductor disminuya
+ esta se carga estabilizando la tension de salida.
+ Sin embargo el uso de un capacitor produce un ripple en cuanto se descarga
+ el capacitor, por lo que en frecuencia bajas esta es mas notoria porque
+ tendra mas tiempo de descargarse mientras que en frecuencias altas el capacitor
+ tendra menos tiempo de descarga.
+ 
+\end_layout
+
+\begin_layout Subsection
+Variacion de Duty Cycle
+\end_layout
+
+\begin_layout Standard
+Variando el duty cycle de la señal de entrada de 
+\begin_inset Formula $20\%$
+\end_inset
+
+ al 
+\begin_inset Formula $80\%$
+\end_inset
+
+ a pasos de 
+\begin_inset Formula $10\%$
+\end_inset
+
+ mateniendo la frecuencia a 
+\begin_inset Formula $50kHz$
+\end_inset
+
+ notamos que la tension de salida subio periodicamente de 
+\begin_inset Formula $V_{20}=6.2V$
+\end_inset
+
+ a 
+\begin_inset Formula $V_{80}=23.5V$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename B20.png
+	lyxscale 40
+	scale 20
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tension de Salida a 20%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename B80.png
+	lyxscale 50
+	scale 20
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tension de Salida a 80%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta del Circuito
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Asi 
 \end_layout
 
 \end_body
