@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6670) (preloaded format=pdflatex 2018.4.17)  28 SEP 2018 11:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6670) (preloaded format=pdflatex 2018.4.17)  28 SEP 2018 16:52
 entering extended mode
 **"./TP2 labo.tex"
 ("TP2 labo.tex"
@@ -1017,95 +1017,178 @@ File: modeloL.png Graphic file (type png)
 <use modeloL.png>
 Package pdftex.def Info: modeloL.png  used on input line 16.
 (pdftex.def)             Requested size: 124.59015pt x 106.5227pt.
+<Lmag.png, id=9, 1445.4pt x 713.66624pt>
+File: Lmag.png Graphic file (type png)
+<use Lmag.png>
+Package pdftex.def Info: Lmag.png  used on input line 32.
+(pdftex.def)             Requested size: 433.62335pt x 214.10152pt.
+<Lfase.png, id=10, 1445.4pt x 713.66624pt>
+File: Lfase.png Graphic file (type png)
+<use Lfase.png>
+Package pdftex.def Info: Lfase.png  used on input line 35.
+(pdftex.def)             Requested size: 433.62335pt x 214.10152pt.
 
+[1 <./modeloL.png>]
+<resdelL.png, id=17, 1028.34187pt x 362.85562pt>
+File: resdelL.png Graphic file (type png)
+<use resdelL.png>
+Package pdftex.def Info: resdelL.png  used on input line 44.
+(pdftex.def)             Requested size: 514.16968pt x 181.42737pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Overfull \hbox (24.78226pt too wide) in paragraph at lines 44--45
+ [][] 
+ []
 
-<modeloC.png, id=9, 286.06876pt x 130.98938pt>
+[2 <./Lmag.png (PNG copy)> <./Lfase.png (PNG copy)>]
+<LdelL.png, id=21, 1028.34187pt x 371.88937pt>
+File: LdelL.png Graphic file (type png)
+<use LdelL.png>
+Package pdftex.def Info: LdelL.png  used on input line 51.
+(pdftex.def)             Requested size: 514.16968pt x 185.94423pt.
+
+Overfull \hbox (24.78226pt too wide) in paragraph at lines 51--52
+ [][] 
+ []
+
+<QdelL.png, id=22, 1028.34187pt x 377.91188pt>
+File: QdelL.png Graphic file (type png)
+<use QdelL.png>
+Package pdftex.def Info: QdelL.png  used on input line 61.
+(pdftex.def)             Requested size: 514.16968pt x 188.95547pt.
+
+Overfull \hbox (24.78226pt too wide) in paragraph at lines 61--62
+ [][] 
+ []
+
+[3 <./resdelL.png (PNG copy)> <./LdelL.png (PNG copy)>]
+<modeloC.png, id=26, 286.06876pt x 130.98938pt>
 File: modeloC.png Graphic file (type png)
 <use modeloC.png>
-Package pdftex.def Info: modeloC.png  used on input line 69.
+Package pdftex.def Info: modeloC.png  used on input line 72.
 (pdftex.def)             Requested size: 143.03403pt x 65.49452pt.
-[1 <./modeloL.png>]
-<lrcCircuito.png, id=16, 227.6505pt x 98.16675pt>
+<Cmag.png, id=27, 1445.4pt x 713.66624pt>
+File: Cmag.png Graphic file (type png)
+<use Cmag.png>
+Package pdftex.def Info: Cmag.png  used on input line 89.
+(pdftex.def)             Requested size: 433.62335pt x 214.10152pt.
+<Cfase.png, id=28, 1028.34187pt x 520.94624pt>
+File: Cfase.png Graphic file (type png)
+<use Cfase.png>
+Package pdftex.def Info: Cfase.png  used on input line 92.
+(pdftex.def)             Requested size: 308.50494pt x 156.28508pt.
+ [4 <./QdelL.png (PNG copy)> <./modeloC.png>]
+<resdelC.png, id=33, 1028.34187pt x 382.42876pt>
+File: resdelC.png Graphic file (type png)
+<use resdelC.png>
+Package pdftex.def Info: resdelC.png  used on input line 101.
+(pdftex.def)             Requested size: 514.16968pt x 191.2139pt.
+
+Overfull \hbox (24.78226pt too wide) in paragraph at lines 101--102
+ [][] 
+ []
+
+[5 <./Cmag.png (PNG copy)> <./Cfase.png (PNG copy)>]
+<CdelC.png, id=37, 1028.34187pt x 376.40625pt>
+File: CdelC.png Graphic file (type png)
+<use CdelC.png>
+Package pdftex.def Info: CdelC.png  used on input line 108.
+(pdftex.def)             Requested size: 514.16968pt x 188.20265pt.
+
+Overfull \hbox (24.78226pt too wide) in paragraph at lines 108--109
+ [][] 
+ []
+
+<DdelC.png, id=38, 1028.34187pt x 379.4175pt>
+File: DdelC.png Graphic file (type png)
+<use DdelC.png>
+Package pdftex.def Info: DdelC.png  used on input line 117.
+(pdftex.def)             Requested size: 514.16968pt x 189.70828pt.
+
+Overfull \hbox (24.78226pt too wide) in paragraph at lines 117--118
+ [][] 
+ []
+
+[6 <./resdelC.png (PNG copy)> <./CdelC.png (PNG copy)>]
+<lrcCircuito.png, id=43, 227.6505pt x 98.16675pt>
 File: lrcCircuito.png Graphic file (type png)
 <use lrcCircuito.png>
-Package pdftex.def Info: lrcCircuito.png  used on input line 89.
+Package pdftex.def Info: lrcCircuito.png  used on input line 130.
 (pdftex.def)             Requested size: 113.82497pt x 49.08325pt.
-<LRC2a.png, id=18, 1027.84pt x 825.0825pt>
+<LRC2a.png, id=45, 1027.84pt x 825.0825pt>
 File: LRC2a.png Graphic file (type png)
 <use LRC2a.png>
-Package pdftex.def Info: LRC2a.png  used on input line 102.
+Package pdftex.def Info: LRC2a.png  used on input line 143.
 (pdftex.def)             Requested size: 256.95937pt x 206.27011pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2 <./modeloC.png> <./lrcCircuito.png>] [3 <./LRC2a.png (PNG copy)>]
-<2cmag.png, id=27, 1106.63437pt x 381.67593pt>
+[7 <./DdelC.png (PNG copy)> <./lrcCircuito.png>] [8 <./LRC2a.png (PNG copy)>]
+<2cmag.png, id=53, 1106.63437pt x 381.67593pt>
 File: 2cmag.png Graphic file (type png)
 <use 2cmag.png>
-Package pdftex.def Info: 2cmag.png  used on input line 128.
+Package pdftex.def Info: 2cmag.png  used on input line 169.
 (pdftex.def)             Requested size: 276.65791pt x 95.41875pt.
-<2cfase.png, id=28, 1105.12875pt x 384.6872pt>
+<2cfase.png, id=54, 1105.12875pt x 384.6872pt>
 File: 2cfase.png Graphic file (type png)
 <use 2cfase.png>
-Package pdftex.def Info: 2cfase.png  used on input line 129.
+Package pdftex.def Info: 2cfase.png  used on input line 170.
 (pdftex.def)             Requested size: 276.28151pt x 96.17155pt.
- [4 <./2cmag.png (PNG copy)> <./2cfase.png (PNG copy)>]
+
+[9 <./2cmag.png (PNG copy)> <./2cfase.png (PNG copy)>]
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 142.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 183.
 
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 142.
+d on input line 183.
 
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <7.6> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 142.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 183.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <6> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 142.
-<2d1.jpg, id=32, 3380.63pt x 2465.21pt>
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 183.
+<2d1.jpg, id=58, 3380.63pt x 2465.21pt>
 File: 2d1.jpg Graphic file (type jpg)
 <use 2d1.jpg>
-Package pdftex.def Info: 2d1.jpg  used on input line 148.
+Package pdftex.def Info: 2d1.jpg  used on input line 189.
 (pdftex.def)             Requested size: 253.53632pt x 184.88277pt.
-<2d2.jpg, id=33, 3232.075pt x 2324.685pt>
+<2d2.jpg, id=59, 3232.075pt x 2324.685pt>
 File: 2d2.jpg Graphic file (type jpg)
 <use 2d2.jpg>
-Package pdftex.def Info: 2d2.jpg  used on input line 161.
+Package pdftex.def Info: 2d2.jpg  used on input line 202.
 (pdftex.def)             Requested size: 242.39517pt x 174.34386pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<2d3.jpg, id=34, 3348.51pt x 2409.0pt>
+<2d3.jpg, id=60, 3348.51pt x 2409.0pt>
 File: 2d3.jpg Graphic file (type jpg)
 <use 2d3.jpg>
-Package pdftex.def Info: 2d3.jpg  used on input line 174.
+Package pdftex.def Info: 2d3.jpg  used on input line 215.
 (pdftex.def)             Requested size: 251.12741pt x 180.6672pt.
-[5 <./2d1.jpg>] [6 <./2d2.jpg> <./2d3.jpg>]
-<2d4.jpg, id=42, 3384.645pt x 2481.27pt>
+[10 <./2d1.jpg>] [11 <./2d2.jpg> <./2d3.jpg>]
+<2d4.jpg, id=67, 3384.645pt x 2481.27pt>
 File: 2d4.jpg Graphic file (type jpg)
 <use 2d4.jpg>
-Package pdftex.def Info: 2d4.jpg  used on input line 189.
+Package pdftex.def Info: 2d4.jpg  used on input line 230.
 (pdftex.def)             Requested size: 253.83742pt x 186.08722pt.
-<2e1.jpg, id=43, 3284.27pt x 2425.06pt>
+<2e1.jpg, id=68, 3284.27pt x 2425.06pt>
 File: 2e1.jpg Graphic file (type jpg)
 <use 2e1.jpg>
-Package pdftex.def Info: 2e1.jpg  used on input line 204.
+Package pdftex.def Info: 2e1.jpg  used on input line 245.
 (pdftex.def)             Requested size: 246.30962pt x 181.87164pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<2e3.jpg, id=44, 3268.21pt x 2360.82pt>
+<2e3.jpg, id=69, 3268.21pt x 2360.82pt>
 File: 2e3.jpg Graphic file (type jpg)
 <use 2e3.jpg>
-Package pdftex.def Info: 2e3.jpg  used on input line 217.
+Package pdftex.def Info: 2e3.jpg  used on input line 258.
 (pdftex.def)             Requested size: 245.10518pt x 177.05386pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7 <./2d4.jpg>] [8 <./2e1.jpg> <./2e3.jpg>] ("TP2 labo.aux"
+[12 <./2d4.jpg>] [13 <./2e1.jpg> <./2e3.jpg>] ("TP2 labo.aux"
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 )
@@ -1114,13 +1197,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 7693 strings out of 492976
- 110409 string characters out of 3127194
- 201871 words of memory out of 3000000
- 11294 multiletter control sequences out of 15000+200000
+ 7750 strings out of 492976
+ 111133 string characters out of 3127194
+ 201942 words of memory out of 3000000
+ 11341 multiletter control sequences out of 15000+200000
  105218 words of font info for 98 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,10n,43p,773b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,11n,43p,773b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fou
 rier-mex.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
@@ -1130,9 +1213,9 @@ KTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/user/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/user/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/user/A
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on "TP2 labo.pdf" (9 pages, 37534130 bytes).
+Output written on "TP2 labo.pdf" (14 pages, 37902770 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
+ 101 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
