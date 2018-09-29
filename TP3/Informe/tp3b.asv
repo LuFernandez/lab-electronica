@@ -26,12 +26,11 @@
 % clearvars data raw;
 
 y = 5/(1-(D1/100))
-y=[6.25 7.14 8.33 10 12.5 16.67 25];
+y=[6.25 7.14 8.33 10];
 figure
-plot (D1,V);
+scatter (D1,V, 'x');
 hold on
 grid on
 plot(D1, y);
-legend('medido','aproximación teórica');
 hold off
 

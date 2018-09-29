@@ -384,7 +384,7 @@ Se armo el siguiente circuito con una inductancia
 \begin_inset Formula $R=1k\Omega$
 \end_inset
 
- excitando el circuito con una señal cuadrada 
+ exitando el circuito con una señal cuadrada 
 \begin_inset Formula $V=3V_{pp}$
 \end_inset
 
@@ -484,10 +484,24 @@ status open
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnote{Se tomó para todas las imágenes mostradas del osciloscopio la entrada
+ en en canal amarillo y la verde como la salida.}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Respuesta del Circuito a 10kHz
+Respuesta del Circuito a 10kHz.
 \end_layout
 
 \end_inset
@@ -940,6 +954,21 @@ Salida con el capacitor agregado en paralelo.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Al medirse en el analizador de impedancias, la resistencia del electrolítico
+ fue de 
+\begin_inset Formula $3.9\varOmega$
+\end_inset
+
+, y la del cerámico de 
+\begin_inset Formula $1.2\varOmega$
+\end_inset
+
+, si bien la capacidad equivalente no varía de manera relevante, la resistencia
+ disminuyó, lo que obliga a que haya más energía para compensar los saltos
+ de tensión a la salida.
 \end_layout
 
 \end_body
