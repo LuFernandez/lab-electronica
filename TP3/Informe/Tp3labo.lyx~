@@ -76,6 +76,8 @@
 \begin_body
 
 \begin_layout Standard
+
+\lang spanish
 \begin_inset ERT
 status open
 
@@ -360,15 +362,19 @@ end{titlepage}
 \end_layout
 
 \begin_layout Section
+
+\lang spanish
 Fuentes Conmutadas
 \end_layout
 
 \begin_layout Standard
-Se armo el siguiente circuito con una inductancia 
+
+\lang spanish
+Se armó el siguiente circuito con una inductancia 
 \begin_inset Formula $L=1mH$
 \end_inset
 
-, un capacitor electrolitico de 
+, un capacitor electrolítico de 
 \begin_inset Formula $C=1\mu F$
 \end_inset
 
@@ -376,7 +382,7 @@ Se armo el siguiente circuito con una inductancia
 \begin_inset Formula $R=150\Omega$
 \end_inset
 
- y una resistencia alambrado de 
+ y una resistencia de alambre bobinado de 
 \begin_inset Formula $5W$
 \end_inset
 
@@ -396,6 +402,8 @@ Se armo el siguiente circuito con una inductancia
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -404,6 +412,8 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang spanish
 \begin_inset Graphics
 	filename circuito.PNG
 	scale 40
@@ -414,6 +424,8 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+
+\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -431,11 +443,15 @@ Circuito de Fuente Conmutadas
 \end_layout
 
 \begin_layout Subsection
-Barrido de Frecuencias
+
+\lang spanish
+Barrido en Frecuencia
 \end_layout
 
 \begin_layout Standard
-Al circuito mencionado se realizo un barrido de frecuencia de 
+
+\lang spanish
+Al circuito mencionado se le realizó un barrido de frecuencia de 
 \begin_inset Formula $10kHz$
 \end_inset
 
@@ -452,7 +468,7 @@ Al circuito mencionado se realizo un barrido de frecuencia de
 \begin_inset Formula $10kHz$
 \end_inset
 
- la tension de salida tiene un ripple de entre 
+ la tensión de salida tiene un ripple de entre 
 \begin_inset Formula $17.3V$
 \end_inset
 
@@ -460,7 +476,7 @@ Al circuito mencionado se realizo un barrido de frecuencia de
 \begin_inset Formula $19.1V$
 \end_inset
 
-, en promedio 
+, con un promedio de 
 \begin_inset Formula $V_{o}=18.2V$
 \end_inset
 
@@ -468,6 +484,8 @@ Al circuito mencionado se realizo un barrido de frecuencia de
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -476,6 +494,8 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang spanish
 \begin_inset Graphics
 	filename 10k.png
 	lyxscale 35
@@ -484,10 +504,24 @@ status open
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+footnote{Se tomó para todas las imágenes mostradas del osciloscopio la entrada
+ en en canal amarillo y la verde como la salida.}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Respuesta del Circuito a 10kHz
+Respuesta del Circuito a 10kHz.
 \end_layout
 
 \end_inset
@@ -501,12 +535,14 @@ Respuesta del Circuito a 10kHz
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 A 
 \begin_inset Formula $50kHz$
 \end_inset
 
- la tension es atenuada teniendo un menor ripple y ademas en promedio la
- tension de salida es 
+ la tensión es atenuada teniendo un menor ripple y además en promedio la
+ tensión de salida es 
 \begin_inset Formula $V_{o}=10.5V$
 \end_inset
 
@@ -514,6 +550,8 @@ A
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -526,6 +564,8 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang spanish
 \begin_inset Graphics
 	filename 50k.png
 	lyxscale 40
@@ -537,6 +577,8 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+
+\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -554,11 +596,13 @@ Respuesta del Circuito a 50kHz
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 Luego a 
 \begin_inset Formula $200kHz$
 \end_inset
 
- la señal es practicamente continua con una tension de 
+ la señal es prácticamente continua con una tensión de 
 \begin_inset Formula $V_{o}=10.5V$
 \end_inset
 
@@ -566,6 +610,8 @@ Luego a
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -574,6 +620,8 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang spanish
 \begin_inset Graphics
 	filename 200k.png
 	lyxscale 40
@@ -585,6 +633,8 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+
+\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -602,9 +652,11 @@ Respuesta del Circuito a 200kHz
 \end_layout
 
 \begin_layout Standard
-Por lo que a frecuencias mas altas se encuentra la salida mas estable.
+
+\lang spanish
+Por lo que a frecuencias más altas se encuentra la salida más estable.
  Notamos de esta manera que la fuente switching tiene su funcionamiento
- gracias a la diferencia de tension generada por el inductor devido a su
+ gracias a la diferencia de tensión generada por el inductor debido a su
  propiedad 
 \begin_inset Formula $V_{L}=-L\frac{di}{dt}$
 \end_inset
@@ -616,16 +668,20 @@ Por lo que a frecuencias mas altas se encuentra la salida mas estable.
  esta se carga estabilizando la tension de salida.
  Sin embargo el uso de un capacitor produce un ripple en cuanto se descarga
  el capacitor, por lo que en frecuencia bajas esta es mas notoria porque
- tendra mas tiempo de descargarse mientras que en frecuencias altas el capacitor
- tendra menos tiempo de descarga.
+ tendra más tiempo de descargarse mientras que en frecuencias altas el capacitor
+ tendrá menos tiempo de descarga.
  
 \end_layout
 
 \begin_layout Subsection
+
+\lang spanish
 Variación de Duty Cycle
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 Variando el duty cycle de la señal de entrada de 
 \begin_inset Formula $20\%$
 \end_inset
@@ -655,6 +711,8 @@ Variando el duty cycle de la señal de entrada de
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -663,6 +721,8 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
+
+\lang spanish
 \begin_inset Float figure
 wide false
 sideways false
@@ -670,6 +730,8 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang spanish
 \begin_inset Graphics
 	filename 20dc.png
 	lyxscale 40
@@ -704,6 +766,8 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
+
+\lang spanish
 \begin_inset Graphics
 	filename 80dc.png
 	lyxscale 40
@@ -747,6 +811,8 @@ Respuesta del Circuito variando Duty Cycle
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 Esto ocurre porque cuando el transistor se encuentra en modo activo, la
  corriente en el inductor aumenta.
  A mayor duty cycle, la corriente alcanzará un valor más grande, por otro
@@ -756,6 +822,8 @@ Esto ocurre porque cuando el transistor se encuentra en modo activo, la
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 La aproximación teórica de la corriente en el inductor es 
 \begin_inset Formula $\frac{V_{out}}{V_{in}}=\frac{1}{1-D}$
 \end_inset
@@ -766,6 +834,8 @@ La aproximación teórica de la corriente en el inductor es
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -774,10 +844,12 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang spanish
 \begin_inset Graphics
 	filename aproxmatlab.png
 	lyxscale 40
-	scale 20
+	scale 40
 
 \end_inset
 
@@ -785,6 +857,8 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+
+\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -802,10 +876,14 @@ Tensión de salida en función del duty cycle.
 \end_layout
 
 \begin_layout Subsection
+
+\lang spanish
 Encendido y apagado de la fuente
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 Para realizar la medición pertinente se utilizó la función single del osciloscop
 io.
  En el caso del encendido, se triggereó con flanco ascendente y de manera
@@ -813,6 +891,8 @@ io.
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -821,10 +901,12 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang spanish
 \begin_inset Graphics
 	filename on.png
 	lyxscale 40
-	scale 20
+	scale 35
 
 \end_inset
 
@@ -832,6 +914,8 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+
+\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -854,10 +938,12 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang spanish
 \begin_inset Graphics
 	filename off.png
 	lyxscale 40
-	scale 20
+	scale 35
 
 \end_inset
 
@@ -865,6 +951,8 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+
+\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -882,6 +970,8 @@ Tensión al apagar la fuente.
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 Se midió un falltime de aproximadamente 200ms que se pensó en un principio
  era la descarga del capacitor, sin embargo al hacer el análisis analítico
  el falltime debería ser de aproximadamente 5ms, por lo que se concluyó
@@ -889,10 +979,14 @@ Se midió un falltime de aproximadamente 200ms que se pensó en un principio
 \end_layout
 
 \begin_layout Subsection
+
+\lang spanish
 Salida con capacitor en paralelo agregado
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 Al medir la salida con el capacitor electrolítico de 
 \begin_inset Formula $1\mu F$
 \end_inset
@@ -907,6 +1001,8 @@ Al medir la salida con el capacitor electrolítico de
 \end_layout
 
 \begin_layout Standard
+
+\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -915,10 +1011,12 @@ status open
 
 \begin_layout Plain Layout
 \align center
+
+\lang spanish
 \begin_inset Graphics
 	filename Dcon cap.png
 	lyxscale 40
-	scale 20
+	scale 35
 
 \end_inset
 
@@ -926,6 +1024,8 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+
+\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -940,6 +1040,216 @@ Salida con el capacitor agregado en paralelo.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Al medirse en el analizador de impedancias, la resistencia del electrolítico
+ fue de 
+\begin_inset Formula $3.9\varOmega$
+\end_inset
+
+, y la del cerámico de 
+\begin_inset Formula $1.2\varOmega$
+\end_inset
+
+, si bien la capacidad equivalente no varía de manera relevante, la resistencia
+ disminuyó, lo que obliga a que haya más energía para compensar los saltos
+ de tensión a la salida.
+\end_layout
+
+\begin_layout Subsection
+
+\lang spanish
+Tensión en el colector y base del transistor
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Se midió la tensión de la base del transistor utilizando la señal cuadrada
+ como entrada (canal amarillo), observando que la salida oscila entre 0
+ y 0.8V (tensión necesaria para saturar entre base y emisor), con la misma
+ frecuencia que la señal cuadrada, y manteniendo los valores altos de la
+ entrada con los de la salida, igual que los bajos.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang spanish
+\begin_inset Graphics
+	filename base.png
+	lyxscale 40
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tensión en la base del transistor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Luego se midió la tensión en el colector, y se observó que la salida tenía
+ máximos de 12V.
+ En este caso, de manera contraria al caso anterior, la salida está invertida,
+ es decir tiene valoers altos cuando la entrada está baja, y viceversa.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\lang spanish
+\begin_inset Graphics
+	filename colector.png
+	lyxscale 40
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tensión en el colector del transistor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Tensión y corriente sobre la bobina
+\end_layout
+
+\begin_layout Standard
+En primer lugar se colocó una resistencia en serie con la inductancia para
+ medir la corriente.
+ La caida de tensión sobre la resistencia es 
+\begin_inset Formula $I_{r}=\frac{V_{d}-V_{r}}{R}$
+\end_inset
+
+ siendo 
+\begin_inset Formula $V_{r}$
+\end_inset
+
+ el potencial entre la resistencia y la bobina.
+ Se utilizó una resistencia de bajo valor, en este caso 
+\begin_inset Formula $1\varOmega$
+\end_inset
+
+ para que la diferencia de potencial coincida con la corriente de la resistencia.
+ Las tensiones 
+\begin_inset Formula $V_{d}$
+\end_inset
+
+ y 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ se obtuvieron con las puntas del osciloscopio entre los bornes de la resistenci
+a y colocando las tierras a la masa del circuito.
+ La importancia de la corriente sobre la resitencia radica en que coincide
+ con el de la bobina 
+\begin_inset Formula $I_{L}=I_{r}$
+\end_inset
+
+ ya que estan en serie.
+\end_layout
+
+\begin_layout Standard
+Teniendo en cuenta que la tensión en la bobina cumple 
+\begin_inset Formula $V_{L}=-L\frac{di}{dt}$
+\end_inset
+
+ se midió la caida sobre la bobina de la misma manera que la descripta anteriorm
+ente para la resistencia.
+ Se observó una rampa cuya pendiente estaba dada por la derivada de corriente
+ presente en la fórmula de la tensión.
+ Entonces se aproximó mediante segmentos pequeños de 
+\begin_inset Formula $\triangle t$
+\end_inset
+
+ y 
+\begin_inset Formula $\triangle i$
+\end_inset
+
+ para finalmente despejar 
+\begin_inset Formula $L=-\frac{V_{L}\,\triangle t}{\triangle i}=1,12mH$
+\end_inset
+
+.
+ El valor calculado presenta un error relativo equivalente al 
+\begin_inset Formula $12\%$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+
+\lang spanish
+Medición utilizando el accesorio resorte
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Se midió de manera convencional utilizando el cable a masa común de las
+ puntas, colocando esta masa en la misma del circuito.
+ A continuación, se realizó la misma medición reemplazando el cable de masa
+ por el resorte colocándolo en el emisor del transistor.
+ Se esperaba que disminuyera el ruido, pero no se observó mejoría considerable.
 \end_layout
 
 \end_body

@@ -971,5 +971,108 @@ Al medirse en el analizador de impedancias, la resistencia del electrolítico
  de tensión a la salida.
 \end_layout
 
+\begin_layout Subsection
+Tensión en el colector y base del transistor
+\end_layout
+
+\begin_layout Standard
+Se midió la tensión de la base del transistor utilizando la señal cuadrada
+ como entrada (canal amarillo), observando que la salida oscila entre 0
+ y 0.8V (tensión necesaria para saturar entre base y emisor), con la misma
+ frecuencia que la señal cuadrada, y manteniendo los valores altos de la
+ entrada con los de la salida, igual que los bajos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename base.png
+	lyxscale 40
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tensión en la base del transistor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego se midió la tensión en el colector, y se observó que la salida tenía
+ máximos de 12V.
+ En este caso, de manera contraria al caso anterior, la salida está invertida,
+ es decir tiene valoers altos cuando la entrada está baja, y viceversa.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename colector.png
+	lyxscale 40
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tensión en el colector del transistor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Medición utilizando el accesorio resorte
+\end_layout
+
+\begin_layout Standard
+Se midió de manera convencional utilizando el cable a masa común de las
+ puntas, colocando esta masa en la misma del circuito.
+ A continuación, se realizó la misma medición reemplazando el cable de masa
+ por el resorte colocándolo en el emisor del transistor.
+ Se esperaba que disminuyera el ruido, pero no se observó mejoría considerable
+\end_layout
+
 \end_body
 \end_document
