@@ -93,6 +93,16 @@ Métodos de medición
 Osciloscopio
 \end_layout
 
+\begin_layout Standard
+
+\lang spanish
+Si se utiliza un osciloscopio para medir la tensión de salida de un puente,
+ se la está midiendo de manera visual, ya que se equilibra basándose en
+ que lo que se vea sea una salida nula, es decir, una senoidal lo más achatada
+ posible.
+ Ésto 
+\end_layout
+
 \begin_layout Subsection
 
 \lang spanish
@@ -102,17 +112,47 @@ Multímetro de precisión
 \begin_layout Standard
 
 \lang spanish
-En este caso, al 
+En este caso, al utilizar un multímetro de banco para equilibrar un puente
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+R1=530.165:50:5305.165; R3=5305.165; C=15e-9; C1=C; C3=C; R4=10e3; R2=2*R4;
+ % s=w*j; % z1=(1+s)/(); % z2= % z3= % z4=
+\end_layout
+
+\begin_layout Plain Layout
+
+f=sqrt(1/(C^2*R1*R3)); w=2*pi*f;
+\end_layout
+
+\begin_layout Plain Layout
+
+Vd=sqrt((C1^2*C3^2*R1^2*R3^2*R4^2*w^4+C1^2*R1^2*R4^2*w^2-2*C1^2*R1*R2*R3*R4*w^2+
+C1^2*R2^2*R3^2*w^2-2*C1*C3*R2*R3^2*R4*w^2+C3^2*R3^2*R4^2*w^2+R4^2)/(R2+R4)^2*C1^
+2*w^2*(C3^2*R2^2*R3^2*w^2+R2^2+2*R2*R3+R3^2));
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 
 \lang spanish
 Amplificador de Instrumentación
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \end_body
