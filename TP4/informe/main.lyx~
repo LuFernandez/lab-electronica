@@ -135,7 +135,7 @@ status open
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "introduccion.lyx"
+filename "caratula.lyx"
 
 \end_inset
 
@@ -145,7 +145,7 @@ filename "introduccion.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "metodo_operativo.lyx"
+filename "ej1.lyx"
 
 \end_inset
 
@@ -155,17 +155,7 @@ filename "metodo_operativo.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "analisis de resultados.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "conclusion.lyx"
+filename "wein.lyx"
 
 \end_inset
 

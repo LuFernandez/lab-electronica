@@ -93,6 +93,19 @@ Métodos de medición
 Osciloscopio
 \end_layout
 
+\begin_layout Standard
+
+\lang spanish
+Si se utiliza un osciloscopio para medir el equilibrio de un puente, se
+ lo está midiendo de manera visual, ya que se equilibra basándose en que
+ la salida tenga la menor amplitud posible.
+ Ésto tiene problemas ya que el hay ruido involucrado es considerable a
+ bajas amplitudes, lo que entorpece la medición y el equilibrio.
+ Una ventaja de este método es que también puede medirse el cambio de fase
+ el equilibrar el puente, y valiéndose de ambos mediciones el resultado
+ puede ser más preciso.
+\end_layout
+
 \begin_layout Subsection
 
 \lang spanish
@@ -102,7 +115,13 @@ Multímetro de precisión
 \begin_layout Standard
 
 \lang spanish
-En este caso, al 
+En este caso, el utilizar un multímetro de banco para equilibrar un puente
+ puede resultar en mejores mediciones ya que no se basa en un método visual,
+ sino que se busca que la salida sea nula numéricamente.
+ La representación numérica no presenta ambigüedades frente al osciloscopio
+ respecto al mínimo que se busca.
+ La desventaja, sin embargo, es que no se puede apreciar el cambio de fase
+ que resulta del equilibrio, por lo que no se cuenta con este recurso.
 \end_layout
 
 \begin_layout Subsection
@@ -113,6 +132,34 @@ Amplificador de Instrumentación
 
 \begin_layout Standard
 
+\lang spanish
+Por último, al valerse de un amplificador de instrumentación, que amplifica
+ en gran manera al mismo tiempo que elimina el ruido (modo común), se consigue
+ mucha más amplitud en el mínimo del puente.
+ Es decir, la salida del puente se amplifica y se hace menos comparable
+ con el ruido, por ende, se consigue mucha más precisión el equilibrarlo.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Por ésto se utilizó un amplificador de instrumentación, para trivializar
+ el ruido, junto a un osciloscopio para observar el cambio de fase y por
+ ser un método más intuitivo para observar el mínimo de la tensión de salida.
 \end_layout
 
 \end_body
