@@ -97,11 +97,11 @@ ref{puenteC}
 \begin_inset Formula $C_{x}$
 \end_inset
 
- comprendido de 6.8nF
-\backslash
-leqC_x
-\backslash
- en condiciones donde 
+ comprendido de 
+\begin_inset Formula $6.8nF\leq C_{x}\leq68nF$
+\end_inset
+
+, y en condiciones donde 
 \begin_inset Formula $D$
 \end_inset
 
@@ -165,6 +165,10 @@ name "puenteC"
 
 \begin_layout Subsection
 Calculo de Valores del Puente
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body
