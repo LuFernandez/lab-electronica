@@ -168,7 +168,44 @@ Calculo de Valores del Puente
 \end_layout
 
 \begin_layout Standard
+Como para un puente genérico 
+\begin_inset Formula $V_{d}=V_{g}.\frac{Z_{3}.Z_{2}-Z_{4}.Z_{1}}{(Z_{3}+Z_{1})(Z_{2}+Z_{4})}$
+\end_inset
 
+, donde para el caso tratado 
+\begin_inset Formula $Z_{1}=\frac{1}{sC_{1}}+R_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $Z_{2}=R_{x}+\frac{1}{sC_{x}}$
+\end_inset
+
+, 
+\begin_inset Formula $Z_{3}=R_{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $Z_{4}=R_{4}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $V_{d}=0$
+\end_inset
+
+ el puente esta en equilibrio, por lo que 
+\begin_inset Formula $Z_{3}Z_{2}=Z_{4}Z_{1}$
+\end_inset
+
+para ello sus respectivas partes reales e imaginarias tendrían que ser iguales,
+ formando así dos ecuaciones.
+ Dada esta condición se llego a la relación 
+\begin_inset Formula $R_{x}=\frac{R_{1}R4}{R_{3}}$
+\end_inset
+
+ y C_x=
+\backslash
+frac{C_1R_3
 \end_layout
 
 \end_body
