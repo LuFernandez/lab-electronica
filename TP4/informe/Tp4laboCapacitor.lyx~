@@ -3591,7 +3591,7 @@ centering
 \backslash
 begin{tabular}{|l|l|l|l|l|} 
 \backslash
-hline  & $E_{C_x}$ & $E_D$ & $E_{
+hline  C{[}nF{]}& $E_{C_x}$ & $E_D$ & $E_{
 \backslash
 varphi}$ & $E_{R_x}$ 
 \backslash
@@ -3652,7 +3652,7 @@ centering
 \backslash
 begin{tabular}{|l|l|l|l|l|} 
 \backslash
-hline  & $E_{C_x}$ & $E_D$ & $E_{
+hline C{[}nF{]} & $E_{C_x}$ & $E_D$ & $E_{
 \backslash
 varphi}$ & $E_{R_x}$ 
 \backslash
@@ -3713,7 +3713,7 @@ centering
 \backslash
 begin{tabular}{|l|l|l|l|l|} 
 \backslash
-hline  & $E_{C_x}$ & $E_D$ & $E_{
+hline C{[}nF{]} & $E_{C_x}$ & $E_D$ & $E_{
 \backslash
 varphi}$ & $E_{R_x}$  
 \backslash
