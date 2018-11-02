@@ -207,8 +207,29 @@ para ello sus respectivas partes reales e imaginarias tendrían que ser iguales,
 \begin_inset Formula $C_{x}=\frac{C_{1}R_{3}}{R_{4}}$
 \end_inset
 
-, y tambien se obtuvo que 
+, y también se obtuvo que 
 \begin_inset Formula $D_{x}=2\pi fC_{1}R_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Dado las condiciones de 
+\begin_inset Formula $C_{x}$
+\end_inset
+
+ y 
+\begin_inset Formula $D_{x}$
+\end_inset
+
+, se decidió tomar las variables de ajuste 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{4}$
 \end_inset
 
 
