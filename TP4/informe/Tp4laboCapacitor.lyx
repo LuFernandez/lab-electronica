@@ -235,7 +235,6 @@ que el intervalo de valores para
 \lang spanish
  valores para 
 \begin_inset Formula $R_{1}:[35.11;211]\Omega$
-
 \end_inset
 
  y 
@@ -4303,6 +4302,56 @@ Se aclara que el puente presenta error de
 \end_inset
 
  se mínima es única.
+ 
+\end_layout
+
+\begin_layout Subsection
+Conclusión
+\end_layout
+
+\begin_layout Standard
+Se logro la implementación de un puente el cual nos permite calcular la
+ capacidad y la resistencia de un componente capacitivo dentro de un rango
+ de trabajo de 
+\begin_inset Formula $6.8nF<C<68nF$
+\end_inset
+
+ con un error en frecuencias de 
+\begin_inset Formula $10KHz$
+\end_inset
+
+ de 
+\begin_inset Formula $\Delta C_{x}=??$
+\end_inset
+
+ y un factor de perdidas resistivas de 
+\begin_inset Formula $0.015<Dx<0.09$
+\end_inset
+
+ con error de 
+\begin_inset Formula $\Delta D_{x}=??$
+\end_inset
+
+.
+ Se vió que comenzaba a presentar limitaciones de trabajo y mayor imprecisión
+ a la hora de trabajar en frecuencias una decada por encima de lo pensado,
+ es decir, 
+\begin_inset Formula $100KHz$
+\end_inset
+
+ como también se observó como para capacitores fuera del rango de trabajo
+ pensado como pueden ser 
+\begin_inset Formula $C=150nF$
+\end_inset
+
+ nos encontrabamos con imprecisiones mayores y errores de 
+\begin_inset Formula $\Delta C_{x}=??PARA105nF$
+\end_inset
+
+ .
+ Dado estos errores es de considerar utilizar instrumentación como un analizador
+ de impedancias si se busca obtener mayor precision a la hora de tomar las
+ mediciones.
  
 \end_layout
 
