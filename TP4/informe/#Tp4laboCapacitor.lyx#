@@ -2709,7 +2709,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-10450
+10400 
 \end_layout
 
 \end_inset
@@ -2727,7 +2727,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0034
+0.034
 \end_layout
 
 \end_inset
@@ -2736,7 +2736,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
--89.81
+-88,1 
 \end_layout
 
 \end_inset
@@ -2745,7 +2745,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-80.5
+80.4
 \end_layout
 
 \end_inset
@@ -3255,7 +3255,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-46.2
+81
 \end_layout
 
 \end_inset
@@ -3264,7 +3264,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-1193 
+10445
 \end_layout
 
 \end_inset
@@ -3273,7 +3273,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-57.4
+6.55
 \end_layout
 
 \end_inset
@@ -3282,7 +3282,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.2 
+0.35
 \end_layout
 
 \end_inset
@@ -3291,7 +3291,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
--78,76
+-70,8
 \end_layout
 
 \end_inset
@@ -3300,7 +3300,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-5.5
+84.6
 \end_layout
 
 \end_inset
@@ -3415,7 +3415,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-81
+46.2
 \end_layout
 
 \end_inset
@@ -3424,7 +3424,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-10445
+1193 
 \end_layout
 
 \end_inset
@@ -3433,7 +3433,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-6.55
+57.4
 \end_layout
 
 \end_inset
@@ -3442,7 +3442,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.35
+0.2 
 \end_layout
 
 \end_inset
@@ -3451,7 +3451,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
--70,8
+-78,76
 \end_layout
 
 \end_inset
@@ -3460,7 +3460,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-84.6
+5.5
 \end_layout
 
 \end_inset
@@ -3568,11 +3568,78 @@ Mediciones a 10kHz
 \end_layout
 
 \begin_layout Subsection
+Errores Relativos
+\end_layout
+
+\begin_layout Standard
+Conciderando que el analizador de impedancias 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table}[h!] 
+\backslash
+centering 
+\backslash
+begin{tabular}{|l|l|l|l|l|} 
+\backslash
+hline  & $E_{C_x}$% & $E_D$% & $E_{0}$% & $E_{R_x}$% 
+\backslash
+
+\backslash
+ 
+\backslash
+hline 6.8n & 4.13 & 46.83 & 0.17 & 46.36 
+\backslash
+
+\backslash
+ 
+\backslash
+hline 33n & 2.08 & 69.19 & 0.20 & 72.06 
+\backslash
+
+\backslash
+ 
+\backslash
+hline 68n & 1.93 & 72.24 & 0.37 & 73.62 
+\backslash
+
+\backslash
+ 
+\backslash
+hline 150n & 1.24 & 70.46 & 0.38 & 71.04 
+\backslash
+
+\backslash
+ 
+\backslash
+hline 
+\backslash
+end{tabular} 
+\backslash
+caption{Error de Medicion a 1kHz}
+\backslash
+end{table}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Convergencias 
 \end_layout
 
 \begin_layout Standard
-Se realizó un análisis de convergencia, es decir, se buscó si existia un
+Se realizó un análisis de convergencia, es decir, se buscó si existía un
  mínimo de 
 \begin_inset Formula $V_{d}$
 \end_inset
@@ -3586,8 +3653,12 @@ Se realizó un análisis de convergencia, es decir, se buscó si existia un
 \end_inset
 
 .
- Notar en los gráficos como la parte oscura tiende a un valor menor y la
- parte clara a mayores en el eje Z donde se gráfica 
+ Notar en los gráficos como la
+\begin_inset Formula $ $
+\end_inset
+
+ parte oscura tiende a un valor menor y la parte clara a mayores en el eje
+ Z donde se gráfica 
 \begin_inset Formula $V_{d}$
 \end_inset
 
