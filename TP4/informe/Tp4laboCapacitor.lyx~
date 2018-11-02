@@ -208,7 +208,7 @@ Tomando a
 
 \begin_layout Standard
 Concluyendo que los valores de 
-\begin_inset Formula $R_{1}:[;]\Omega$
+\begin_inset Formula $R_{1}:[35.11;211]\Omega$
 \end_inset
 
  y 
@@ -3568,6 +3568,10 @@ Mediciones a 10kHz
 \end_layout
 
 \begin_layout Subsection
+Analisis de Error
+\end_layout
+
+\begin_layout Subsubsection
 Errores Relativos
 \end_layout
 
@@ -3591,7 +3595,7 @@ centering
 \backslash
 begin{tabular}{|l|l|l|l|l|} 
 \backslash
-hline  & $E_{C_x}$ & $E_D$ & $E_{
+hline  C{[}nF{]}& $E_{C_x}$ & $E_D$ & $E_{
 \backslash
 varphi}$ & $E_{R_x}$ 
 \backslash
@@ -3599,25 +3603,25 @@ varphi}$ & $E_{R_x}$
 \backslash
  
 \backslash
-hline 6.8n & 4.13 & 46.83 & 0.17 & 46.36 
+hline 6.8 & 4.13 & 46.83 & 0.17 & 46.36 
 \backslash
 
 \backslash
  
 \backslash
-hline 33n & 2.08 & 69.19 & 0.20 & 72.06 
+hline 33 & 2.08 & 69.19 & 0.20 & 72.06 
 \backslash
 
 \backslash
  
 \backslash
-hline 68n & 1.93 & 72.24 & 0.37 & 73.62 
+hline 68 & 1.93 & 72.24 & 0.37 & 73.62 
 \backslash
 
 \backslash
  
 \backslash
-hline 150n & 1.24 & 70.46 & 0.38 & 71.04 
+hline 150 & 1.24 & 70.46 & 0.38 & 71.04 
 \backslash
 
 \backslash
@@ -3652,7 +3656,7 @@ centering
 \backslash
 begin{tabular}{|l|l|l|l|l|} 
 \backslash
-hline  & $E_{C_x}$ & $E_D$ & $E_{
+hline C{[}nF{]} & $E_{C_x}$ & $E_D$ & $E_{
 \backslash
 varphi}$ & $E_{R_x}$ 
 \backslash
@@ -3660,25 +3664,25 @@ varphi}$ & $E_{R_x}$
 \backslash
  
 \backslash
-hline 6.8n & 4.02 & 26.72 & 1.12 & 29.48 
+hline 6.8 & 4.02 & 26.72 & 1.12 & 29.48 
 \backslash
 
 \backslash
  
 \backslash
-hline 33n & 1.31 & 46.12 & 1.44 & 46.98 
+hline 33 & 1.31 & 46.12 & 1.44 & 46.98 
 \backslash
 
 \backslash
  
 \backslash
-hline 68n & 1.91 & 57.21 & 1.85 & 57.84 
+hline 68 & 1.91 & 57.21 & 1.85 & 57.84 
 \backslash
 
 \backslash
  
 \backslash
-hline 150n & 1.64 & 55.84 & 2.35 & 57.05 
+hline 150 & 1.64 & 55.84 & 2.35 & 57.05 
 \backslash
 
 \backslash
@@ -3713,7 +3717,7 @@ centering
 \backslash
 begin{tabular}{|l|l|l|l|l|} 
 \backslash
-hline  & $E_{C_x}$ & $E_D$ & $E_{
+hline C{[}nF{]} & $E_{C_x}$ & $E_D$ & $E_{
 \backslash
 varphi}$ & $E_{R_x}$  
 \backslash
@@ -3721,25 +3725,25 @@ varphi}$ & $E_{R_x}$
 \backslash
  
 \backslash
-hline 6.8n & 3.46 & 11.78 & 3.45 & 14.80 
+hline 6.8 & 3.46 & 11.78 & 3.45 & 14.80 
 \backslash
 
 \backslash
  
 \backslash
-hline 33n & 12.21 & 44.82 & 13.53 & 37.16 
+hline 33 & 12.21 & 44.82 & 13.53 & 37.16 
 \backslash
 
 \backslash
  
 \backslash
-hline 68n & 14.71 & 52.77 & 17.22 & 44.66 
+hline 68 & 14.71 & 52.77 & 17.22 & 44.66 
 \backslash
 
 \backslash
  
 \backslash
-hline 150n & 16.77 & 59.31 & 27.94 & 51.37 
+hline 150 & 16.77 & 59.31 & 27.94 & 51.37 
 \backslash
 
 \backslash
@@ -3749,12 +3753,29 @@ hline
 \backslash
 end{tabular} 
 \backslash
+caption{Error de Medicion a 100kHz}
+\backslash
 end{table}
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+
+Error del Puente
+\end_layout
+
+\begin_layout Standard
+
+Conciderando el erroren la medición de los instrumentos del las resistencias,
+ introducido por el instrumento usado: ±,1; y a que el puente nunca llega
+ a cero ya que las mediciones se hicieron con un amplicador de instrumentación
+ podemos considerar el error en Vd como 100mV , máximo voltaje considerado
+ 0, dividido 135, ganancia del amplicador, por lo que tenemos ±1mV.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -3963,11 +3984,11 @@ Teniendo un capacitor cuyo valor es desconocido (
 \end_inset
 
 , cuyo rango es 
-\begin_inset Formula $R_{1}:[;]\Omega$
+\begin_inset Formula $R_{1}:[35.11;211]\Omega$
 \end_inset
 
  y 
-\begin_inset Formula $R_{4}:[;]\Omega$
+\begin_inset Formula $R_{4}:[1;10]k\Omega$
 \end_inset
 
 .
