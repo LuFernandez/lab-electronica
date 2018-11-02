@@ -207,7 +207,91 @@ Tomando a
 \end_layout
 
 \begin_layout Subsection
-Mediciones de los componentes patrón
+Calculo de Sensibilidades
+\end_layout
+
+\begin_layout Standard
+Se busco la sensibilidad de las resistencias variables 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ sobre la tensión 
+\begin_inset Formula $V_{d}$
+\end_inset
+
+.
+ Como finalidad de la busqueda estaba verificar y analizar el cambio producido
+ por cada una de ellas a la hora de intentar de calibrar el puente.
+ Se buscaba uniformidad de manera tal que la sensibilidad de una sea proporciona
+l a la sensibilidad respecto de la otra para asi encontrar un ajuste proporciona
+l entre ambas resistencias.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Cociente de Sensibilidades.jpg
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cociente de Sensibilidades
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Habiendo obtenido la expresión matemática para cada sensibilidad de la forma
+ 
+\begin_inset Formula $S_{R}^{Vd}=\frac{dVd}{dR}\frac{R}{Vd}$
+\end_inset
+
+, se realizó el cociente y se obtuvo la relación observada en la imagen.
+ Puede verse como este cociente es aproximado a un plano ya que tomo valores
+ mínimos en 0.1128 y máximos en 0.1242, hay muy poca disperción.
+ Habiendo hecho el cociente 
+\begin_inset Formula $C=\frac{S_{R_{1}}^{V_{c}}}{S_{R_{4}}^{V_{c}}}$
+\end_inset
+
+ podemos afirmar que nuestra resistencia 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ realizara el ajuste grueso mientras que 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ nuestro ajuste blando.
+\end_layout
+
+\begin_layout Subsection
+M ediciones de los componentes patrón
 \end_layout
 
 \begin_layout Standard
@@ -472,7 +556,7 @@ Se muestran a continuación las mediciones obtenidas con el analizador de
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -903,7 +987,7 @@ Mediciones a 1kHz
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1334,7 +1418,7 @@ Mediciones a 10kHz
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1773,7 +1857,7 @@ Mediciones realizadas con el puente c serie
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2325,7 +2409,7 @@ Mediciones a 1kHz
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2877,7 +2961,7 @@ Mediciones a 10kHz
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3422,6 +3506,166 @@ Mediciones a 10kHz
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Convergencias 
+\end_layout
+
+\begin_layout Standard
+Se realizó un análisis de convergencia, es decir, se buscó si existia un
+ mínimo de 
+\begin_inset Formula $V_{d}$
+\end_inset
+
+, para un único valor de 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ a un único valor de 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Notar en los gráficos como la parte oscura tiende a un valor menor y la
+ parte clara a mayores en el eje Z donde se grafica 
+\begin_inset Formula $V_{d}$
+\end_inset
+
+.
+ Se decidió esta presentación de los gráficos para poder apreciar la convergenci
+a.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ConvergenciaR1Dx.jpg
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Convergencia de 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ dado un valor de 
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De manera equivalente se busco ver que existía una convergencia donde existiera
+ para un único valor de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ un único valor de 
+\begin_inset Formula $C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ConvergenciaR4Cx.jpg
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Convergencia de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ dado un valor de 
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo observado en ambos gráficos se puede notar que existe la convergencia,
+ es decir, 
+\begin_inset Formula $V_{d}$
+\end_inset
+
+ toma un valor mínimo para un único valor de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ o 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ dado un valor de 
+\begin_inset Formula $C$
+\end_inset
+
+ o 
+\begin_inset Formula $D$
+\end_inset
+
+ respectivamente .
 \end_layout
 
 \end_body
