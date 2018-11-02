@@ -111,7 +111,7 @@ Se diseñó un puente C serie que permite la medición de capacitores en el
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -207,8 +207,35 @@ Tomando a
 \end_layout
 
 \begin_layout Standard
-Concluyendo que los valores de 
+Concluyendo 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+que el intervalo de valores para
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+ valores para 
 \begin_inset Formula $R_{1}:[35.11;211]\Omega$
+
 \end_inset
 
  y 
@@ -245,6 +272,7 @@ l entre ambas resistencias.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -286,7 +314,7 @@ Habiendo obtenido la expresión matemática para cada sensibilidad de la forma
 
 , se realizó el cociente y se obtuvo la relación observada en la imagen.
  Puede verse como este cociente es aproximado a un plano ya que tomo valores
- mínimos en 0.1128 y máximos en 0.1242, hay muy poca dispersión.
+ mínimos en 0.1128 y máximos en 0.1142, hay muy poca dispersión.
  Habiendo hecho el cociente 
 \begin_inset Formula $C=\frac{S_{R_{1}}^{V_{c}}}{S_{R_{4}}^{V_{c}}}$
 \end_inset
@@ -302,33 +330,17 @@ Habiendo obtenido la expresión matemática para cada sensibilidad de la forma
  nuestro ajuste blando.
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagebreak
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Mediciones de los componentes patrón
 \end_layout
 
 \begin_layout Standard
 Teniendo en cuenta los cálculos realizados del puente se procedió a medir
- el capacitor patrón, 
+ el capacitor patrón 
 \begin_inset Formula $C_{1}=6,8nF$
 \end_inset
 
- utilizado en el puente.
+ utilizado el analizador de impedancias.
  Se realizaron mediciones del mismo a 1kHz, 10kHz y a 100kHz obteniendo
  la siguiente tabla:
 \end_layout
@@ -583,6 +595,169 @@ Valores del analizador de impedancias
 
 \end_layout
 
+\begin_layout Standard
+A partir de la información obtenida se puede concluir que el capacitor se
+ asemeja más al valor nominal a medida que aumenta la frecuencia, además
+ se nota una disminución de la resistencia parásita con el aumento de la
+ frecuencia.
+\end_layout
+
+\begin_layout Subsection
+Convergencias 
+\end_layout
+
+\begin_layout Standard
+Se realizó un análisis de convergencia, es decir, se buscó si existía un
+ mínimo de 
+\begin_inset Formula $V_{d}$
+\end_inset
+
+, para un único valor de 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ a un único valor de 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Notar en los gráficos como la parte oscura tiende a un valor menor y la
+ parte clara a mayores en el eje Z donde se gráfica 
+\begin_inset Formula $V_{d}$
+\end_inset
+
+.
+ Se decidió esta presentación de los gráficos para poder apreciar la convergenci
+a.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ConvergenciaR1Dx.jpg
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Convergencia de 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ dado un valor de 
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De manera equivalente se busco ver que existía una convergencia donde existiera
+ para un único valor de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ un único valor de 
+\begin_inset Formula $C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ConvergenciaR4Cx.jpg
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Convergencia de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ dado un valor de 
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo observado en ambos gráficos se puede notar que existe la convergencia,
+ es decir, 
+\begin_inset Formula $V_{d}$
+\end_inset
+
+ toma un valor mínimo para un único valor de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ o 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ dado un valor de 
+\begin_inset Formula $C$
+\end_inset
+
+ o 
+\begin_inset Formula $D$
+\end_inset
+
+ respectivamente.
+\end_layout
+
 \begin_layout Subsubsection
 Analizador de impedancias
 \end_layout
@@ -597,7 +772,7 @@ Se muestran a continuación las mediciones obtenidas con el analizador de
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1031,7 +1206,7 @@ Mediciones a 1kHz
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1465,7 +1640,7 @@ Mediciones a 10kHz
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1907,7 +2082,7 @@ Mediciones realizadas con el puente C serie
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2462,7 +2637,7 @@ Mediciones a 1kHz
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3017,7 +3192,7 @@ Mediciones a 10kHz
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3581,7 +3756,6 @@ Considerando que el analizador de impedancias es el valor teórico calculamos
 \end_layout
 
 \begin_layout Standard
-
 \begin_inset ERT
 status open
 
@@ -3642,7 +3816,6 @@ end{table}
 \end_layout
 
 \begin_layout Standard
-
 \begin_inset ERT
 status open
 
@@ -3703,7 +3876,6 @@ end{table}
 \end_layout
 
 \begin_layout Standard
-
 \begin_inset ERT
 status open
 
@@ -3764,12 +3936,10 @@ end{table}
 \end_layout
 
 \begin_layout Subsubsection
-
 Error del Puente
 \end_layout
 
 \begin_layout Standard
-
 Conciderando el erroren la medición de los instrumentos del las resistencias,
  introducido por el instrumento usado: ±,1; y a que el puente nunca llega
  a cero ya que las mediciones se hicieron con un amplicador de instrumentación
