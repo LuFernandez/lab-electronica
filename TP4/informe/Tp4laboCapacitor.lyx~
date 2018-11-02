@@ -235,7 +235,6 @@ que el intervalo de valores para
 \lang spanish
  valores para 
 \begin_inset Formula $R_{1}:[35.11;211]\Omega$
-
 \end_inset
 
  y 
@@ -275,7 +274,7 @@ l entre ambas resistencias.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -328,6 +327,19 @@ Habiendo obtenido la expresión matemática para cada sensibilidad de la forma
 \end_inset
 
  nuestro ajuste blando.
+ Por lo tanto se decidió implementar la resistencia 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ con dos presets de 5k en serie y para 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ se utilizó un preset de 500
+\begin_inset Formula $\varOmega$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -350,7 +362,7 @@ Teniendo en cuenta los cálculos realizados del puente se procedió a medir
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -637,7 +649,7 @@ a.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -694,7 +706,7 @@ De manera equivalente se busco ver que existía una convergencia donde existiera
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -756,6 +768,10 @@ Por lo observado en ambos gráficos se puede notar que existe la convergencia,
 \end_inset
 
  respectivamente.
+\end_layout
+
+\begin_layout Subsection
+Análisis practico
 \end_layout
 
 \begin_layout Subsubsection
@@ -3742,6 +3758,21 @@ Mediciones a 10kHz
 
 \end_layout
 
+\begin_layout Standard
+Cabe destacar que los valores de 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ para la capacidad nominal que es dos veces la máxima no se encuentra dentro
+ del rango establecido, igualmente se pudo equilibrar el puente debido a
+ la implementación utilizada para la resistencia, que permitió la variación
+ de esta entre 0 y 10k
+\begin_inset Formula $\varOmega.$
+\end_inset
+
+ 
+\end_layout
+
 \begin_layout Subsection
 Análisis de Error
 \end_layout
@@ -3935,18 +3966,39 @@ end{table}
 
 \end_layout
 
+\begin_layout Standard
+A partir de los datos de la tabla se observa que a frecuencias de 
+\begin_inset Formula $1kHz$
+\end_inset
+
+ y 
+\begin_inset Formula $10kHz$
+\end_inset
+
+ el error relativo de la capacitancia es menor al 5% y dismunuye al aumentar
+ el valor nominal del capacitor, en cambio a 
+\begin_inset Formula $100kHz$
+\end_inset
+
+ el error incrementa a medida que se aumenta el valor del capacitor medido
+ y estos alcanzan un error relativo del 16.77%.
+ Además queda en evidencia que el error de los parámetros restantes aumentan
+ con el incremento de la capacitancia para todos los casos de la frecuencia
+ de trabajo.
+\end_layout
+
 \begin_layout Subsubsection
 Error del Puente
 \end_layout
 
 \begin_layout Standard
-Conciderando el erroren la medición de los instrumentos del las resistencias,
- introducido por el instrumento usado: 
+Considerando el error en la medición de los instrumentos utilizados para
+ medir las resistencias: 
 \begin_inset Formula $±1\Omega$
 \end_inset
 
-; y a que el puente nunca llega a cero ya que las mediciones se hicieron
- con un amplicador de instrumentación podemos considerar su error de ±1mV.
+; y el hecho de que el puente nunca llega a cero ya que nuevamente el instrument
+o utilizado para medir la tensión presenta error, se lo tomó de ±1mV.
  
 \end_layout
 
@@ -4002,7 +4054,7 @@ y como usamos un preset de
 \begin_inset Formula $\text{∆}R_{4}=50\Omega$
 \end_inset
 
-, conciderando un cuarto de vuelta del preset.
+, considerando un cuarto de vuelta del preset.
  Hay que considerar el peor caso cuando se suman los errores lo que seria
  para el caso 
 \begin_inset Formula $\text{∆}R_{1}=5\Omega$
@@ -4060,7 +4112,7 @@ Por ultimo hallamos el error del
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\text{∆}D_{x}=2πfC1\text{·}\text{∆}R1
+\text{∆}D_{x}=2πfC1∆R1
 \]
 
 \end_inset
@@ -4077,166 +4129,6 @@ Por ultimo hallamos el error del
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Convergencias 
-\end_layout
-
-\begin_layout Standard
-Se realizó un análisis de convergencia, es decir, se buscó si existía un
- mínimo de 
-\begin_inset Formula $V_{d}$
-\end_inset
-
-, para un único valor de 
-\begin_inset Formula $R_{1}$
-\end_inset
-
- a un único valor de 
-\begin_inset Formula $D$
-\end_inset
-
-.
- Notar en los gráficos como la parte oscura tiende a un valor menor y la
- parte clara a mayores en el eje Z donde se gráfica 
-\begin_inset Formula $V_{d}$
-\end_inset
-
-.
- Se decidió esta presentación de los gráficos para poder apreciar la convergenci
-a.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ConvergenciaR1Dx.jpg
-	lyxscale 50
-	scale 25
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Convergencia de 
-\begin_inset Formula $R_{1}$
-\end_inset
-
- dado un valor de 
-\begin_inset Formula $D$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-De manera equivalente se busco ver que existía una convergencia donde existiera
- para un único valor de 
-\begin_inset Formula $R_{4}$
-\end_inset
-
- un único valor de 
-\begin_inset Formula $C$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ConvergenciaR4Cx.jpg
-	lyxscale 50
-	scale 25
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Convergencia de 
-\begin_inset Formula $R_{4}$
-\end_inset
-
- dado un valor de 
-\begin_inset Formula $C$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Por lo observado en ambos gráficos se puede notar que existe la convergencia,
- es decir, 
-\begin_inset Formula $V_{d}$
-\end_inset
-
- toma un valor mínimo para un único valor de 
-\begin_inset Formula $R_{4}$
-\end_inset
-
- o 
-\begin_inset Formula $R_{1}$
-\end_inset
-
- dado un valor de 
-\begin_inset Formula $C$
-\end_inset
-
- o 
-\begin_inset Formula $D$
-\end_inset
-
- respectivamente .
 \end_layout
 
 \begin_layout Subsection
@@ -4434,6 +4326,56 @@ Se aclara que el puente presenta error de
 \end_inset
 
  se mínima es única.
+ 
+\end_layout
+
+\begin_layout Subsection
+Conclusión
+\end_layout
+
+\begin_layout Standard
+Se logró la implementación de un puente el cual nos permite calcular la
+ capacidad y la resistencia de un componente capacitivo dentro de un rango
+ de trabajo de 
+\begin_inset Formula $6.8nF<C<68nF$
+\end_inset
+
+ con un error en frecuencias de 
+\begin_inset Formula $10KHz$
+\end_inset
+
+ de 
+\begin_inset Formula $\Delta C_{x}=3.4nF$
+\end_inset
+
+  y un factor de perdidas resistivas de 
+\begin_inset Formula $0.015<Dx<0.09$
+\end_inset
+
+ con error de 
+\begin_inset Formula $\Delta D_{x}=??$
+\end_inset
+
+.
+ Se vió que comenzaba a presentar limitaciones de trabajo y mayor imprecisión
+ a la hora de trabajar en frecuencias una decada por encima de lo pensado,
+ es decir, 
+\begin_inset Formula $100KHz$
+\end_inset
+
+ como también se observó como para capacitores fuera del rango de trabajo
+ pensado como pueden ser 
+\begin_inset Formula $C=150nF$
+\end_inset
+
+ nos encontrabamos con imprecisiones mayores y errores de 
+\begin_inset Formula $\Delta C_{x}=??PARA105nF$
+\end_inset
+
+ .
+ Dado estos errores es de considerar utilizar instrumentación como un analizador
+ de impedancias si se busca obtener mayor precision a la hora de tomar las
+ mediciones.
  
 \end_layout
 
