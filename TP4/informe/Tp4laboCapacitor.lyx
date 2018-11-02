@@ -195,7 +195,7 @@ Tomando a
 
  se procedió a averiguar el rango de valores que podrían tomar las resistencias
  variables.
- Despejando de las expresiónes anteriores,
+ Despejando de las expresiones anteriores,
 \begin_inset Formula 
 \[
 \frac{C_{1}R_{3}}{C_{xmax}}<R_{4}<\frac{C_{1}R_{3}}{C_{xmin}}\;\;\;\;\;\;\frac{D_{xmin}}{C_{1}2\pi f}<R_{1}<\frac{D_{xmax}}{C_{1}2\pi f}
@@ -204,6 +204,18 @@ Tomando a
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Concluyendo que los valores de 
+\begin_inset Formula $R_{1}:[;]\Omega$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{4}:[1;10]k\Omega$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -224,10 +236,10 @@ Se busco la sensibilidad de las resistencias variables
 \end_inset
 
 .
- Como finalidad de la busqueda estaba verificar y analizar el cambio producido
+ Como finalidad de la búsqueda estaba verificar y analizar el cambio producido
  por cada una de ellas a la hora de intentar de calibrar el puente.
  Se buscaba uniformidad de manera tal que la sensibilidad de una sea proporciona
-l a la sensibilidad respecto de la otra para asi encontrar un ajuste proporciona
+l a la sensibilidad respecto de la otra para así encontrar un ajuste proporciona
 l entre ambas resistencias.
 \end_layout
 
@@ -242,7 +254,7 @@ status open
 \begin_inset Graphics
 	filename Cociente de Sensibilidades.jpg
 	lyxscale 50
-	scale 50
+	scale 30
 
 \end_inset
 
@@ -274,7 +286,7 @@ Habiendo obtenido la expresión matemática para cada sensibilidad de la forma
 
 , se realizó el cociente y se obtuvo la relación observada en la imagen.
  Puede verse como este cociente es aproximado a un plano ya que tomo valores
- mínimos en 0.1128 y máximos en 0.1242, hay muy poca disperción.
+ mínimos en 0.1128 y máximos en 0.1242, hay muy poca dispersión.
  Habiendo hecho el cociente 
 \begin_inset Formula $C=\frac{S_{R_{1}}^{V_{c}}}{S_{R_{4}}^{V_{c}}}$
 \end_inset
@@ -290,14 +302,34 @@ Habiendo obtenido la expresión matemática para cada sensibilidad de la forma
  nuestro ajuste blando.
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagebreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
-M ediciones de los componentes patrón
+Mediciones de los componentes patrón
 \end_layout
 
 \begin_layout Standard
 Teniendo en cuenta los cálculos realizados del puente se procedió a medir
- el capacitor patrón, C1 = 4,7nF utilizado en el puente.
- Se realizaron mediciones del mismo a 2kHz, 20kHz y a 200kHz obteniendo
+ el capacitor patrón, 
+\begin_inset Formula $C_{1}=6,8nF$
+\end_inset
+
+ utilizado en el puente.
+ Se realizaron mediciones del mismo a 1kHz, 10kHz y a 100kHz obteniendo
  la siguiente tabla:
 \end_layout
 
@@ -332,7 +364,10 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-C [nF]
+\begin_inset Formula $C[nF]$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -341,7 +376,10 @@ C [nF]
 \begin_inset Text
 
 \begin_layout Plain Layout
-R[Omega]
+\begin_inset Formula $R[\Omega]$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -350,7 +388,10 @@ R[Omega]
 \begin_inset Text
 
 \begin_layout Plain Layout
-D
+\begin_inset Formula $D$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -385,7 +426,7 @@ D
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+7.033 
 \end_layout
 
 \end_inset
@@ -394,7 +435,7 @@ D
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+140
 \end_layout
 
 \end_inset
@@ -403,7 +444,7 @@ D
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0062
 \end_layout
 
 \end_inset
@@ -412,7 +453,7 @@ D
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+-89.65 
 \end_layout
 
 \end_inset
@@ -435,7 +476,7 @@ D
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+6.983 
 \end_layout
 
 \end_inset
@@ -444,7 +485,7 @@ D
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+66
 \end_layout
 
 \end_inset
@@ -453,7 +494,7 @@ D
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0291 
 \end_layout
 
 \end_inset
@@ -462,7 +503,7 @@ D
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+-88.33 
 \end_layout
 
 \end_inset
@@ -485,7 +526,7 @@ D
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+6.847 
 \end_layout
 
 \end_inset
@@ -494,7 +535,7 @@ D
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+30.8
 \end_layout
 
 \end_inset
@@ -503,7 +544,7 @@ D
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.1332 
 \end_layout
 
 \end_inset
@@ -512,7 +553,7 @@ D
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+-82.76 
 \end_layout
 
 \end_inset
@@ -548,7 +589,7 @@ Analizador de impedancias
 
 \begin_layout Standard
 Se muestran a continuación las mediciones obtenidas con el analizador de
- imepdancias
+ impedancia
 \end_layout
 
 \begin_layout Standard
@@ -608,7 +649,10 @@ Valor nominal
 \begin_inset Text
 
 \begin_layout Plain Layout
-D
+\begin_inset Formula $D$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1039,7 +1083,10 @@ Valor nominal
 \begin_inset Text
 
 \begin_layout Plain Layout
-D
+\begin_inset Formula $D$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1470,7 +1517,10 @@ Valor nominal
 \begin_inset Text
 
 \begin_layout Plain Layout
-D
+\begin_inset Formula $D$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1849,7 +1899,7 @@ Puente
 \end_layout
 
 \begin_layout Standard
-Mediciones realizadas con el puente c serie
+Mediciones realizadas con el puente C serie
 \end_layout
 
 \begin_layout Standard
@@ -1943,7 +1993,10 @@ Valor nominal
 \begin_inset Text
 
 \begin_layout Plain Layout
-D
+\begin_inset Formula $D$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2092,7 +2145,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-49
+77
 \end_layout
 
 \end_inset
@@ -2101,7 +2154,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-1023
+10450
 \end_layout
 
 \end_inset
@@ -2110,7 +2163,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-68.7
+6.7
 \end_layout
 
 \end_inset
@@ -2119,7 +2172,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0022
+0.0034
 \end_layout
 
 \end_inset
@@ -2128,7 +2181,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
--89.88
+-89.81
 \end_layout
 
 \end_inset
@@ -2137,7 +2190,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-5.01 
+80.5
 \end_layout
 
 \end_inset
@@ -2252,7 +2305,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-77
+49
 \end_layout
 
 \end_inset
@@ -2261,7 +2314,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-10450
+1023
 \end_layout
 
 \end_inset
@@ -2270,7 +2323,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-6.7
+68.7
 \end_layout
 
 \end_inset
@@ -2279,7 +2332,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0034
+0.0022
 \end_layout
 
 \end_inset
@@ -2288,7 +2341,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
--89.81
+-89.88
 \end_layout
 
 \end_inset
@@ -2297,7 +2350,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-80.5
+5.01 
 \end_layout
 
 \end_inset
@@ -2495,7 +2548,10 @@ Valor nominal
 \begin_inset Text
 
 \begin_layout Plain Layout
-D
+\begin_inset Formula $D$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3047,7 +3103,10 @@ Valor nominal
 \begin_inset Text
 
 \begin_layout Plain Layout
-D
+\begin_inset Formula $D$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3196,7 +3255,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-46.2
+81
 \end_layout
 
 \end_inset
@@ -3205,7 +3264,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-1193 
+10445
 \end_layout
 
 \end_inset
@@ -3214,7 +3273,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-57.4
+6.55
 \end_layout
 
 \end_inset
@@ -3223,7 +3282,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.2 
+0.35
 \end_layout
 
 \end_inset
@@ -3232,7 +3291,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
--78,76
+-70,8
 \end_layout
 
 \end_inset
@@ -3241,7 +3300,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-5.5
+84.6
 \end_layout
 
 \end_inset
@@ -3356,7 +3415,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-81
+46.2
 \end_layout
 
 \end_inset
@@ -3365,7 +3424,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-10445
+1193 
 \end_layout
 
 \end_inset
@@ -3374,7 +3433,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-6.55
+57.4
 \end_layout
 
 \end_inset
@@ -3383,7 +3442,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.35
+0.2 
 \end_layout
 
 \end_inset
@@ -3392,7 +3451,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
--70,8
+-78,76
 \end_layout
 
 \end_inset
@@ -3401,7 +3460,7 @@ resistencia
 \begin_inset Text
 
 \begin_layout Plain Layout
-84.6
+5.5
 \end_layout
 
 \end_inset
@@ -3513,7 +3572,7 @@ Convergencias
 \end_layout
 
 \begin_layout Standard
-Se realizó un análisis de convergencia, es decir, se buscó si existia un
+Se realizó un análisis de convergencia, es decir, se buscó si existía un
  mínimo de 
 \begin_inset Formula $V_{d}$
 \end_inset
@@ -3528,7 +3587,7 @@ Se realizó un análisis de convergencia, es decir, se buscó si existia un
 
 .
  Notar en los gráficos como la parte oscura tiende a un valor menor y la
- parte clara a mayores en el eje Z donde se grafica 
+ parte clara a mayores en el eje Z donde se gráfica 
 \begin_inset Formula $V_{d}$
 \end_inset
 
@@ -3550,7 +3609,7 @@ status open
 \begin_inset Graphics
 	filename ConvergenciaR1Dx.jpg
 	lyxscale 50
-	scale 50
+	scale 25
 
 \end_inset
 
@@ -3607,7 +3666,7 @@ status open
 \begin_inset Graphics
 	filename ConvergenciaR4Cx.jpg
 	lyxscale 50
-	scale 50
+	scale 25
 
 \end_inset
 
@@ -3666,6 +3725,204 @@ Por lo observado en ambos gráficos se puede notar que existe la convergencia,
 \end_inset
 
  respectivamente .
+\end_layout
+
+\begin_layout Subsection
+Manual de Usuario
+\end_layout
+
+\begin_layout Standard
+Teniendo un capacitor cuyo valor es desconocido (
+\begin_inset Formula $C_{x}$
+\end_inset
+
+), entre los valores 
+\begin_inset Formula $6.8nF$
+\end_inset
+
+ a 
+\begin_inset Formula $68nF$
+\end_inset
+
+ y cuya tangente de perdida
+\begin_inset Formula $D_{x}$
+\end_inset
+
+ este comprendida entre 
+\begin_inset Formula $0.015$
+\end_inset
+
+ a 
+\begin_inset Formula $0.09$
+\end_inset
+
+ a una frecuencia de 
+\begin_inset Formula $10kHz$
+\end_inset
+
+, se busca mediante el uso del puente poder hallar el valor de 
+\begin_inset Formula $C_{x}.$
+\end_inset
+
+ Para el cual se utilizan resistencias variables en la posición de 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+, cuyo rango es 
+\begin_inset Formula $R_{1}:[;]\Omega$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{4}:[;]\Omega$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Colocando el capacitor deseado a medir, perteneciendo al rango indicado
+ y excitando el puente con una senoidal de 
+\begin_inset Formula $10kHz$
+\end_inset
+
+ y 
+\begin_inset Formula $3V_{pp}$
+\end_inset
+
+, se debe ajustar las variables 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ hasta obtener el 
+\begin_inset Formula $V_{d}$
+\end_inset
+
+ mínimo posible.
+ Obteniendo el 
+\begin_inset Formula $V_{d}$
+\end_inset
+
+ mínimo se podrá proceder a la medición de los valores de resistencia de
+ ajuste, desconectando la fuente.
+ Con los resultados obtenidos podremos analizar y concluir con los valores
+ de 
+\begin_inset Formula $C_{x}$
+\end_inset
+
+ y 
+\begin_inset Formula $D_{x}$
+\end_inset
+
+, como sabemos que 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ del puente es 
+\begin_inset Formula $6.8nF$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+ es de 
+\begin_inset Formula $10k\Omega$
+\end_inset
+
+ es posible de las ecuaciones siguientes calcular sus respectivos valores
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $C_{x}=\frac{C_{1}R_{3}}{R_{4}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+y 
+\begin_inset Formula $D_{x}=2\pi fC_{1}R_{1}$
+\end_inset
+
+, con 
+\begin_inset Formula $f$
+\end_inset
+
+ siendo igual a 10kHz.
+ 
+\end_layout
+
+\begin_layout Standard
+Se aclara que el puente presenta error de 
+\begin_inset Formula $\Delta C_{x}=??$
+\end_inset
+
+ y 
+\begin_inset Formula $\Delta D_{x}=??$
+\end_inset
+
+ en la medición de las capacidades y en la tangente de perdida respectivamente
+ a 
+\begin_inset Formula $10kHz$
+\end_inset
+
+.
+ Ademas se destaca que la combinación de resistencia de 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+ para que 
+\begin_inset Formula $V_{d}$
+\end_inset
+
+ se mínima es única.
+ 
 \end_layout
 
 \end_body
