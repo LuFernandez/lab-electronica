@@ -21,5 +21,5 @@ Vd=sqrt((C1^2.*C3^2.*R1.^2.*R3.^2.*R4^2.*w.^4+C1^2.*R1.^2.*R4^2.*w.^2-2.*C1^2.*R
 %plot(R,Vd)
 %title('Sensibilidad en función de R1');
 %grid on
-surf(R,w/(2*pi),Vd);
+surf(w/(2*pi),Vd);
 

@@ -1,0 +1,509 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 25mm
+\topmargin 19mm
+\rightmargin 25mm
+\bottommargin 19mm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection
+Puente de Wien
+\end_layout
+
+\begin_layout Subsubsection
+Diseño y elección de componentes
+\end_layout
+
+\begin_layout Standard
+Se realizó un puente de Wien.
+ El mismo permite medir frecuencias de entre 2kHz a 20kHz, y se diseñó como
+ se muestra a continuación, siendo las resistencias R3 y R1 las variables
+ de ajuste:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename wien.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Puente de Wien.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para un puente genérico, la tensión Vd está dada por la siguiente expresión,
+ tomando impedancias genéricas:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Vd=\frac{Z_{1}Z_{4}-Z_{3}Z_{2}}{(Z_{1}+Z_{3})(Z_{4}+Z_{2})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para el caso del puente de Wien, tomamos las siguientes equivalencias:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+\begin{array}{c}
+Z_{1}=\frac{sC_{1}R_{1}+1}{sC_{1}}\\
+Z_{2}=R_{2}\\
+Z_{3}=\frac{R_{1}}{sC_{1}R_{1}+1}\\
+Z_{4}=R_{4}
+\end{array}\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El equilibrio se consigue para Vd=0, de donde resultan dos condiciones para
+ el equilibrio del puente, que son:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+\begin{array}{c}
+f=\frac{1}{2\pi\sqrt{C_{1}C_{3}R_{1}R_{3}}}\\
+\frac{R_{2}}{R_{4}}=\frac{R_{1}}{R_{3}}+\frac{C_{3}}{C_{1}}
+\end{array}\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si tomamos 
+\begin_inset Formula $R_{1}=R_{3}=R$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{1}=C_{3}=C$
+\end_inset
+
+ las expresiones anteriores se simplifican y resultan:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+\begin{array}{c}
+f=\frac{1}{2\pi CR}\\
+R_{2}=2R_{4}
+\end{array}\end{cases}\label{eq:realWien}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomando en cuenta que 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+ son las variables de ajuste y la condición de equivalencia entre ellas
+ tomada anteriormente se halló el intervalo de resistencias R para medir
+ el rango de frecuencias deseado del puente.
+ El rango obtenido para los valores de R fueron 
+\begin_inset Formula $R=[\frac{1}{2\pi C.20kHz},\frac{1}{2\pi C.2kHz}]$
+\end_inset
+
+ que, fijando 
+\begin_inset Formula $C=15nF$
+\end_inset
+
+ resultan en:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+R=[530.5\varOmega,5305\varOmega]\label{eq:Rrango}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además se tomó 
+\begin_inset Formula $R_{4}=10k\varOmega$
+\end_inset
+
+ dando 
+\begin_inset Formula $R_{2}=20k\varOmega$
+\end_inset
+
+, por la relación encontrada en 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:realWien"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Análisis de Sensibilidades
+\end_layout
+
+\begin_layout Standard
+Para el análisis de sensibilidades se planteó variar las resistencias un
+ 
+\begin_inset Formula $\varDelta R$
+\end_inset
+
+, pues al ser presets, no tienen tolerancias y la sensibilidad se basa en
+ cuán bien se puede llegar, girando el mismo, al valor deseado.
+ Como el rango estaba dado por 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Rrango"
+
+\end_inset
+
+, se eligieron presets de 
+\begin_inset Formula $10k\varOmega$
+\end_inset
+
+, de 25 vueltas cada uno para 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+ Éste 
+\begin_inset Formula $\varDelta R$
+\end_inset
+
+ se eligió como media vuelta del preset, es decir media vuelta equivale
+ a 
+\begin_inset Formula $200\varOmega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Con ésto en mente se halló la sensibilidad del puente frente a 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ graficando la tensión de equilibrio en función tanto de 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ como de 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+, así como también en función de la frecuencia a medir, valiéndose de 
+\begin_inset Formula $f=\frac{1}{2\pi RC}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename sensibilidadR1enR.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sensibilidad respecto a 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ en función de R.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename sensibilidadR1enf.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sensibilidad respecto a 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ en función de f.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename sensibilidadR3enR.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sensibilidad respecto a 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+ en función de R.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename sensibilidadR3enf.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sensibilidad respecto a 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+ en función de f.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De estos análisis se observa que ambas variables tienen igual importancia
+ a la hora de equilibrar el puente y medir la frecuencia deseada.
+ Además para frecuencias más altas, es decir valores de resistencias más
+ altos, las sensibilidades se ven más afectadas para el caso de 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ y a frecuencias medias para 
+\begin_inset Formula $R_{3}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
