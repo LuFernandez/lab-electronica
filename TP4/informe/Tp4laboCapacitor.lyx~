@@ -4348,12 +4348,12 @@ Se logró la implementación de un puente el cual nos permite calcular la
 \begin_inset Formula $\Delta C_{x}=3.4nF$
 \end_inset
 
-  y un factor de perdidas resistivas de 
+ y un factor de perdidas resistivas de 
 \begin_inset Formula $0.015<Dx<0.09$
 \end_inset
 
  con error de 
-\begin_inset Formula $\Delta D_{x}=??$
+\begin_inset Formula $\Delta D_{x}=0.0021$
 \end_inset
 
 .
@@ -4361,15 +4361,6 @@ Se logró la implementación de un puente el cual nos permite calcular la
  a la hora de trabajar en frecuencias una decada por encima de lo pensado,
  es decir, 
 \begin_inset Formula $100KHz$
-\end_inset
-
- como también se observó como para capacitores fuera del rango de trabajo
- pensado como pueden ser 
-\begin_inset Formula $C=150nF$
-\end_inset
-
- nos encontrabamos con imprecisiones mayores y errores de 
-\begin_inset Formula $\Delta C_{x}=??PARA105nF$
 \end_inset
 
  .

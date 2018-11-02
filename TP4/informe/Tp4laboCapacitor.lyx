@@ -103,7 +103,7 @@ Se diseñó un puente C serie que permite la medición de capacitores en el
 \end_inset
 
 .
- A continuación se muestra el circuito empleado 
+ A continuación, se muestra el circuito empleado 
 \end_layout
 
 \begin_layout Standard
@@ -249,7 +249,7 @@ Calculo de Sensibilidades
 \end_layout
 
 \begin_layout Standard
-Se busco la sensibilidad de las resistencias variables 
+Se buscó la sensibilidad de las resistencias variables 
 \begin_inset Formula $R_{1}$
 \end_inset
 
@@ -327,7 +327,7 @@ Habiendo obtenido la expresión matemática para cada sensibilidad de la forma
 \end_inset
 
  nuestro ajuste blando.
- Por lo tanto se decidió implementar la resistencia 
+ Por lo tanto, se decidió implementar la resistencia 
 \begin_inset Formula $R_{4}$
 \end_inset
 
@@ -3982,7 +3982,7 @@ A partir de los datos de la tabla se observa que a frecuencias de
 
  el error incrementa a medida que se aumenta el valor del capacitor medido
  y estos alcanzan un error relativo del 16.77%.
- Además queda en evidencia que el error de los parámetros restantes aumentan
+ Además, queda en evidencia que el error de los parámetros restantes aumentan
  con el incremento de la capacitancia para todos los casos de la frecuencia
  de trabajo.
 \end_layout
@@ -4313,19 +4313,8 @@ Se aclara que el puente presenta error de
 \end_inset
 
 .
- Ademas se destaca que la combinación de resistencia de 
-\begin_inset Formula $R_{1}$
-\end_inset
-
- y 
-\begin_inset Formula $R_{4}$
-\end_inset
-
- para que 
-\begin_inset Formula $V_{d}$
-\end_inset
-
- se mínima es única.
+ Además, se destaca que la combinación de resistencia de R 1 y R 4 para
+ que V d se mínima es única.
  
 \end_layout
 
