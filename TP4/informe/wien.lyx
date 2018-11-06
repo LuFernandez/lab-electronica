@@ -107,6 +107,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename wien.png
+	scale 50
 
 \end_inset
 
@@ -518,6 +519,7 @@ Tras haber implementado el puente ya mencionado en placa, se conectó la
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
