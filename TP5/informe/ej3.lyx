@@ -168,7 +168,7 @@ Señal moduladora senoidal m=0.5
 
 \begin_layout Standard
 Se generó una señal AM de 200mVpp con un índice de modulación de 0.5, siendo
- la frecuencia de la portadora 1.5MHz, y la moduladora 100kHz.
+ la frecuencia de la portadora 1.3MHz, y la moduladora 100kHz.
  El espectro se muestra a continuación:
 \end_layout
 
@@ -327,7 +327,7 @@ En este caso, la señal moduladora se tomó como
 \begin_inset Formula $\Lambda(t)=\Lambda(t+\mathrm{T})\,\,\,\forall t\,\epsilon\mathbb{\,R}$
 \end_inset
 
- con una frecuencia de 1.5MHz.
+ con una frecuencia de 1.3MHz.
 \end_layout
 
 \begin_layout Standard

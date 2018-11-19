@@ -148,16 +148,24 @@ Cuando en AM m=0.5
 \end_inset
 
 
+\begin_inset space \hfill{}
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename E:/OperaDownload/Laboratorio Electronica/lab-electronica/TP5/ej4/senoidal m=1 (1).jpeg
-	scale 47
+	scale 50
 
 \end_inset
 
