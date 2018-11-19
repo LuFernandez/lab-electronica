@@ -133,8 +133,8 @@ Espectro de una senoidal generada por el Agilent 33220A.
 \end_layout
 
 \begin_layout Standard
-Es trivial recordar que, ya que la señal real no es ideal, se observan más
- armónicos aparte del fundamental; siendo 
+Es trivial recordar que, ya que la generación de la señal real no es ideal,
+ se observan más armónicos aparte del fundamental; siendo 
 \begin_inset Formula $P_{0}$
 \end_inset
 
@@ -248,7 +248,125 @@ Espectro de una senoidal generada por el GW Instek GFG-8019G.
 \end_layout
 
 \begin_layout Standard
-Se midieron las potencias de los ármonicos principales
+Se midieron las potencias de los armónicos principales, llegándose a medir
+ tres.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+P_{0}=-14.2dBm & P_{0}=38mW\,\,\,\,(1.3MHz)\\
+P_{1}=-54dBm & P_{1}=3.98\mu W\,\,\,\,(2.6MHz)\\
+P_{2}=-46.2dBm & P_{2}=23.99\mu W\,\,\,\,(3.9MHz)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Que resulta en un THD del 0.074%, que se condice con los datos provistos
+ por la hoja de datos (<1%).
+\end_layout
+
+\begin_layout Subsection
+Distorsión armónica del Instek GFG-8219A
+\end_layout
+
+\begin_layout Standard
+Se procedió, luego, a realizar las medicioenes con el generador mencionado.
+ En este caso, se observaron 5 armónicos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej1/instek GFG-8219.jpeg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Espectro de una senoidal generada por el Instek GFG-8219A.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+P_{0}=-15.4dBm & P_{0}=28.84mW\,\,\,\,(1.3MHz)\\
+P_{1}=-49.4dBm & P_{1}=11.48\mu W\,\,\,\,(2.6MHz)\\
+P_{2}=-47.6dBm & P_{2}=17.38\mu W\,\,\,\,(3.9MHz)\\
+P_{3}=-61.6dBm & P_{3}=691.8nW\,\,\,\,(5.2MHz)\\
+P_{4}=-55.6dBm & P_{4}=2.75\mu W\,\,\,\,(6.5MHz)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede ver que este instrumento es el que tendrá mayor distorsión, pues
+ es donde se observan más armónicos.
+ Para este caso, el THD calculado, da el siguiente valor:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+THD=\frac{P_{4}+P_{3}+P_{2}+P_{1}}{P_{0}}=0.11\%
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vale aclarar que se condice con los datos provistos por la hoja de datos
+ (THD<1%).
+\end_layout
+
+\begin_layout Subsection
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+Como hay armónicos que no son visibles en el tiempo se recurre a observarlos
+ en el dominio de la frecuencia, calculando la distorsión armónica, como
+ parámetro relevante, a partir de los armónicos observados en el analizador
+ de espectros.
+ Luego de realizar las mediciones y cálculos del índice de THD de los 3
+ generadores, todos se condicen con los datos instanciados en las hojas
+ de datos y se observa una superioridad del Agilent respecto de ambos Instek
+ en cuanto a distorsión armónica respecta.
 \end_layout
 
 \end_body

@@ -109,6 +109,8 @@ status open
 \align center
 \begin_inset Graphics
 	filename ../ej1/agilent 33220A.jpeg
+	lyxscale 60
+	scale 60
 
 \end_inset
 
@@ -196,7 +198,7 @@ Lo que resulta en una
  -40 dBc, hay que utilizar otra definición de distorsión, dada por 
 \begin_inset Formula 
 \[
-THD:10log(\frac{\sum_{n=1}^{N}P_{n}_{\,}}{P_{0}})=-48.6dBc.
+THD:10log(\frac{\sum_{n=1}^{N}P_{n}{}_{\,}}{P_{0}})=-48.6dBc.
 \]
 
 \end_inset
@@ -224,6 +226,8 @@ status open
 \align center
 \begin_inset Graphics
 	filename C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej1/Gfg-8019g.jpeg
+	lyxscale 60
+	scale 60
 
 \end_inset
 
@@ -292,6 +296,8 @@ status open
 \align center
 \begin_inset Graphics
 	filename C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej1/instek GFG-8219.jpeg
+	lyxscale 60
+	scale 60
 
 \end_inset
 
