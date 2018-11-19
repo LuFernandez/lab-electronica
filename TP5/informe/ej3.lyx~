@@ -75,6 +75,107 @@
 
 \begin_body
 
+\begin_layout Section
+Modulación AM
+\end_layout
+
+\begin_layout Standard
+La modulación de amplitud o amplitud modulada (AM) se basa en variar la
+ amplitud de la señal transmitida en relación con la información que se
+ envía.
+ Teniendo una señal con información que llamaremos señal modulada, dada
+ por 
+\begin_inset Formula $S_{M}(t)=cos(2\pi f_{M}t)$
+\end_inset
+
+ se la multiplica por una señal de mayor frecuencia y potencia conocida
+ como portadora, 
+\begin_inset Formula $S_{P}(t)=A_{P}cos(2\pi f_{P}t)$
+\end_inset
+
+.
+ Esto resulta en:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S_{AM}(t)=S_{P}(t)(1+mS_{M}(t))=A_{P}cos(2πf_{P}t)[1+mcos(2πf_{M}t)]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $m=\frac{\ensuremath{A_{M}}}{A_{P}}$
+\end_inset
+
+ es el índice de modulación de la señal.
+\end_layout
+
+\begin_layout Standard
+La expresión final está dada por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S_{AM}(t)=A_{P}cos(2πf_{P}t)+\frac{mA_{P}}{2}cos[2π(f_{P}+f_{M})t]+\frac{mA_{P}}{2}cos[2π(f_{P}-f_{M})t]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para analizar en el dominio de la frecuencia se realiza la transformada
+ de Fourier, quedándonos con las frecuencias positivas:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S_{AM}(f)=\frac{A_{P}}{2}[δ(f\text{−}f_{P})]+\frac{A_{P}.m}{4}[δ(f\text{−}(f_{P}+f_{M})+δ(f\text{−}(f_{P}\text{−}f_{M})]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir, lo que se observará será la frecuencia central (
+\begin_inset Formula $f_{P}$
+\end_inset
+
+) con mayor potencia, rodeada por las señales generadas de la multiplicación
+ entre la señal portadora y la modulante.
+\end_layout
+
+\begin_layout Subsection
+Señal moduladora senoidal m=0.5
+\end_layout
+
 \begin_layout Standard
 
 \end_layout
