@@ -15,20 +15,40 @@ p = zeros([1 N]);
 f0=1.3e6;
 T=1/f0;
 A=125e-3;
-d=0.5*T;
+d=(1/3)*T;  %33%
+% d=0.5*T;  %50%
 
 % A0 = A*(2*d/T-1);
 % An = 2*A/(pi*n)*sin(pi*n*d/T);
 % Ann = 2*A/(pi*(-n))*sin(pi*(-n)*d/T);
 
+% PARA 50%
+% for n = 1:N  
+%      if(rem(n,2))   %si es impar
+%          y(n) = (2*A/(pi*n)*sin(pi*n*d/T)+2*A/(pi*(-n))*sin(pi*(-n)*d/T))/2;
+%      end;
+% end;
+% 
+% for n = 1:N  
+%      if(rem(n,2))   %si es impar
+%          p(n) = 10*log10(((y(n)/sqrt(2))^2/50)/1e-3);
+%      else
+%          p(n)= -50;
+%      end;
+% end;
+
+% PARA 33.3%
 for n = 1:N  
-     if(rem(n,2))   %si es impar
-         y(n) = (2*A/(pi*n)*sin(pi*n*d/T)+2*A/(pi*(-n))*sin(pi*(-n)*d/T))/2;
+     if(rem(n,3))   %si no es multiplo de 3
+         if(n==0)   
+            y(n) = A*(2*d/T-1)/2;
+         else
+            y(n) = (2*A/(pi*n)*sin(pi*n*d/T)+2*A/(pi*(-n))*sin(pi*(-n)*d/T))/2;
+         end
      end;
 end;
-
 for n = 1:N  
-     if(rem(n,2))   %si es impar
+     if(rem(n,3))   %si es impar
          p(n) = 10*log10(((y(n)/sqrt(2))^2/50)/1e-3);
      else
          p(n)= -50;
@@ -42,7 +62,7 @@ set(gca,'color','none')
 
 
 scatter(x,p,'X');
-title('Espectro de señal cuadrada')
+title('Espectro de señal cuadrada con DC:33.3%')
 grid on;
 xlabel('F[Hz]')
 ylabel('P[dBm]')
