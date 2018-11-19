@@ -132,22 +132,6 @@ S_{AM}(t)=A_{P}cos(2πf_{P}t)+\frac{mA_{P}}{2}cos[2π(f_{P}+f_{M})t]+\frac{mA_{P
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-newline
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Para analizar en el dominio de la frecuencia se realiza la transformada
  de Fourier, quedándonos con las frecuencias positivas:
 \end_layout
@@ -312,7 +296,114 @@ Para este caso,
 \end_layout
 
 \begin_layout Standard
-Se puede ver que las potencias medidas 
+Se puede ver que las potencias medidas son similares a las calculadas teóricamen
+te, y se observan más armónicos que los calculados, ésto se debe a que el
+ generador utilizado GFG-8219A tiene considerable distorsión armónica, agregándo
+le armónicos a la señal.
+\end_layout
+
+\begin_layout Subsection
+Señal moduladora triangular m=1
+\end_layout
+
+\begin_layout Standard
+En este caso, la señal moduladora se tomó como 
+\begin_inset Formula $S_{M}(t)=A\left(1-4\frac{|t|}{\tau}\right)$
+\end_inset
+
+ para 
+\begin_inset Formula $0\leq|t|\leq\tau$
+\end_inset
+
+, y 
+\begin_inset Formula $\Lambda(t)=\Lambda(t+\mathrm{T})\,\,\,\forall t\,\epsilon\mathbb{\,R}$
+\end_inset
+
+ con una frecuencia de 1.5MHz.
+\end_layout
+
+\begin_layout Standard
+La misma puede expresarse como serie de Fourier de la siguiente manera:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S_{M}(t)=\sum_{n\epsilon\mathbb{N}}\frac{8A_{M}}{(2n+1)^{2}\pi^{2}}\cos\left(\frac{2\pi t}{\mathrm{T}}(2n+1)\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quedando expresada en el dominio de la frecuencia de manera completa (la
+ señal AM):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+S_{AM}(f) & = & \frac{A_{P}}{2}\left[\delta(f-f_{P})+\delta(f+f_{P})\right]+\sum_{n\epsilon\mathbb{\mathbb{Z}}}\frac{A_{P}.m.2.A_{M}}{(2n+1)^{2}\pi^{2}}.\nonumber \\
+ &  & .\left[\delta\left(f-\left(f_{P}+\frac{2n+1}{\mathrm{T}}\right)\right)+\delta\left(f-\left(f_{P}-\frac{2n+1}{\mathrm{T}}\right)\right)\,+\,\delta\left(f+\left(f_{P}-\frac{2n+1}{\mathrm{T}}\right)\right)+\delta\left(f+\left(f_{P}+\frac{2n+1}{\mathrm{T}}\right)\right)\right]\,\nonumber \\
+ &  & \,\,\,\,n\neq0
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con ésto, se midió el espectro de la señal, obteniendo los siguientes resultados
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej3/triangular m 1.jpeg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modulación AM con moduladora con forma triangular m=1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se calculó previamente de manera teórica, se ve que la potencia de
+ la señal se distribuye de acuerdo a los armónicos de una triangular, centrados
+ en la frecuencia de la portadora.
+ Cabe aclarar de igual manera que el inciso anterior, el generador agrega
+ más armónicos pues tiene un índice de distorsión armónica notable.
+\end_layout
+
+\begin_layout Subsection
+Señal moduladora senoidal m=1, de frecuencia igual a la portadora
 \end_layout
 
 \end_body
