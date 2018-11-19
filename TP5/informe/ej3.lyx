@@ -220,5 +220,111 @@ Modulación AM con moduladora con forma senoidal m=0.5
 
 \end_layout
 
+\begin_layout Standard
+Teniendo en cuenta que la impedancia de la moduladora es 
+\begin_inset Formula $50\varOmega$
+\end_inset
+
+, podemos calcular la potencias de los armónicos presentes como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+P_{0}=10log\left(\frac{\left(\frac{A_{P}}{2}\frac{1}{\sqrt{2}}\right)^{2}}{50\varOmega.1mW}\right)=10log\left(\frac{\left(\frac{100mV}{2}\frac{1}{\sqrt{2}}\right)^{2}}{50\varOmega.1mW}\right)=-16dBm\\
+P_{1}=10log\left(\frac{\left(\frac{A_{P}}{4}\frac{m}{\sqrt{2}}\right)^{2}}{50\varOmega.1mW}\right)=10log\left(\frac{\left(\frac{100mV}{4}\frac{m}{\sqrt{2}}\right)^{2}}{50\varOmega.1mW}\right)=-28.1dBm
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De esto y analizando el gráfico, se concluye que las potencias son similares
+ a las calculadas teóricamente.
+\end_layout
+
+\begin_layout Subsection
+Señal moduladora senoidal m=1
+\end_layout
+
+\begin_layout Standard
+Se generó una senoidal de la misma forma que el caso anterior pero esta
+ vez con un índice de modulación mayor, m=1.
+\end_layout
+
+\begin_layout Standard
+Se observó el espectro que se muestra a continuación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej3/senoidal m 1.jpeg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modulación AM con moduladora con forma senoidal m=1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para este caso, 
+\begin_inset Formula $P_{0}$
+\end_inset
+
+ se mantiene igual 
+\begin_inset Formula $(P_{0}=-16dBm)$
+\end_inset
+
+ pues la amplitud es la misma, pero al ser el índice de modulación diferente,
+ 
+\begin_inset Formula $P_{1}=10log\left(\frac{\left(\frac{100mV}{4}\frac{1}{\sqrt{2}}\right)^{2}}{50\varOmega.1mW}\right)=-22dBm.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede ver que las potencias medidas son similares a las calculadas teóricamen
+te, y se observan más armónicos que los calculados, ésto se debe a que el
+ generador utilizado GFG-8219A tiene considerable distorsión armónica, agregándo
+le armónicos a la señal.
+\end_layout
+
+\begin_layout Subsection
+Señal moduladora triangular m=1
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
 \end_body
 \end_document
