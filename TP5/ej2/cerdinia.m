@@ -34,7 +34,7 @@ xlim([0 (N+1)*f]);
 
 set(gca,'color','white') 
 %scatter(x,p,'X');
-title('Espectro de señal cuadrada')
+title('Espectro de señal cuadrada DC:50%')
 grid on;
 xlabel('F[Hz]')
 ylabel('P[dBm]')

@@ -11,6 +11,7 @@ x = 1 : N;
 x  = x*f;
 y = zeros([1 N]);
 p = zeros([1 N]);
+% x = zeros([1 N]);
 
 f0=1.3e6;
 T=1/f0;
@@ -37,23 +38,32 @@ d=(1/3)*T;  %33%
 %      end;
 % end;
 
+hold on
 % PARA 33.3%
 for n = 1:N  
      if(rem(n,3))   %si no es multiplo de 3
          if(n==0)   
             y(n) = A*(2*d/T-1)/2;
+            p(n) = 10*log10(((y(n)/sqrt(2))^2/50)/1e-3);
+            quiver(x(n+1), -45, 0, p(n+1)+45, 0, 'Color', 'b', 'LineWidth', .2);
          else
             y(n) = (2*A/(pi*n)*sin(pi*n*d/T)+2*A/(pi*(-n))*sin(pi*(-n)*d/T))/2;
+            p(n) = 10*log10(((y(n)/sqrt(2))^2/50)/1e-3);
+            quiver(x(n), -45, 0, p(n)+45, 0, 'Color', 'b', 'LineWidth', .2);
          end
      end;
 end;
-for n = 1:N  
-     if(rem(n,3))   %si es impar
-         p(n) = 10*log10(((y(n)/sqrt(2))^2/50)/1e-3);
-     else
-         p(n)= -50;
-     end;
-end;
+
+
+% for n = 1:N  
+%      if(rem(n,3))   %si es impar
+%          p(n) = 10*log10(((y(n)/sqrt(2))^2/50)/1e-3);
+%          quiver(x(n), -45, 0, p(n)+45, 0, 'Color', 'b', 'LineWidth', .2);
+% %      else
+% %          p(n)= -50;
+% %          quiver(x(n), -45, 0, p(n)+45, 0, 'Color', 'b', 'LineWidth', .2);
+%      end;
+% end;
 
 
 xlim([0 (N+1)*f]);
@@ -61,7 +71,7 @@ xlim([0 (N+1)*f]);
 set(gca,'color','none') 
 
 
-scatter(x,p,'X');
+% scatter(x,p,'X');
 title('Espectro de señal cuadrada con DC:33.3%')
 grid on;
 xlabel('F[Hz]')

@@ -15,11 +15,11 @@ for n = 1:N
      end;
 end;
 
+hold on
 for n = 1:N  
      if(rem(n,2))   %si es impar
          p(n) = 10*log10(((y(n)/sqrt(2))^2/50)/1e-3);
-     else
-         p(n)= -80;
+         quiver(x(n), -80, 0, p(n)+80, 0, 'Color', 'b', 'LineWidth', .2);
      end;
 end;
 
@@ -28,7 +28,7 @@ xlim([0 (N+1)*f]);
 set(gca,'color','none') 
 
 
-scatter(x,p,'X');
+% scatter(x,p,'X');
 title('Espectro de señal Triangular')
 grid on;
 xlabel('F[Hz]')
