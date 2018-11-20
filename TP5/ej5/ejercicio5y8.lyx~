@@ -90,8 +90,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../ej5/espectro radiofrecuencia.png
-	lyxscale 70
+	filename espectro radiofrecuencia.png
+	lyxscale 50
 	width 10cm
 	height 12cm
 
@@ -109,6 +109,10 @@ Espectro de radiofrecuencias en Argentina
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
