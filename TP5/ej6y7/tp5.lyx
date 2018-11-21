@@ -7,7 +7,7 @@
 \textclass article
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -27,9 +27,10 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -53,11 +54,15 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language french
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -71,7 +76,286 @@
 \begin_body
 
 \begin_layout Section
-Análisis de circuito RC
+Espectro Electromagnético de la Banda FM
+\end_layout
+
+\begin_layout Standard
+Dentro de la distribución del servicio de radio FM, en la argentina se distingue
+ y categoriza entre las estaciones de alta y mediana potencia (categorías
+ A, B, C y D) , y baja potencia (categorías E, F y G) con radios máximos
+ de 5, 3 y 1.5 km.
+ Se considera como límite de la señal, el contorno de 48 dBμ/m - (250 μV/m).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Categorias de Estaciones.jpeg
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Categorías de Estaciones
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otro lado la distribución de canales viene dado entre 18MHz y 108MHz
+ cada 200KHz dando así un total de 99 canales.
+ 
+\end_layout
+
+\begin_layout Section
+Espectro Electromagnético de TV
+\end_layout
+
+\begin_layout Standard
+La señal de televisión que llega a nuestros receptores debe contener la
+ información de sincronismo vertical, sincronismo horizontal, la imagen
+ en blanco y negro (luminiscencia), la información del color y la información
+ de sonido (audio calidad FM).
+ Para esto se utilizan portadoras de distinta amplitud que conlleven la
+ señal dando así 6 MHz de ancho de banda por canal de televisión.
+ 
+\end_layout
+
+\begin_layout Standard
+Aquí observamos algunos canales y su composición por las distintas ondas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename CanalesTvFrecuencias.jpeg
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Canales de TV y sus Frecuencias
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otra parte el ente nacional de comunicaciones categoriza los canales
+ de television en 3 bandas I, II, III para los canales 2 al 6, 7 al 13 y
+ 21 al 69 respectivamente.
+ 
+\end_layout
+
+\begin_layout Standard
+Así como para el espectro electromagnético de FM se categoriza por potencia
+ y alcance de la señal con las bandas para los canales de TV sucede lo mismo,,
+ a su vez si la señal proviene de la linea principal, o de secundarias.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename CategoriasBanda1.jpeg
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Banda I
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename CategoriasBanda2.jpeg
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Banda II
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename CategoriasBanda3.jpeg
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Banda III
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename CategoriasBanda3Cod.jpeg
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Banda III Codificado 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
