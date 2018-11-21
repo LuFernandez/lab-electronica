@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -21,6 +21,8 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -49,6 +51,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -57,7 +60,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -79,15 +85,16 @@ Se conectó el analizador de espectros al generador con un tren de deltas,
  es decir, un tren de pulsos con duty cycle mínimo y con un sinc(x).
  La amplitud de las señales era de 250 mVpp a frecuencia 125 kHz y máxima
  frecuencia permitida por los intrumentos utilizados.
- Se muestran a continuación los resultados obtenidos
+ Se muestran a continuación los resultados obtenidos.
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -99,7 +106,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Tomas/labo/lab-electronica/TP5/ej8/tren de deltas a125k.jpeg
+	filename C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej8/tren de deltas a125k.jpeg
 	lyxscale 50
 	scale 45
 
@@ -136,7 +143,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Tomas/labo/lab-electronica/TP5/ej8/tren de deltas a 5M.jpeg
+	filename C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej8/tren de deltas a 5M.jpeg
 	lyxscale 50
 	scale 55
 
@@ -184,23 +191,24 @@ Tren de deltas
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Tomas/labo/lab-electronica/TP5/ej8/sinx,x 125k.jpeg
+	filename C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej8/sinx,x 125k.jpeg
 	lyxscale 50
 	scale 45
 
@@ -228,12 +236,12 @@ status collapsed
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Tomas/labo/lab-electronica/TP5/ej8/since maxfrec a 6Mhz.jpeg
+	filename C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej8/since maxfrec a 6Mhz.jpeg
 	lyxscale 50
 	scale 50
 
