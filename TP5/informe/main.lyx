@@ -160,17 +160,7 @@ filename "ej5.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "ej6.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "ej7.lyx"
+filename "C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej6y7/tp5.lyx"
 
 \end_inset
 

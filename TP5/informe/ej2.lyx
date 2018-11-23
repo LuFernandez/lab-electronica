@@ -80,12 +80,12 @@ Analisis de señales
 \end_layout
 
 \begin_layout Standard
-Se analiza señales analiticamente para luego simularlo en Matlab obtentiendo
+Se analizan señales analíticamente para luego simularlA en Matlab obteniendo
  su respectiva potencia en 
-\begin_inset Formula $dbm$
+\begin_inset Formula $dBm$
 \end_inset
 
- para sus armonicos, sabiendo que la resistencia del analizador de espectros
+ para sus armónicos, sabiendo que la resistencia del analizador de espectros
  es de 
 \begin_inset Formula $50\Omega$
 \end_inset
@@ -118,17 +118,17 @@ Se puede definir una señal cuadrada como
 \begin_inset Formula $A$
 \end_inset
 
- la ampritud pico, 
+ la amplitud pico, 
 \begin_inset Formula $T$
 \end_inset
 
- periodo y 
+ período y 
 \begin_inset Formula $\frac{d}{T}$
 \end_inset
 
- el duty cycle de la funcion.
- Sabiendo que la funcion es par, buscamos la serie trigonometrica de Fourier
- tal que la funcion tiene forma de 
+ el duty cycle de la función.
+ Sabiendo que la misma es par, buscamos la serie trigonométrica de Fourier
+ tal que la función tiene forma de 
 \begin_inset Formula $x(t)=A_{0}+\sum_{n=-\infty}^{\infty}A_{n}cos(\frac{2\pi nt}{T})$
 \end_inset
 
@@ -141,7 +141,7 @@ Se puede definir una señal cuadrada como
 \end_inset
 
  los coeficientes de Fourier de la misma.
- Los respectivos coeficientes se calcularian:
+ Los respectivos coeficientes se calcularán como:
 \end_layout
 
 \begin_layout Standard
@@ -164,7 +164,7 @@ A_{n}=\frac{4}{T}\left(\int_{0}^{\frac{d}{2}}\frac{A}{2}cos\left(\frac{2\pi nt}{
 \end_layout
 
 \begin_layout Standard
-Desde la serie trigonometrica de Fourier si realizamos la respectiva transformad
+Desde la serie trigonométrica de Fourier si realizamos la respectiva transformad
 a de Fourier obtenemos:
 \end_layout
 
@@ -196,7 +196,7 @@ Teniendo un tren de pulsos a un duty cycle del 50% donde
 \begin_inset Formula $\frac{1}{T}=1.3MHz$
 \end_inset
 
- se simulo en Matlab obteniendo el siguiente resultado:
+ se simuló en Matlab obteniendo el siguiente resultado:
 \end_layout
 
 \begin_layout Standard
@@ -239,10 +239,10 @@ Simulacion de espectro de una señal cuadrada a 50% duty cycle
 Donde se puede ver que la potencia en el 0 de frecuencia es 0, debido a
  que el valor medio de la señal es nulo, además podemos ver que la potencia
  en los armónicos caen 
-\begin_inset Formula $\frac{1}{n}dbm$
+\begin_inset Formula $\frac{1}{n}dBm$
 \end_inset
 
- y que los armonicos pares potencia es 0 de acuerdo que 
+ y que los armónicos pares potencia es 0 de acuerdo que 
 \begin_inset Formula $A_{n}=0$
 \end_inset
 
@@ -250,12 +250,13 @@ Donde se puede ver que la potencia en el 0 de frecuencia es 0, debido a
 \end_layout
 
 \begin_layout Standard
-Experimentalmente con el uso de un analisador de espectro y se observo lo
- siguiente:
+Experimentalmente con el uso de un analizador de espectros y se observó
+ lo siguiente:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -295,9 +296,9 @@ Espectro de una señal cuadrada a 50% duty cycle
 \end_layout
 
 \begin_layout Standard
-Verificando que la simulacion de los resultados estan a rasgo de la experiencia,
+Verificando que la simulación de los resultados están a rasgo de la experiencia,
  si bien a frecuencia 0 parece haber una potencia pero esa es debido a la
- fuente de alimentacion del analisador de espectro.
+ fuente de alimentación del analizador de espectro.
 \end_layout
 
 \begin_layout Subsubsection
@@ -315,6 +316,7 @@ Ahora teniendo pulsos de duty cycle del 33.3%, es decir que
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -355,20 +357,21 @@ Simulacion de espectro de una señal cuadrada a 33.3% duty cycle
 
 \begin_layout Standard
 Tal que la potencia en los armónicos caen 
-\begin_inset Formula $\frac{1}{n}dbm$
+\begin_inset Formula $\frac{1}{n}dBm$
 \end_inset
 
- y se anulan los armonicos de multiplos de 3.
+ y se anulan los armónicos de múltiplos de 3.
  
 \end_layout
 
 \begin_layout Standard
-Experimentalmente con el uso de un analisador de espectro y se observo que
- el espectro coincide con los analisis previos:
+Experimentalmente con el uso de un analizador de espectro se observó que
+ el espectro coincide con los análisis previos:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -408,7 +411,7 @@ Señal triangular
 \end_layout
 
 \begin_layout Subsubsection
-Analisis teórico de una señal triangular a 50% de simetria
+Analisis teórico de una señal triangular a 50% de simetría
 \end_layout
 
 \begin_layout Standard
@@ -420,13 +423,13 @@ Una señal triangular definida como
 \begin_inset Formula $x(t)$
 \end_inset
 
- es una funcion periodica de periodo T.
- Como la funcion es par y su valor medio es 0, la representacion de serie
- de Fourier trigonometrica sera 
+ es una función periódica de período T.
+ Como la función es par y su valor medio es 0, la representación de serie
+ de Fourier trigonométrica será 
 \begin_inset Formula $x(t)=\sum_{n=1}^{\infty}A_{n}cos\left(\frac{2\pi nt}{T}\right)$
 \end_inset
 
- con su coeficiente calculada:
+ con su coeficiente calculado:
 \end_layout
 
 \begin_layout Standard
@@ -469,7 +472,7 @@ Resultados obtenidos
 \end_layout
 
 \begin_layout Standard
-Simulando la funcion, sabiendo que 
+Simulando la función, sabiendo que 
 \begin_inset Formula $A=250mV$
 \end_inset
 
@@ -477,11 +480,12 @@ Simulando la funcion, sabiendo que
 \begin_inset Formula $\frac{1}{T}=200kHz$
 \end_inset
 
-, ycalculando sus potencias en matlab su diagrama espectrale resulto:
+, y calculando sus potencias en matlab su diagrama espectral resultó:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -503,7 +507,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Simulacion de espectro de una señal triangular
+Simulación de espectro de una señal triangular
 \end_layout
 
 \end_inset
@@ -517,11 +521,11 @@ Simulacion de espectro de una señal triangular
 \end_layout
 
 \begin_layout Standard
-Tal que se corroborá que la potencia en los armónicos cae de la forma 
+Tal como se corroborá que la potencia en los armónicos es de la forma 
 \begin_inset Formula $\frac{1}{n^{2}}$
 \end_inset
 
- y los armonicos pares son iguales a cero.
+ y los armónicos pares son iguales a cero.
 \end_layout
 
 \begin_layout Standard
@@ -530,6 +534,7 @@ Experimentalmente se obtuvo un resultado parecido:
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open

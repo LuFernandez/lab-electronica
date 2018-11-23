@@ -209,7 +209,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename E:/OperaDownload/Laboratorio Electronica/lab-electronica/TP5/ej2/cuadrada.png
+	filename C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej2/cuadrada.png
 	lyxscale 50
 	scale 27
 
@@ -256,6 +256,7 @@ Experimentalmente con el uso de un analisador de espectro y se observo lo
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -263,7 +264,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename E:/OperaDownload/Laboratorio Electronica/lab-electronica/TP5/ej2/cuadrada.jpeg
+	filename C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej2/cuadrada.jpeg
 	lyxscale 50
 	scale 50
 
@@ -315,6 +316,7 @@ Ahora teniendo pulsos de duty cycle del 33.3%, es decir que
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -322,7 +324,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename E:/OperaDownload/Laboratorio Electronica/lab-electronica/TP5/ej2/cuadrada33.3.png
+	filename C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej2/cuadrada33.3.png
 	lyxscale 30
 	scale 27
 
@@ -369,6 +371,7 @@ Experimentalmente con el uso de un analisador de espectro y se observo que
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -380,7 +383,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename E:/OperaDownload/Laboratorio Electronica/lab-electronica/TP5/ej2/tren de pulsos a 33.3% a 1.3M.jpeg
+	filename C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej2/tren de pulsos a 33.3% a 1.3M.jpeg
 	lyxscale 50
 	scale 50
 
@@ -482,6 +485,7 @@ Simulando la funcion, sabiendo que
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -493,7 +497,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename E:/OperaDownload/Laboratorio Electronica/lab-electronica/TP5/ej2/triangular.png
+	filename C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej2/triangular.png
 	lyxscale 27
 	scale 60
 
@@ -530,6 +534,7 @@ Experimentalmente se obtuvo un resultado parecido:
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -541,7 +546,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename E:/OperaDownload/Laboratorio Electronica/lab-electronica/TP5/ej2/del punto 2, la triangular de 1.3M que es en verdad de 200k porq era el max del gen.jpeg
+	filename C:/Users/lugfe/Documents/GitHub/lab-electronica/TP5/ej2/del punto 2, la triangular de 1.3M que es en verdad de 200k porq era el max del gen.jpeg
 	lyxscale 30
 	scale 40
 
